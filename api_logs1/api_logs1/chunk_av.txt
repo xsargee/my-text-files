@@ -1,0 +1,500 @@
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+</head>
+<body class="light-mode body_in_forms" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a href="/prices">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+          <section class="module pb-0" id="works">
+          <div class="font-alt mb-30 titan-title-size-1 logo_center margin-top-zero"><img src="/static/img/logo.png" width="300px" alt="PDF417MRZ_BOT - Logo" /></div>           
+        </section>
+<div id='act_lang' style='display: none;'>en</div>
+<div id='act_generate' style='display: none;'>DNK AND </div>
+<div id='user_form' style='display: none;'>none</div>
+<div id='date_format_u' style='display: none;'>EUR</div>
+<div class="pdf417">
+    <h1 id="title">Denmark VISA MRZ Form</h1>
+    <div class='div_with_copy_class' id='div_with_copy'>Copied!</div>
+  <form id='true_good_form'>
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="notification_test">
+             <div class='form_notification' style="display: block;" id="test_mode">Please, pay attention that this is test form. For getting barcodes you required to have active subscription. You can <a href="https://t.me/pdf417mrz_bot">buy subscription</a> directly in bot.</div>
+          </div>
+      </div>
+      <div class='form_error' id='error_one' style="display: none;"></div> 
+      <div class="row mt-4">
+        <div class="col-4">
+          <div id="country_selector" class="label_pdf">Country</div>
+          <select class="inputer select_pdf" id="country" onchange="select_country(this.value);" required>
+           <option  id="country_option">Select country</option>
+           <option value="USA">United States</option>
+           <option value="AUS">Australia</option>
+           <option value="AUT">Austria</option>           
+           <option value="BGR">Bulgaria</option>
+           <option value="CAN">Canada</option>
+           <option value="CHN">China</option>
+           <option value="HRV">Croatia</option>
+           <option value="CYP">Cyprus</option>
+           <option value="CZE">Czech Republic</option> 
+           <option value="DNK">Denmark</option>
+           <option value="EST">Estonia</option> 
+           <option value="FIN">Finland</option>        
+           <option value="FRA">France</option>
+           <option value="DEU">Germany</option>
+           <option value="GRC">Greece</option>
+           <option value="IDN">Indonesia</option>
+           <option value="IRL">Ireland</option>
+           <option value="ITA">Italy</option>
+           <option value="HUN">Hungary</option>
+           <option value="LTU">Lithuania</option>
+           <option value="LUX">Luxembourg</option>
+           <option value="LVA">Latvia</option>
+           <option value="MLT">Malta</option>
+           <option value="MEX">Mexico</option>
+           <option value="NLD">Netherlands</option>
+           <option value="POL">Poland</option>
+           <option value="PRT">Portugal</option>
+           <option value="ROU">Romania</option>
+           <option value="RUS">Russia</option>
+           <option value="SVK">Slovakia</option>
+           <option value="SVN">Slovenia</option>
+           <option value="ESP">Spain</option>
+           <option value="SWE">Sweden</option>
+           <option value="TUR">Turkey</option>
+           <option value="THA">Thailand</option>
+           <option value="GBR">United Kingdom</option>
+           <option value="VNM">Vietnam</option>          
+          </select>
+        </div>
+        <div class="col-4">
+          <div id="vtype_label" class="label_pdf">Visa type</div>
+          <input class="inputer" type="text" id="vtype" autocomplete="off" required placeholder="C">
+        </div>
+        <div class="col-4">
+          <div id="country_birth_selector" class="label_pdf">Country of birth</div>
+          <input class="inputer" type="text" id="country_of_birthday" onkeyup='birth_country_keyup(this.value);' autocomplete="off" required>
+        </div>
+      </div>
+      <div class='form_error' id='error_two' style="display: none;"></div> 
+      <div class="row">
+        <div class="col-4">
+          <div id="lname_label" class="label_pdf">Last name</div>
+          <input class="inputer" type="text" id="lname" autocomplete="off" required>
+        </div>
+        <div class="col-4">
+          <div id="fname_label" class="label_pdf">First name</div>
+          <input class="inputer" type="text" id="fname" autocomplete="off" required>
+        </div>
+        <div class="col-4">
+          <div id="mname_label" class="label_pdf">Middle name</div>
+          <input class="inputer" type="text" id="mname" autocomplete="off" required>
+        </div>
+      </div>
+      <div class='form_error' id='error_three' style="display: none;"></div> 
+      <div class="row">
+        <div class="col-4">
+          <div  id="sex_selector" class="label_pdf">Sex</div>
+          <select class="inputer select_pdf" id="sex" required>
+           <option id="sex_option">Select sex</option>  
+           <option id="u_option" value="U">Unknown</option>
+           <option id="m_option" value="M">Male</option>
+           <option id="f_option" value="F">Female</option> 
+          </select>
+        </div>
+        <div class="col-4">
+          <div id="birthday_selector" class="label_pdf">Birthday date</div>
+          <div class="inp_height">
+            <button type="button" class="gen_button_new" onclick="change_date_format();">Format: USA</button>
+            <input class="inputer_with_auto inputer" id="bdate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+            <button type="button" id="bdate_gen_b" class="gen_button" onclick="generate_bdate();">Auto</button>
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="expiry_selector" class="label_pdf">Expiry date</div>
+          <div class="inp_height">
+            <button type="button" class="gen_button_new" onclick="change_date_format();">Format: USA</button>
+            <input class="inputer_with_auto inputer" id="edate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+            <button type="button" id="edate_gen_b" class="gen_button" onclick="generate_edate();">Auto</button>
+          </div>
+        </div>
+      </div>
+      <div class='form_error' id='error_four' style="display: none;"></div> 
+      <div class="row">
+        <div class="col-4">
+          <div id="number_selector" class="label_pdf">Document number</div>
+          <div class="inp_height">
+            <label class="new_label"><input class="inputer_with_auto inputer" type="text" id="doc_number" onclick="document_number_copy(event)" required></label>
+            <button type="button" id="doc_num_gen_b" class="gen_button" onclick="generate_document();">Auto</button>
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="visa_number" class="label_pdf">Visa number</div>
+          <div class="inp_height">
+            <label class="new_label"><input class="inputer_with_auto inputer" type="text" id="visa_number_inp" onclick="visa_number_copy(event)" required></label>
+            <button type="button" id="visa_number_gen_b" class="gen_button" onclick="generate_visa();">Auto</button> 
+          </div>        
+        </div>
+        <div id="add_data_html" class="col-4"></div>
+      </div>
+      <div class = "row">
+        <div id="left_column_result" class="col-6">
+        </div> 
+        <div id="right_column_result" class="col-6">
+          <button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+</main>
+</body>
+</html>
+
+
+====== ./mrz/visa-lithuania ======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generate 100% Valid Visa MRZ String for Lithuania</title>
+    <meta name="description" content="Generate accurate MRZ strings for Visa. Our PDF417MRZ Telegram Bot has more than 60 different countries. Create secure MRZ strings quickly and reliably.">
+    <meta name="keywords" content="Lithuania visa MRZ string generator" />
+    <meta name="og:site_name" content="pdf417mrz" />
+    <meta name="og:url" content="https://pdf417mrz.xyz/mrz/visa-lithuania" />
+    <meta name="og:title" content="Lithuania VISA MRZ Form" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Generate accurate MRZ strings for Visa. Our PDF417MRZ Telegram Bot has more than 60 different countries. Create secure MRZ strings quickly and reliably." />
+    <meta name="og:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lithuania VISA MRZ Form" />
+    <meta name="twitter:description" content="Generate accurate MRZ strings for Visa. Our PDF417MRZ Telegram Bot has more than 60 different countries. Create secure MRZ strings quickly and reliably." />
+    <meta name="twitter:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "MRZ String Generator | PDF417MRZ",
+        "item": "https://pdf417mrz.xyz/mrz"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Lithuania VISA MRZ Form"
+      }]
+    }]
+    </script>
+    <link rel="canonical" href="https://pdf417mrz.xyz/mrz/visa-lithuania">
+    <link rel="alternate" hreflang="x-default" href="https://pdf417mrz.xyz/mrz/visa-lithuania">
+    <link rel="alternate" hreflang="ru" href="https://pdf417mrz.xyz/ru/mrz/visa-lithuania" >
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/static/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link href="/static/libs/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/styles/new_style.css" rel="stylesheet">
+    <link id="color-scheme" href="/static/styles/colors/default.css" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <script src="/static/JS/visa.js" defer></script>
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+</head>
+<body class="light-mode body_in_forms" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a href="/prices">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+          <section class="module pb-0" id="works">
+          <div class="font-alt mb-30 titan-title-size-1 logo_center margin-top-zero"><img src="/static/img/logo.png" width="300px" alt="PDF417MRZ_BOT - Logo" /></div>           
+        </section>
+<div id='act_lang' style='display: none;'>en</div>
+<div id='act_generate' style='display: none;'>LTU AND </div>
+<div id='user_form' style='display: none;'>none</div>
+<div id='date_format_u' style='display: none;'>EUR</div>
+<div class="pdf417">
+    <h1 id="title">Lithuania VISA MRZ Form</h1>
+    <div class='div_with_copy_class' id='div_with_copy'>Copied!</div>
+  <form id='true_good_form'>
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="notification_test">
+             <div class='form_notification' style="display: block;" id="test_mode">Please, pay attention that this is test form. For getting barcodes you required to have active subscription. You can <a href="https://t.me/pdf417mrz_bot">buy subscription</a> directly in bot.</div>
+          </div>
+      </div>
+      <div class='form_error' id='error_one' style="display: none;"></div> 
+      <div class="row mt-4">
+        <div class="col-4">
+          <div id="country_selector" class="label_pdf">Country</div>
+          <select class="inputer select_pdf" id="country" onchange="select_country(this.value);" required>
+           <option  id="country_option">Select country</option>
+           <option value="USA">United States</option>
+           <option value="AUS">Australia</option>
+           <option value="AUT">Austria</option>           
+           <option value="BGR">Bulgaria</option>
+           <option value="CAN">Canada</option>
+           <option value="CHN">China</option>
+           <option value="HRV">Croatia</option>
+           <option value="CYP">Cyprus</option>
+           <option value="CZE">Czech Republic</option> 
+           <option value="DNK">Denmark</option>
+           <option value="EST">Estonia</option> 
+           <option value="FIN">Finland</option>        
+           <option value="FRA">France</option>
+           <option value="DEU">Germany</option>
+           <option value="GRC">Greece</option>
+           <option value="IDN">Indonesia</option>
+           <option value="IRL">Ireland</option>
+           <option value="ITA">Italy</option>
+           <option value="HUN">Hungary</option>
+           <option value="LTU">Lithuania</option>
+           <option value="LUX">Luxembourg</option>
+           <option value="LVA">Latvia</option>
+           <option value="MLT">Malta</option>
+           <option value="MEX">Mexico</option>
+           <option value="NLD">Netherlands</option>
+           <option value="POL">Poland</option>
+           <option value="PRT">Portugal</option>
+           <option value="ROU">Romania</option>
+           <option value="RUS">Russia</option>
+           <option value="SVK">Slovakia</option>
+           <option value="SVN">Slovenia</option>
+           <option value="ESP">Spain</option>
+           <option value="SWE">Sweden</option>
+           <option value="TUR">Turkey</option>
+           <option value="THA">Thailand</option>
+           <option value="GBR">United Kingdom</option>
+           <option value="VNM">Vietnam</option>          
+          </select>
+        </div>
+        <div class="col-4">
+          <div id="vtype_label" class="label_pdf">Visa type</div>
+          <input class="inputer" type="text" id="vtype" autocomplete="off" required placeholder="C">
+        </div>
+        <div class="col-4">
+          <div id="country_birth_selector" class="label_pdf">Country of birth</div>
+          <input class="inputer" type="text" id="country_of_birthday" onkeyup='birth_country_keyup(this.value);' autocomplete="off" required>
+        </div>
+      </div>
+      <div class='form_error' id='error_two' style="display: none;"></div> 
+      <div class="row">
+        <div class="col-4">
+          <div id="lname_label" class="label_pdf">Last name</div>
+          <input class="inputer" type="text" id="lname" autocomplete="off" required>
+        </div>
+        <div class="col-4">
+          <div id="fname_label" class="label_pdf">First name</div>
+          <input class="inputer" type="text" id="fname" autocomplete="off" required>
+        </div>
+        <div class="col-4">
+          <div id="mname_label" class="label_pdf">Middle name</div>
+          <input class="inputer" type="text" id="mname" autocomplete="off" required>
+        </div>
+      </div>
+      <div class='form_error' id='error_three' style="display: none;"></div> 
+      <div class="row">
+        <div class="col-4">
+          <div  id="sex_selector" class="label_pdf">Sex</div>
+          <select class="inputer select_pdf" id="sex" required>
+           <option id="sex_option">Select sex</option>  
+           <option id="u_option" value="U">Unknown</option>
+           <option id="m_option" value="M">Male</option>
+           <option id="f_option" value="F">Female</option> 
+          </select>
+        </div>
+        <div class="col-4">
+          <div id="birthday_selector" class="label_pdf">Birthday date</div>
+          <div class="inp_height">
+            <button type="button" class="gen_button_new" onclick="change_date_format();">Format: USA</button>
+            <input class="inputer_with_auto inputer" id="bdate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+            <button type="button" id="bdate_gen_b" class="gen_button" onclick="generate_bdate();">Auto</button>
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="expiry_selector" class="label_pdf">Expiry date</div>
+          <div class="inp_height">
+            <button type="button" class="gen_button_new" onclick="change_date_format();">Format: USA</button>
+            <input class="inputer_with_auto inputer" id="edate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+            <button type="button" id="edate_gen_b" class="gen_button" onclick="generate_edate();">Auto</button>
+          </div>
+        </div>
+      </div>
+      <div class='form_error' id='error_four' style="display: none;"></div> 
+      <div class="row">
+        <div class="col-4">
+          <div id="number_selector" class="label_pdf">Document number</div>
+          <div class="inp_height">
+            <label class="new_label"><input class="inputer_with_auto inputer" type="text" id="doc_number" onclick="document_number_copy(event)" required></label>
+            <button type="button" id="doc_num_gen_b" class="gen_button" onclick="generate_document();">Auto</button>
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="visa_number" class="label_pdf">Visa number</div>
+          <div class="inp_height">
+            <label class="new_label"><input class="inputer_with_auto inputer" type="text" id="visa_number_inp" onclick="visa_number_copy(event)" required></label>
+            <button type="button" id="visa_number_gen_b" class="gen_button" onclick="generate_visa();">Auto</button> 
+          </div>        
+        </div>
+        <div id="add_data_html" class="col-4"></div>
+      </div>
+      <div class = "row">
+        <div id="left_column_result" class="col-6">
+        </div> 
+        <div id="right_column_result" class="col-6">
+          <button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+</main>
+</body>
+</html>
+
+
+====== ./mrz/visa-vietnam ======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generate 100% Valid Visa MRZ String for Vietnam</title>
+    <meta name="description" content="Generate accurate MRZ strings for Visa. Our PDF417MRZ Telegram Bot has more than 60 different countries. Create secure MRZ strings quickly and reliably.">
+    <meta name="keywords" content="Vietnam visa MRZ string generator" />
+    <meta name="og:site_name" content="pdf417mrz" />
+    <meta name="og:url" content="https://pdf417mrz.xyz/mrz/visa-vietnam" />
+    <meta name="og:title" content="Vietnam VISA MRZ Form" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Generate accurate MRZ strings for Visa. Our PDF417MRZ Telegram Bot has more than 60 different countries. Create secure MRZ strings quickly and reliably." />
+    <meta name="og:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vietnam VISA MRZ Form" />
+    <meta name="twitter:description" content="Generate accurate MRZ strings for Visa. Our PDF417MRZ Telegram Bot has more than 60 different countries. Create secure MRZ strings quickly and reliably." />
+    <meta name="twitter:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,

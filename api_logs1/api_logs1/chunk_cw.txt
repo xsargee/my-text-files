@@ -1,0 +1,500 @@
+    <link id="color-scheme" href="/static/styles/colors/default.css" rel="stylesheet">
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/libs/isotope/dist/isotope.pkgd.js"></script>
+    <script src="/static/libs/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="/static/libs/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/static/libs/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a class="current_link">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+        <section class="module pb-0">
+          <div class="font-alt mb-30 titan-title-size-1 logo_center margin-top-zero"><img src="/static/img/logo.png" width="300px" alt="PDF417MTZ_BOT - Logo" /></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h1 class="module-title">Our Prices</h1>
+                <div class="module-subtitle font-serif"></div>
+              </div>
+            </div>
+          </div>      
+        </section>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="module-subtitle">Regular price is 2$ per one generation, but if you are valuable customer, you can pay 1$ per generation. Also, we offer subscriptions. As long as you have active subscription - you can generate unlimited number of barcodes and MRZ strings.</div>
+              </div>
+            </div>
+            <div class="row multi-columns-row">
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="price-table font-alt">
+                  <h3>12 Generations</h3>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>20
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>Day of unlimited access</li>
+                  </ul><a class="btn btn-d btn-round" href="https://t.me/pdf417mrz_bot">Sign Up</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="price-table font-alt">
+                  <h3>One Week</h3>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>25
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>Year of unlimited access</li>
+                  </ul><a class="btn btn-d btn-round" href="https://t.me/pdf417mrz_bot">Sign Up</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="price-table font-alt best">
+                  <h3>One Month</h3>
+                  <p class="small">Best Choice</p>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>50
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>Month of unlimited access</li>
+                  </ul><a class="btn btn-d btn-round" href="https://t.me/pdf417mrz_bot">Sign Up</a>
+                </div>
+              </div>
+            </div>
+            <div class="row multi-columns-row">
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="price-table font-alt">
+                  <h3>70 Generations</h3>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>70
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>Day of unlimited access</li>
+                  </ul><a class="btn btn-d btn-round" href="https://t.me/pdf417mrz_bot">Sign Up</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="price-table font-alt">
+                  <h3>One Year</h3>
+                  <div class="borderline"></div>
+                  <p class="price"><span>$</span>400
+                  </p>
+                  <ul class="price-details">
+                    <li>Free Support</li>
+                    <li>Year of unlimited access</li>
+                  </ul><a class="btn btn-d btn-round" href="https://t.me/pdf417mrz_bot">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="module-extra-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-8 col-lg-9">
+                <div class="callout-text font-alt">
+                  <p class="footer_title_text">@PDF417MRZ_BOT</p>
+                  <p style="margin-bottom: 0px;">Generate PDF417, Code 128 and MRZ for DL, ID, Passport, VISA</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://t.me/pdf417mrz_bot">Open in Telegram</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+    </main>
+  </body>
+</html>
+
+
+====== ./blog/editable-usa-passport-template-psd-file ======
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USA Passport Template: New Editable PSD Photoshop File Online</title>
+    <meta name="description" content="Editable PSD USA passport template from pdf417mrz – download a fully editable USA passport template. Customize name, address, photo and more online!">
+    <meta name="keywords" content="us passport editable psd template" />
+    <meta name="og:site_name" content="pdf417mrz" />
+    <meta name="og:url" content="https://pdf417mrz.xyz/blog/editable-usa-passport-template-psd-file" />
+    <meta name="og:title" content="USA Passport Template: New Editable PSD Photoshop File Online" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Editable PSD USA passport template from pdf417mrz – download a fully editable USA passport template. Customize name, address, photo and more online!" />
+    <meta name="og:image" content="https://pdf417mrz.xyz/static/img/2_1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="USA Passport Template: New Editable PSD Photoshop File Online" />
+    <meta name="twitter:description" content="Editable PSD USA passport template from pdf417mrz – download a fully editable USA passport template. Customize name, address, photo and more online!" />
+    <meta name="twitter:image" content="https://pdf417mrz.xyz/static/img/2_1.jpg" />
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "USA Passport Template: New Editable PSD Photoshop File Online"
+      }]
+    }]
+    </script>
+    <link rel="canonical" href="https://pdf417mrz.xyz/blog/editable-usa-passport-template-psd-file">
+    <link rel="alternate" hreflang="x-default" href="https://pdf417mrz.xyz/blog/editable-usa-passport-template-psd-file">
+    <link rel="alternate" hreflang="ru" href="https://pdf417mrz.xyz/ru/blog/editable-usa-passport-template-psd-file" >
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/static/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/static/libs/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/styles/new_style.css" rel="stylesheet">
+    <link id="color-scheme" href="/static/styles/colors/default.css" rel="stylesheet">
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/libs/isotope/dist/isotope.pkgd.js"></script>
+    <script src="/static/libs/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="/static/libs/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/static/libs/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a href="/prices">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+      <div class="main">
+        <section class="new-module">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-1">
+                <div class="post">
+                  <div class="post-thumbnail"><img src="https://pdf417mrz.xyz/static/img/2_1.jpg" alt="Editable USA Passport Template – PSD File for Easy Customization"/></div>
+                  <div class="post-header font-alt">
+                    <h1 class="post-title">Editable USA Passport Template – PSD File for Easy Customization</h1>
+                    <div class="post-meta">James Ward, 2025-07-01</div>
+                  </div>
+                  <div class="post-entry">
+                    <p>The Editable United States Passport Template—a PSD file designed for easy customization—offers a revolutionary solution for those seeking a hassle-free way to create their own travel documents.</p> 
+<p>With high-resolution graphics and layers that can be easily manipulated, you can personalize your passport to reflect your needs, all while ensuring compliance with design standards. In this article, we’ll explore the features and benefits of the Editable USA Passport Template, guiding you through the customization process and highlighting its potential uses in various contexts. Get ready to unlock your creativity and embark on a new journey of design!</p>
+<h2>What is an Editable USA Passport Template?</h2>
+<p>An <b>Editable USA Passport Template is a digital file designed to resemble an authentic passport, allowing users to customize various elements</b> for different purposes. This Photoshop template is fully editable, meaning that individuals can modify information such as the address, country, and even the passport number using compatible editing software. The template is often available in vector format, making it easy to scale and adjust without losing quality.</p>
+<h3>What does a passport template include?</h3>
+<p>Specifically, an editable US passport template provides a framework for inputting personal information such as name, date of birth, and other identifying details. This template typically includes components like the passport photo area, personal data section, and various security features that are standard in official passports.</p>
+<h3>How is a PSD file structured in Photoshop?</h3>
+<p>When working with a passport template in Photoshop, understanding how a PSD file is structured is crucial. A PSD file is composed of multiple layers, each containing different elements of the passport design. This layered approach allows for easy editing and manipulation of text, images, and other features to create a realistic-looking document.</p>
+<h2>Key Features of the USA Passport Template</h2>
+<p>Key features of the USA Passport Template include its high-resolution design, customizable text fields, and detailed layout that mimics a real passport. Users can edit this template to fit their needs, whether for mock-ups, presentations, or personal use. The choice of font can also be tailored to enhance the overall appearance.</p>
+<p>The benefits of using a PSD file for customization are numerous. It allows for seamless adjustments while maintaining the integrity of the design, providing versatility to users. With this template, creating a lifelike passport becomes a straightforward task that can be accomplished easily and efficiently.</p>
+<h2>Where to Find Reliable Passport Template Downloads</h2>
+<a href="https://pdf417mrz.xyz/psd-templates/usa-passport-2006"><img src="/static/img/2_2.jpg" alt="pdf417mrz USA template PSD Photoshop"></a>
+<p>We at pdf417mrz understand the importance of having high-quality, customizable templates for various identification needs. Our <b><a href="https://pdf417mrz.xyz/psd-templates/usa-passport-2006">US Passport Template</a> is designed to be user-friendly, allowing you to easily input your own information</b> while maintaining the professional look of an official document.</p>
+<h3>Other USA PDF Photoshop Templates</h3>
+<p>In addition to the US Passport Template, <b>we also offer a wide range of other US templates</b>, including the <a href="https://pdf417mrz.xyz/psd-templates/minnesota-2017/">Minnesota DL</a> template, <a href="https://pdf417mrz.xyz/psd-templates/texas-2021/">Texas DL</a> template, and others. Each template is meticulously crafted to ensure accuracy and authenticity, making them ideal for personal use or educational purposes.</p>
+<p>Furthermore, our <a href="https://pdf417mrz.xyz/psd-templates/ssn-united-states/">SSN template</a> is designed to help you create a professional-looking document for your records. We prioritize security and privacy, ensuring that all templates are provided with guidance on responsible use. Check out our article to learn <a href="https://pdf417mrz.xyz/blog/how-to-make-a-social-security-card">how to work with Social Security Cart Template</a>.</p>
+<p>Explore our website to discover a variety of editable document templates that cater to your specific needs. Whether you are looking for templates for personal identification or for business purposes, we are committed to providing you with the tools you need to create high-quality documents. If you have any questions or need assistance, our support team is always here to help.</p>
+<h3>Steps to Download the US Passport Template PSD File</h3>
+<p>Once you are ready to download the US passport template PSD file, follow these steps:</p>
+<ul>
+<li>Add the template to the cart.</li>
+<li>In the cart, proceed to checkout, filling in the email data (the template will be delivered to your email).</li>
+</ul>
+<b>What is next?</b>
+<p>You can then edit this template to include your details, choosing the appropriate font to match official documents.</p>
+<h2>How to Customize a USA Passport Template in Photoshop?</h2>
+<p>To customize a USA passport template in Photoshop, begin by opening the Photoshop template in your preferred editing software. This template is fully editable, allowing you to adjust various elements easily. Start with basic editing techniques like selecting the text layers and using the appropriate font for personal information. Modify your name, address, and country as required, ensuring that you maintain the correct alignment for a professional appearance.</p>
+<p>When you need to edit this template, focus on how to modify personal information. Select the text box, and replace the placeholder text with your details, including your passport number. Make sure to check the formatting to match the original design.</p>
+<p>Finally, utilize layers in Photoshop to customize your template effectively. By using layers, you can easily manage different elements without affecting others, enabling a more streamlined editing process. This approach also allows you to revert changes effortlessly if necessary.</p>
+<h2>Essential Elements of a US Passport Document</h2>
+<p>Essential elements of a US passport document typically include the individual's address, country, passport number, and expiration date. To personalize the passport, you can edit this template with your own details, such as name and birth date, ensuring that all necessary information is accurately represented.</p>
+<p>Incorporating signature and photo into the template is a crucial step in the editing process. Using editing software, you can seamlessly add a high-quality photo and a digital signature. The template, often designed in vector format, allows for precise adjustments without losing quality. By selecting the appropriate font, users can create a passport that appears authentic and professional, making it an excellent tool for any creative project.</p>
+<h2>Comparing Online Tools vs. Photoshop for Template Editing</h2>
+<img src="/static/img/2_3.jpg" alt="where to edit psd us passport - photoshop vs online tools">
+<p>When comparing online tools to editing software like Photoshop, many find the online options more accessible and user-friendly. However, only in Photoshop can you create a professional-looking document that will go for verifiable purposes. So, depending on your needs, you can use online templates for Photoshop.</p>
+<h3>Benefits of Using Online Tools</h3>
+<p>For quick edits and simple designs, online tools like <a href="https://www.canva.com/en_gb/">Canva</a> or <a href="https://pixlr.com">Pixlr</a> provide a variety of templates and drag-and-drop interfaces that make it easy for anyone to create visually appealing graphics without extensive design knowledge. These platforms often come with pre-set dimensions for social media posts, flyers, and presentations, making them ideal for users who need to produce content quickly and efficiently.</p>
+<h3>Benefits of Using Photoshop</h3>
+<p>On the other hand, <a href="https://www.adobe.com/products/photoshop.html">Photoshop</a> offers a depth of features that cater to professional designers and photographers. Its robust capabilities allow for intricate editing, advanced color correction, and the ability to work with layers and masks in a way that online tools simply cannot match. For projects that require high resolution and precision, such as print materials or detailed photo retouching, Photoshop remains the industry standard.</p>
+<h2>Conclusion: The Convenience of Using a USA Passport Template</h2>
+<p>The use of a USA passport template offers unparalleled convenience for those needing to create their identification documents efficiently. With a well-designed template, users can easily fill in their personal information while ensuring that all necessary elements are included, such as the id number, date of birth, and expiration date.</p>
+<p>Furthermore, utilizing a digital template allows for quick adjustments and reprints if needed, making it ideal for individuals who may require multiple copies. Ultimately, the accessibility and clarity provided by a USA passport template simplify the often daunting task of document creation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+        <section class="module-extra-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-8 col-lg-9">
+                <div class="callout-text font-alt">
+                  <h4 style="margin-top: 0px;">@PDF417MRZ_BOT</h4>
+                  <p style="margin-bottom: 0px;">Generate PDF417, Code 128 and MRZ for DL, ID, Passport, VISA</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://t.me/pdf417mrz_bot">Open in Telegram</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+    </main>
+  </body>
+</html>
+
+
+====== ./blog/how-to-use-id-psd-template ======
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Edit USA ID Card PSD Templates in Photoshop — Step-by-Step</title>
+    <meta name="description" content="Learn how to edit USA ID card PSD templates in Photoshop step-by-step. Download high-quality, fully editable ID &amp; passport templates.">
+    <meta name="keywords" content="california id card PSD template" />
+    <meta name="og:site_name" content="pdf417mrz" />
+    <meta name="og:url" content="https://pdf417mrz.xyz/blog/how-to-use-id-psd-template" />
+    <meta name="og:title" content="How to Edit USA ID Card PSD Templates in Photoshop — Step-by-Step" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Learn how to edit USA ID card PSD templates in Photoshop step-by-step. Download high-quality, fully editable ID &amp; passport templates." />
+    <meta name="og:image" content="https://pdf417mrz.xyz/static/img/3_43.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Edit USA ID Card PSD Templates in Photoshop — Step-by-Step" />
+    <meta name="twitter:description" content="Learn how to edit USA ID card PSD templates in Photoshop step-by-step. Download high-quality, fully editable ID &amp; passport templates." />
+    <meta name="twitter:image" content="https://pdf417mrz.xyz/static/img/3_43.jpg" />
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "How to Edit USA ID Card PSD Templates in Photoshop — Step-by-Step"
+      }]
+    }]
+    </script>
+    <link rel="canonical" href="https://pdf417mrz.xyz/blog/how-to-use-id-psd-template">
+    <link rel="alternate" hreflang="x-default" href="https://pdf417mrz.xyz/blog/how-to-use-id-psd-template">
+    <link rel="alternate" hreflang="ru" href="https://pdf417mrz.xyz/ru/blog/how-to-use-id-psd-template" >
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/static/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="/static/libs/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/styles/new_style.css" rel="stylesheet">
+    <link id="color-scheme" href="/static/styles/colors/default.css" rel="stylesheet">
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/libs/isotope/dist/isotope.pkgd.js"></script>
+    <script src="/static/libs/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="/static/libs/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/static/libs/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a href="/prices">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+      <div class="main">
+        <section class="new-module">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-1">
+                <div class="post">
+                  <div class="post-thumbnail"><img src="https://pdf417mrz.xyz/static/img/3_43.jpg" alt="How to Use an ID PSD Template — Step-by-Step Guide"/></div>
+                  <div class="post-header font-alt">
+                    <h1 class="post-title">How to Use an ID PSD Template — Step-by-Step Guide</h1>
+                    <div class="post-meta">James Ward, 2025-06-27</div>
+                  </div>
+                  <div class="post-entry">
+                    <p>Welcome! This is a complete guide on how to use PSD templates from the site <a href="https://pdf417mrz.xyz/">pdf417mrz.xyz</a>. Whether you are a beginner or an experienced designer, this guide will help you navigate through the process of downloading, editing, and utilizing PSD ID templates effectively.</p>
+<h2>Step 1: Downloading the PSD Template</h2>
+<p>To begin creating your USA passport ID card PSD template, the first step is to download the appropriate template PSD. You can find a variety of templates available, including a driving license template and a residence permit that meet specific needs from <a href="https://pdf417mrz.xyz/psd-templates/">pdf417mrz.xyz</a></p>
+<p><b>All our photoshop templates you choose are fully editable and customizable</b>. All our editable ID card PSD options come with fonts included, making it easier to tailor your design.</p>
+<p>Let’s walk through an example using a <a href="https://pdf417mrz.xyz/psd-templates/california-2017/">California Driving License PSD template</a>. Once you download the archive, extract it — inside, you’ll find a PSD file (the actual card template).</p>
+<h2>Step 2: Editing the PSD Template in Photoshop</h2>
+<p>Open the PSD file in Photoshop. On the right panel, you’ll see the layers — this is where the editable content is located. Note: the structure of layers may differ between PSD templates.</p>
+<img src="/static/img/3_2.jpg" alt="California Driving License ID in Photoshop">
+<p>In this example, you can edit:</p>
+<ul>
+<li>Text</li>

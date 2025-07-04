@@ -1,0 +1,500 @@
+                    <ul>
+                      <li>Data encoded in your barcode SHOULD ALWAYS BE THE SAME as data typed on the front page of the document.</li>
+                      <li>Most anti-fraud systems during the ID verification use simple methods: they gather data from decoding PDF417 barcodes placed on the back side of the document and comparing them with what is typed on the front side of the same document. Typically, anti-fraud systems flag the verification as high risk ones if they find opposites in data.</li>
+                      <li>Always double-check data you provide to the pdf417 generator and compare them with what is typed on the front side of your document.</li>
+                    </ul>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_3.jpg" alt="Select the form in bot and open it in browser "/></div>
+                    <h2>Step-by-step guide on how to generate PDF417 barcode</h2>
+                    <h3>Select the form in bot and open it in browser </h3>
+                    <p>Start <a href="https://t.me/pdf417mrz_bot">PDF417MRZ Bot</a> in Telegram, select the language, use <b>/generate</b> command and click <b>“PDF417 + Code128 DL/ID”</b>. Confirm that you accept redirects and open the form for barcode generation in the web browser.</p>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_4.jpg" alt="PDF417 form - select language"/></div>
+                    <p>Please, pay attention that you can select the form language and the color theme in the right top corner of the form. It will not impact your generated barcode and was made just for your comfort.</p>
+                    <h3>Country, State, Document Type, Revision, Name and Truncation</h3>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_5.jpg" alt="PDF417 - Country, State, Document Type, Revision, Name and Truncation"/></div>
+                    <p>Select the <b>Country</b> issued the document for which you try to generate barcodes. After the field <b>Country</b> is selected,  the selection fields <b>State</b> and <b>Document type</b> are filled with available options. These two fields depend on the selected <b>Country</b>.</p>
+                    <p>For instance, if you choose Canada,  the field <b>State</b> is filled with Canadian states. In some countries the fields <b>State</b> or/and field <b>Document type</b> are disabled, since exactly the same barcode format is used on the documents issued in different regions of the country. For example, the selection of Argentina as a country will disable fields <b>State</b> and <b>Document type</b> since this data is not used in Argentinian barcodes and have no impact on anything.</p>
+                    <p>The last field of the row is the <b>Revision</b> of the document to which you generate barcode. Let’s say this is a more professional field. If you do not know the revision of the template of the document you use – just left this field empty. It will be filed automatically after you enter the date of issue of the document. </p>
+                    <p>If you know the revision of the template you used to draw the document – please select the right one. Also, please pay attention:</p>
+                    <ul>
+                      <li>This field is filled with values depending on the State selected by you. Each state has its own reviews.</li>
+                      <li>The field will automatically change its value after you provide the date of issue of the document.</li>
+                      <li>The revision of the document is always in the next format MMDDYYYY – its the date when the State started to use it.</li>
+                      <li>If you change the date format, then the revision will change its format too.</li>
+                      <li>Its very-very unlikely that the date of issue will be less than the revision date. The document issued on 31th May, 2021 cannot use the  revision of 22th April, 2022. Because this revision was not available on the date of issuing.</li>
+                    </ul>
+                    <p><b>Last name</b>, <b>First name</b>,  <b>Middle name</b> are text fields. Please, fill them exactly as the typed on the document. If the middle name on the front side of the document is typed as “M.” it means that you should fill the field <b>Middle name</b> as “M.”. Usually, the last name is after 1 on the front side of the document, but, please, double-check it in the legend of the document.</p>
+                    <p><b>Name truncation</b> is the selection value. You can select from “Unknown”, “Yes” or “No”. Fill it with “Yes” if Customer last name, first name OR middle name has more than 40 symbols. Fill it with “Unknown” if the Customer’s Middle name has a dot, for example “M.”. In any other cases use “No”.</p>
+                    <h3>Dates, Document number, class and compliance</h3>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_6.jpg" alt="PDF417 - Dates, Document number, class and compliance"/></div>
+                    <p><b>Birthday date</b>, <b>Issue date</b> and <b>Expiry date</b> are very similar fields. Please, pay attention that you should fill them with exact dates placed on the front side of your document.</p>
+                    <p>By default, the format date is American ( MM/DD/YYYY ) but you can change it by clicking the <b>Format</b> button on the left side of each of three fields. Now, we support next formats:</p>
+                    <ul>
+                      <li>American – MM/DD/YYYY</li>
+                      <li>Canadian – YYYY-MM-DD</li>
+                      <li>Argentinian – DD.MM.YYYY</li>
+                    </ul>
+                    <p>After you change date format, all filled dates will remain as such and will simply change format according to your choice. For instance,  you have used the American format and filled the <b>Birthday date</b> with 06/25/1998. If you change format to Canadian, the <b>Birthday date</b> will be filled with 19998-06-25.</p>
+                    <p>Each of three date fields also have an <b>Auto</b> button. It will generate the value of the field automatically. <b>Expiry date</b> depends on <b>Issue date</b> and sometimes (depends from the state) on Birthday day. It means, that if you will try to auto generate <b>Expiry date</b> without filled <b>Issue date</b> field – you see an error.</p>
+                    <p><b>Document number</b> field, as some other fields in the form, has a clipboard icon on the left side of the field. The value of the field will be copied to your clipboard  If you click on the field with a clipboard icon that has a value. Make sure that the <b>Document number</b> field is filled with exactly the same value as typed on the front side of the document.</p>
+                    <p><b>Auto</b> button generates the document number automatically. Document number depends on very different data, that varies from one state to another. For instance, for Florida you cannot auto generate a document number without filled <b>Last Name</b> and <b>Birthday date</b> fields.</p>
+                    <p>You can type any value you want to the Document <b>class</b> field as well as select from proposed values by clicking on the lower arrow icon on the right side of the field. Pay attention that the document class in the form is the same as on the front and (sometimes) back side of your document.</p>
+                    <p>Select field <b>Compliance</b> has two values: “F” (stands for Federal) and “N” ( not federal IDs). IDs with federal compliance can be used in all states and countries, while IDs with opposed values can only be used in the states that issued the id.  How to know if your ID is federal? Look carefully on the front side of your document, If you can see there the yellow star icon like on the picture below than this ID with Federal compliance:</p>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_7.jpg" alt="PDF417 - DL with Federal compliance"/></div>
+                    <p>If there is no yellow star icon then the <b>Compliance</b> should be “N”. In our example, we generate barcode for Florida’s driver license where yellow star badge located on the front side of the document. ( See the image above ) The compliance option is “F”.</p>
+                    <h3>Badges, Restrictions, Endorsement, Discriminator, Inventory and Audit</h3>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_8.jpg" alt="PDF417 - Badges, Restrictions, Endorsement, Discriminator, Inventory and Audit"/></div>
+                    <p>There are three <b>badges</b> that can be placed on the document: Veteran, Donor or Safe Driver. In most cases information about these badges is encoded into barcodes. Active badges in our form are painted in turquoise color. Take a look carefully to the front side of your document. Click on each button that corresponds to the found badges. For instance, check the front side of the document from our example:</p>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_9.jpg" alt="PDF417 - Document with Safe Driver badge"/></div>
+                    <p>So, just one button is clicked – Safe Driver.</p>
+                    <p>You can write anything to the <b>Restrictions</b> and <b>Endorsement</b> fields or just select the values by clicking on the lower arrow icon on the right side of the field. Just remember: same information type on the document should be encoded inside barcode. Please, make sure that selected values are the same as typed on the front and, sometimes, back sides of the document. In our example both values are “NONE”.</p>
+                    <p><b>Discriminator</b> field has a clipboard icon on the left side of the field. The value of the field will be copied to your clipboard, if you click on it when it has the value. Pay attention that this field is filled with exactly the same value as typed on the front and, sometimes, back sides of the document. Sometimes this field is named as “DD” on the front side of the document, just as in our example.</p>
+                    <p>Auto button generates the discriminator automatically. Discriminator depends on very different data, that varies from one state to another. You cannot auto generate if you do not provide all required data and, after the click, will be scrolled to the required field.</p>
+                    <p>Fields <b>Inventory</b> and <b>Audit</b> are pretty much the same. With the only difference that not all states use this data.  These fields will not be shown in the form if you choose the state which does not require them. For example, The Florida state from our example does not use <b>Audit</b> so there is just an empty space on this place.</p>
+                    <h3>Height, Weight, Skin Color and Address</h3>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_10.jpg" alt="PDF417 - Height, Weight, Skin Color and Address"/></div>
+                    <p><b>Sex</b>, <b>Hair Color</b>, <b>Eyes Color</b>, <b>Height</b>, <b>Weight</b> and <b>Skin Color</b> are personal data related to the customer.</p>
+                    <p>If the format of the barcode does not use some of this data then these fields will be disabled and just filled with value “Not required”.</p>
+                    <p>Select the sex of the cusomer in <b>Sex</b> field. Available values are:</p>
+                    <ul>
+                      <li>Unknown – If the customer ask the issued office to hide this field.</li>
+                      <li>Male – If the customer is male.</li>
+                      <li>Female – If the customer is female.</li>
+                      <li>Others – If the customer identifies himself in some different way.</li>
+                    </ul>
+                    <p>Select the <b>Hair color</b> and <b>Eyes color</b> from the select fields. Please pay attention to fill these fields with exactly the same values that are typed on the front side of the document.</p>
+                    <p>If you generate barcodes for the United States the <b>Height</b> will be in feets and inches and it will be in meters and centimeters in case of any other country. The first field is for feets or meters and the second one is for inches or centimeters.</p>
+                    <p>If the <b>Height</b> of the customer is 5’11’’ then the first field is 5 and the second one is 11. If the height of the customer is 185CM then the first field is 1 and the second one is 85. Please, make sure that same value is typed on the front side of your document.</p>
+                    <p><b>Weight</b> field is just the number. In pounds if it is the United of America or in kilograms in any other case.</p>
+                    <p><b>Skin color</b> is a rare field that meets just in a few states. If this field is active, select the value that corresponds to the color of the skin of the customer on his photo in the document.</p>
+                    <h3>Address and additional fields</h3>
+                    <div class="post-thumbnail"><img src="/static/img/pdf417_barcodes_11.jpg" alt="PDF417 - Address and additional fields"/></div>
+                    <p>Provide the customer’s address exactly the same as typed on the front side of the document.</p>
+                    <p>Pay attention that data encoded in the barcode differs from state to state and in some cases can be really unique. For instance, in Ohio’s barcodes you need to provide the State where the customer was born. All these unique for each state data we call <b>Additional data</b> and you will be able to fill them in the fields appeared in the last row.</p>
+                    <p>If the state does not require to provide any additional data – as in our example with Florida – the row will be empty.</p>
+                    <h3>Generate your PDF417 barcode for Driver&#x27;s License</h3>
+                    <p>Click the <b>Generate</b> button. The form will be checked for accuracy if every data filled without mistakes – we send the data to generation. You will receive the message from our bot in Telegram with all generated barcodes in one zip archive.</p>
+                    <p>In case where something went wrong or you do not understand the process or need any additional assistance - do not hesitate to ask for our <a href="https://t.me/pdf417mrz">support</a>.</p>
+                    <p>Barcodes on id documents from any states made in AAMVA standart If you want to know more about what data is encoded in PDF417 barcode – check <a href="https://www.aamva.org/getmedia/99ac7057-0f4d-4461-b0a2-3a5532e1b35c/AAMVA-2020-DLID-Card-Design-Standard.pdf">AAMVA PDF417 officilal guide</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 sidebar">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Knowledge Base</h5>
+                  <ul class="widget-posts">
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="/check-barcodes"><img src="/static/img/barcodes_checkers.jpg" alt="PDF417, Code128 and Code39 barcode checkers"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="/check-barcodes">How to check barcodes?</a></div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="/regula"><img src="/static/img/regula.jpg" alt="Regula Logo"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="/regula">How to check barcodes in Regula?</a></div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="/scandit"><img src="/static/img/scandit.jpg" alt="Scandit Logo"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="/scandit">How to check barcodes in Scandit?</a></div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="/inlite"><img src="/static/img/inlite.jpg" alt="Inlite Logo"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="/inlite">How to check barcodes on InLite website?</a></div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="/inlite"><img src="/static/img/mrz_string.jpg" alt="How to generate MRZ string?"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+        <section class="module-extra-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-8 col-lg-9">
+                <div class="callout-text font-alt">
+                  <h4 style="margin-top: 0px;">@PDF417MRZ_BOT</h4>
+                  <p style="margin-bottom: 0px;">Generate PDF417, Code 128 and MRZ for DL, ID, Passport, VISA</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://t.me/pdf417mrz_bot">Open in Telegram</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+    </main>
+  </body>
+</html>
+
+
+====== ./robots.txt ======
+User-agent: Googlebot
+Disallow: /user
+Disallow: /user/
+Disallow: /users
+Disallow: /users/
+Disallow: /user_list
+Disallow: /user_list/
+Disallow: /passport/
+Disallow: /visa/
+Disallow: /id/
+Disallow: /dl/
+Disallow: /generate/
+Disallow: /regenerate/
+Disallow: /generate-pdf
+Disallow: /generate-pdf/
+Disallow: /discounts
+Disallow: /discounts/
+Disallow: /languages
+Disallow: /languages/
+Disallow: /subscriptions
+Disallow: /subscriptions/
+Disallow: /reports
+Disallow: /reports/
+Disallow: /settingsmrz
+Disallow: /settingsmrz/
+Disallow: /checkout/
+Disallow: /payment_done
+Disallow: /payment_done/
+Disallow: /filter_users
+Disallow: /filter_users/
+Disallow: /login
+Disallow: /login/
+Disallow: /logout/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /error
+Disallow: /error/
+Sitemap: https://pdf417mrz.xyz/sitemap.xml
+
+User-agent: *
+Disallow: /user
+Disallow: /user/
+Disallow: /users
+Disallow: /users/
+Disallow: /user_list
+Disallow: /user_list/
+Disallow: /passport/
+Disallow: /visa/
+Disallow: /id/
+Disallow: /dl/
+Disallow: /generate/
+Disallow: /regenerate/
+Disallow: /generate-pdf
+Disallow: /generate-pdf/
+Disallow: /discounts
+Disallow: /discounts/
+Disallow: /languages
+Disallow: /languages/
+Disallow: /subscriptions
+Disallow: /subscriptions/
+Disallow: /reports
+Disallow: /reports/
+Disallow: /settingsmrz
+Disallow: /settingsmrz/
+Disallow: /checkout/
+Disallow: /payment_done
+Disallow: /payment_done/
+Disallow: /filter_users
+Disallow: /filter_users/
+Disallow: /login
+Disallow: /login/
+Disallow: /logout/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /error
+Disallow: /error/
+Sitemap: https://pdf417mrz.xyz/sitemap.xml
+
+
+====== ./pdf417_generator/north-dakota ======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generate ND DL Barcodes | PDF417 Code128 Generator</title>
+    <meta name="description" content="Generate valid PDF417 barcodes for driver licenses effortlessly. Our DL barcode generator ensures accuracy and authenticity. Create your barcode online!">
+    <meta name="keywords" content="pdf417 dl north-dakota  generator" />
+    <meta name="og:site_name" content="pdf417mrz" />
+    <meta name="og:url" content="https://pdf417mrz.xyz/pdf417_generator/north-dakota" />
+    <meta name="og:title" content="North Dakota ( DL + ID ) PDF417 + Code128 Form" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Generate valid PDF417 barcodes for driver licenses effortlessly. Our DL barcode generator ensures accuracy and authenticity. Create your barcode online!" />
+    <meta name="og:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="North Dakota ( DL + ID ) PDF417 + Code128 Form" />
+    <meta name="twitter:description" content="Generate valid PDF417 barcodes for driver licenses effortlessly. Our DL barcode generator ensures accuracy and authenticity. Create your barcode online!" />
+    <meta name="twitter:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "PDF417 and Code128 Generator | PDF417MRZ",
+        "item": "https://pdf417mrz.xyz/pdf417_generator"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "North Dakota ( DL + ID ) PDF417 + Code128 Form"
+      }]
+    }]
+    </script>
+    <link rel="canonical" href="https://pdf417mrz.xyz/pdf417_generator/north-dakota"> 
+    <link rel="alternate" hreflang="x-default" href="https://pdf417mrz.xyz/pdf417_generator/north-dakota">
+    <link rel="alternate" hreflang="ru" href="https://pdf417mrz.xyz/ru/pdf417_generator/north-dakota" >
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/static/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link href="/static/libs/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/static/styles/new_style.css" rel="stylesheet">
+    <link id="color-scheme" href="/static/styles/colors/default.css" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <script src="/static/JS/abbreviations.js" defer></script>
+    <script src="/static/JS/dl.js" defer></script>
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+</head>
+<body class="light-mode body_in_forms" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a href="/prices">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+          <section class="module pb-0" id="works">
+          <div class="font-alt mb-30 titan-title-size-1 logo_center margin-top-zero"><img src="/static/img/logo.png" width="300px" alt="PDF417MRZ_BOT - Logo" /></div>           
+        </section>
+<div id='act_lang' style='display: none;'>en</div>
+<div id='act_generate' style='display: none;'>USA AND ND</div>
+<div id='user_form' style='display: none;'>none</div>
+<div class="pdf417">
+    <h1 id="title">North Dakota ( DL + ID ) PDF417 + Code128 Form</h1>
+    <div class='div_with_copy_class' id='div_with_copy'>Copied!</div>
+    <form id='true_good_form'>
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="notification_test">
+             <div class='form_notification' style="display: block;" id="test_mode">Please, pay attention that this is test form. For getting barcodes you required to have active subscription. You can <a href="https://t.me/pdf417mrz_bot">buy subscription</a> directly in bot.</div>
+          </div>
+      </div>
+      <div class='form_error' id='error_first_row' style="display: none;"></div>
+      <div class="row mt-4">	
+      <div class="col">
+      <div class="label_pdf" id='country_selector'>Country</div>
+      <select class="inputer select_pdf" id="country" onchange="select_country();" required>
+       <option id='country_option'>Select country</option>	
+       <option value="USA">USA</option>
+       <option value="CAN">CAN</option>
+       <option value="ARG">ARG</option>
+      </select>
+      </div>
+      <div class= "col">
+      <div class="label_pdf" id='state_selector'>State</div>
+      <select class="inputer select_pdf" id="state" onchange="select_state();" required>
+       <option id='state_option'>Select state</option>	
+      </select>
+      </div>
+      <div class= "col">
+      <div class="label_pdf" id='doc_selector'>Document type</div>
+      <select class="inputer select_pdf" id="doc_type" onchange="select_doc_type();" required>
+       <option id='doc_option'>Select type</option>
+       <option value="DL">DL</option>	
+       <option value="ID">ID</option>	  
+      </select>
+      </div>
+      <div class= "col">
+      <div class="label_pdf" id='revision_selector'>Revision</div>
+      <select class="inputer select_pdf" id="revision" onchange="selected_revision();" required>
+       <option id='rev_option'>Select revision</option>
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_second_row' style="display: none;"></div>
+      <div class="row">	
+      <div class="col">
+      <div class="label_pdf" id='lname_label'>Last name</div>
+      <input class="inputer" type="text" id="lname" autocomplete="off" required>
+      </div>
+      <div class="col">
+      <div class="label_pdf" id='fname_label'>First name</div>
+      <input class="inputer" type="text" id="fname" autocomplete="off" required>
+      </div>
+      <div class="col">
+      <div class="label_pdf" id='mname_label'>Middle name</div>
+      <input class="inputer" type="text" id="mname" autocomplete="off" required>
+      </div>
+      <div class="col">
+      <div class="label_pdf" id='truncation_label'>Name truncation</div>
+      <select class="inputer select_pdf" id="truncation" required>
+       <option value="U" selected>Unknown</option>  
+       <option value="Y">Yes</option>  
+       <option value="N">No</option>    
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_third_row' style="display: none;"></div>
+      <div class="row">
+      <div class= "col-4">
+      <div class="label_pdf" id='birthday_selector'>Birthday date</div>
+      <div class="inp_height">
+        <button type="button" class="gen_button_new" onclick="change_date_format('CAN');">Format: USA</button>
+        <input class="inputer_with_auto inputer" id="bdate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+        <button type="button" id="bdate_gen_b" class="gen_button" onclick="generate_bdate();">Auto</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='issue_selector'>Issue date</div>
+      <div class="inp_height">
+        <button type="button" class="gen_button_new" onclick="change_date_format('CAN');">Format: USA</button>
+        <input class="inputer_with_auto inputer" id="idate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+        <button type="button" id="edate_gen_b" class="gen_button" onclick="generate_edate();">Auto</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='expiry_selector'>Expiry date</div>
+      <div class="inp_height">
+        <button type="button" class="gen_button_new" onclick="change_date_format('CAN');">Format: USA</button>
+        <input class="inputer_with_auto inputer" id="edate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+        <button type="button" id="edate_gen_b" class="gen_button" onclick="issue_date();">Auto</button>
+      </div>
+      </div>	
+      </div>
+      <div class='form_error' id='error_four_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='number_selector'>Doc. number</div>
+      <div class="inp_height">
+      <label class="new_label"><input class="inputer_with_auto" type="text" id="doc_number" onclick="document_number_copy(event)" required></label>
+      <button type="button" id="doc_num_gen_b" class="gen_button" onclick='generate_doc_number();'>Auto</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='doc_class_selector'>Document class</div>
+      <select class="inputer select_pdf" id="doc_class" onchange="select_doc_class(this.value)">
+       <option id='class_option'>Select doc. class</option>  
+      </select>
+      <input class="inputer on_top_input" type="text" id="doc_class_txt" onclick="clear_doc_class_text();" autocomplete="off" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='compliance_selector'>Compliance ( The real id or no )</div>
+      <select class="inputer select_pdf" id="doc_comp" required>
+       <option value="N" selected>N</option>  
+       <option value="F">F</option>     
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_five_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='badges_selector'>Badges</div>
+      <div class="inp_height">
+      <button id="veteran_b" class="pdf_badge" type="button" onclick='veteran_click();'>Veteran</button>
+      <button id="donor_b" class="pdf_badge" type="button" onclick='donor_click();'>Donor</button>
+      <button id="safe_b" class="pdf_badge" type="button" onclick='safe_click();'>Safe Driver</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='restriction_selector'>Restrictions</div>
+      <select class="inputer select_pdf" id="restriction" onchange="select_rest(this.value)">
+       <option id='rest_option'>Select doc. restriction</option>   
+      </select>
+      <input class="inputer on_top_input" type="text" id="restriction_txt" onclick="clear_rest_text();" autocomplete="off" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='endosernent_selector'>Endorsement</div>
+      <select class="inputer select_pdf" id="endosernent" onchange="select_endr(this.value)">
+       <option id='endosernent_option'>Select doc. Endosernent</option> 
+       <input class="inputer on_top_input" type="text" id="endosernent_txt" onclick="clear_endr_text();" autocomplete="off" required>  
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_six_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='discriminator_selector'>Discriminator</div>
+      <div class="inp_height">
+      <label class="new_label"><input class="inputer_with_auto" type="text" id="discriminator" onclick="discriminator_number_copy(event)" required></label>
+      <button type="button"  id="discriminator_gen_b" class="gen_button" onclick="generate_discriminator();">Auto</button>
+      </div>
+      </div>
+      <div id="inv_html" class= "col-4">
+      <div class="label_pdf" id='inventory_selector'>Inventory</div>
+      <div class="inp_height">
+      <input class="inputer_with_auto" type="text" id="inventory" required>

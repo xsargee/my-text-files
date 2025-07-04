@@ -1,0 +1,500 @@
+      <div class="row"> 
+      <div class="col-4">
+      <div class="label_pdf" id='sex_selector'>Sex</div>
+      <select class="inputer select_pdf" id="sex" required>
+       <option id='sex_option'>Select sex</option>  
+       <option value="U" id='u_option'>U</option>
+       <option value="M" id='m_option'>M</option>
+       <option value="F" id='f_option'>F</option>
+       <option value="O" id='o_option'>O</option>  
+      </select>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='hair_selector'>Hair color</div>
+      <select class="inputer select_pdf" id="hair" required>
+       <option id='hair_option'>Select hair color</option> 
+       <option value="BAL" id='hair_col_bal'>BAL</option>
+       <option value="BLK" id='hair_col_blk'>BLK</option>
+       <option value="BLN" id='hair_col_bln'>BLN</option>
+       <option value="BRN" id='hair_col_brn'>BRN</option> 
+       <option value="GRY" id='hair_col_gry'>GRY</option>
+       <option value="RED" id='hair_col_red'>RED</option>
+       <option value="SDY" id='hair_col_sdy'>SDY</option>
+       <option value="WHI" id='hair_col_whi'>WHI</option>
+       <option value="UNK" id='hair_col_unk'>UNK</option>   
+      </select>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='eyes_selector'>Eyes color</div>
+      <select class="inputer select_pdf" id="eyes" required>
+       <option id='eyes_option'>Select eyes color</option>
+       <option value="BLK" id='eyes_col_blk'>BLK</option>  
+       <option value="BLU" id='eyes_col_blu'>BLU</option>    
+       <option value="BRN" id='eyes_col_brn'>BRN</option>  
+       <option value="GRY" id='eyes_col_gry'>GRY</option> 
+       <option value="HAZ" id='eyes_col_haz'>HAZ</option>  
+       <option value="MAR" id='hair_col_mar'>MAR</option>    
+       <option value="PNK" id='eyes_col_pnk'>PNK</option>  
+       <option value="DIC" id='eyes_col_dic'>DIC</option>
+       <option value="UNK" id='eyes_col_unk'>UNK</option>  
+       <option value="GRN" id='eyes_col_grn'>GRN</option>  
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_eight_row' style="display: none;"></div>
+      <div class="row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='height_selector'>Height</div>
+      <div class="inp_height">
+      <input class="inputer" type="text" id="height_one" onkeyup="only_numbers(this.id);" required><p id="height_label_one">'</p>
+      <input class="inputer" type="text" id="height_two" onkeyup="only_numbers(this.id);" required><p id="height_label_two">"</p>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div id="weight_label" class="label_pdf">Weight (lbs)</div>
+      <input class="inputer" type="text" id="weight" onkeyup="only_numbers(this.id);" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='skin_selector'>Skin color</div>
+      <select class="inputer select_pdf" id="scin_color" required>
+       <option id='skin_col_ai' value="AI">Alaskan or American Indian</option>
+       <option id='skin_col_ap' value="AP">Asian or Pacific Islander</option>    
+       <option id='skin_col_bk' value="BK">Black</option>  
+       <option id='skin_col_w' value="W" selected>White</option> 
+       <option id='skin_col_h' value="H">Hispanic Origin</option>    
+       <option id='skin_col_u' value="U">Unknown</option>  
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_nine_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='address_selector'>Street and house number</div>
+      <input class="inputer" type="text" id="address" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='city_selector'>City</div>
+      <input class="inputer" type="text" id="city" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='zip_selector'>Zip code</div>
+      <input class="inputer" type="text" id="zipcode" required>
+      </div>
+      </div>
+      <div class='form_error' id='error_ten_row' style="display: none;"></div>
+      <div class="row" id="adds_row"> 
+      </div>
+       <div class = "row"> 
+        <div id="left_column_result" class="col-6">
+        </div>
+        <div id="right_column_result" class="col-6">
+          <button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>
+        </div>
+      </div>     
+    </div>
+    </form>
+</div>
+<div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+</main>
+</body>
+</html>
+
+
+====== ./pdf417_generator/utah ======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generate UT DL Barcodes | PDF417 Code128 Generator</title>
+    <meta name="description" content="Generate valid PDF417 barcodes for driver licenses effortlessly. Our DL barcode generator ensures accuracy and authenticity. Create your barcode online!">
+    <meta name="keywords" content="pdf417 dl utah  generator" />
+    <meta name="og:site_name" content="pdf417mrz" />
+    <meta name="og:url" content="https://pdf417mrz.xyz/pdf417_generator/utah" />
+    <meta name="og:title" content="Utah ( DL + ID ) PDF417 + Code128 Form" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Generate valid PDF417 barcodes for driver licenses effortlessly. Our DL barcode generator ensures accuracy and authenticity. Create your barcode online!" />
+    <meta name="og:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Utah ( DL + ID ) PDF417 + Code128 Form" />
+    <meta name="twitter:description" content="Generate valid PDF417 barcodes for driver licenses effortlessly. Our DL barcode generator ensures accuracy and authenticity. Create your barcode online!" />
+    <meta name="twitter:image" content="https://pdf417mrz.xyz/static/img/logo.png" />
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "PDF417 and Code128 Generator | PDF417MRZ",
+        "item": "https://pdf417mrz.xyz/pdf417_generator"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Utah ( DL + ID ) PDF417 + Code128 Form"
+      }]
+    }]
+    </script>
+    <link rel="canonical" href="https://pdf417mrz.xyz/pdf417_generator/utah"> 
+    <link rel="alternate" hreflang="x-default" href="https://pdf417mrz.xyz/pdf417_generator/utah">
+    <link rel="alternate" hreflang="ru" href="https://pdf417mrz.xyz/ru/pdf417_generator/utah" >
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/static/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link href="/static/libs/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/static/styles/new_style.css" rel="stylesheet">
+    <link id="color-scheme" href="/static/styles/colors/default.css" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <script src="/static/JS/abbreviations.js" defer></script>
+    <script src="/static/JS/dl.js" defer></script>
+    <script src="/static/libs/jquery/dist/jquery.js"></script>
+    <script src="/static/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/libs/wow/dist/wow.js"></script>
+    <script src="/static/JS/site.js"></script>
+    <script defer async src="/static/JS/cart.js"></script>
+</head>
+<body class="light-mode body_in_forms" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4R3WNZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">PDF17MRZ</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/psd-templates">PSD Templates</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Generation</a>
+     <ul class="dropdown-menu">
+      <li><a href="/pdf417_generator">PDF417 + Code128</a></li>
+      <li><a href="/mrz">MRZ String</a></li>
+      <li><a href="/examples">Examples</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Knowledge Base</a>
+     <ul class="dropdown-menu">
+      <li><a href="/check-barcodes">How to check barcodes?</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/regula">Regula</a></li>
+      <li><a href="/scandit">Scandit</a></li>
+      <li><a href="/inlite">Inlite</a></li>
+      <li><a href="/how-to-generate-mrz-strings">How to generate MRZ string?</a></li>
+      <li><a href="/how-to-generate-pdf417">How to generate barcodes for DL/ID?</a></li>
+     </ul>
+    </li>
+    <li><a href="/prices">Prices</a></li>
+    <li><a href="/demo">Demo access</a></li>
+    <li><a href="/referral">Referral</a></li>
+    <li><a href="/faq"% else %}class="current_link">FAQ</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+     <ul class="dropdown-menu">
+      <li><a  class="current_link" >English</a></li>
+      <li><a  href="/ru" >Русский</a></li>
+     </ul>
+    </li>
+    <li><a id="cart_link" href="/">Cart (<b id="cart_itms">0</b>)</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+          <section class="module pb-0" id="works">
+          <div class="font-alt mb-30 titan-title-size-1 logo_center margin-top-zero"><img src="/static/img/logo.png" width="300px" alt="PDF417MRZ_BOT - Logo" /></div>           
+        </section>
+<div id='act_lang' style='display: none;'>en</div>
+<div id='act_generate' style='display: none;'>USA AND UT</div>
+<div id='user_form' style='display: none;'>none</div>
+<div class="pdf417">
+    <h1 id="title">Utah ( DL + ID ) PDF417 + Code128 Form</h1>
+    <div class='div_with_copy_class' id='div_with_copy'>Copied!</div>
+    <form id='true_good_form'>
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="notification_test">
+             <div class='form_notification' style="display: block;" id="test_mode">Please, pay attention that this is test form. For getting barcodes you required to have active subscription. You can <a href="https://t.me/pdf417mrz_bot">buy subscription</a> directly in bot.</div>
+          </div>
+      </div>
+      <div class='form_error' id='error_first_row' style="display: none;"></div>
+      <div class="row mt-4">	
+      <div class="col">
+      <div class="label_pdf" id='country_selector'>Country</div>
+      <select class="inputer select_pdf" id="country" onchange="select_country();" required>
+       <option id='country_option'>Select country</option>	
+       <option value="USA">USA</option>
+       <option value="CAN">CAN</option>
+       <option value="ARG">ARG</option>
+      </select>
+      </div>
+      <div class= "col">
+      <div class="label_pdf" id='state_selector'>State</div>
+      <select class="inputer select_pdf" id="state" onchange="select_state();" required>
+       <option id='state_option'>Select state</option>	
+      </select>
+      </div>
+      <div class= "col">
+      <div class="label_pdf" id='doc_selector'>Document type</div>
+      <select class="inputer select_pdf" id="doc_type" onchange="select_doc_type();" required>
+       <option id='doc_option'>Select type</option>
+       <option value="DL">DL</option>	
+       <option value="ID">ID</option>	  
+      </select>
+      </div>
+      <div class= "col">
+      <div class="label_pdf" id='revision_selector'>Revision</div>
+      <select class="inputer select_pdf" id="revision" onchange="selected_revision();" required>
+       <option id='rev_option'>Select revision</option>
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_second_row' style="display: none;"></div>
+      <div class="row">	
+      <div class="col">
+      <div class="label_pdf" id='lname_label'>Last name</div>
+      <input class="inputer" type="text" id="lname" autocomplete="off" required>
+      </div>
+      <div class="col">
+      <div class="label_pdf" id='fname_label'>First name</div>
+      <input class="inputer" type="text" id="fname" autocomplete="off" required>
+      </div>
+      <div class="col">
+      <div class="label_pdf" id='mname_label'>Middle name</div>
+      <input class="inputer" type="text" id="mname" autocomplete="off" required>
+      </div>
+      <div class="col">
+      <div class="label_pdf" id='truncation_label'>Name truncation</div>
+      <select class="inputer select_pdf" id="truncation" required>
+       <option value="U" selected>Unknown</option>  
+       <option value="Y">Yes</option>  
+       <option value="N">No</option>    
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_third_row' style="display: none;"></div>
+      <div class="row">
+      <div class= "col-4">
+      <div class="label_pdf" id='birthday_selector'>Birthday date</div>
+      <div class="inp_height">
+        <button type="button" class="gen_button_new" onclick="change_date_format('CAN');">Format: USA</button>
+        <input class="inputer_with_auto inputer" id="bdate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+        <button type="button" id="bdate_gen_b" class="gen_button" onclick="generate_bdate();">Auto</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='issue_selector'>Issue date</div>
+      <div class="inp_height">
+        <button type="button" class="gen_button_new" onclick="change_date_format('CAN');">Format: USA</button>
+        <input class="inputer_with_auto inputer" id="idate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+        <button type="button" id="edate_gen_b" class="gen_button" onclick="generate_edate();">Auto</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='expiry_selector'>Expiry date</div>
+      <div class="inp_height">
+        <button type="button" class="gen_button_new" onclick="change_date_format('CAN');">Format: USA</button>
+        <input class="inputer_with_auto inputer" id="edate" placeholder="MM/DD/YYYY" type="text" onkeyup='bd_onkeyup(this, event);' maxlength="10" required>
+        <button type="button" id="edate_gen_b" class="gen_button" onclick="issue_date();">Auto</button>
+      </div>
+      </div>	
+      </div>
+      <div class='form_error' id='error_four_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='number_selector'>Doc. number</div>
+      <div class="inp_height">
+      <label class="new_label"><input class="inputer_with_auto" type="text" id="doc_number" onclick="document_number_copy(event)" required></label>
+      <button type="button" id="doc_num_gen_b" class="gen_button" onclick='generate_doc_number();'>Auto</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='doc_class_selector'>Document class</div>
+      <select class="inputer select_pdf" id="doc_class" onchange="select_doc_class(this.value)">
+       <option id='class_option'>Select doc. class</option>  
+      </select>
+      <input class="inputer on_top_input" type="text" id="doc_class_txt" onclick="clear_doc_class_text();" autocomplete="off" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='compliance_selector'>Compliance ( The real id or no )</div>
+      <select class="inputer select_pdf" id="doc_comp" required>
+       <option value="N" selected>N</option>  
+       <option value="F">F</option>     
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_five_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='badges_selector'>Badges</div>
+      <div class="inp_height">
+      <button id="veteran_b" class="pdf_badge" type="button" onclick='veteran_click();'>Veteran</button>
+      <button id="donor_b" class="pdf_badge" type="button" onclick='donor_click();'>Donor</button>
+      <button id="safe_b" class="pdf_badge" type="button" onclick='safe_click();'>Safe Driver</button>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='restriction_selector'>Restrictions</div>
+      <select class="inputer select_pdf" id="restriction" onchange="select_rest(this.value)">
+       <option id='rest_option'>Select doc. restriction</option>   
+      </select>
+      <input class="inputer on_top_input" type="text" id="restriction_txt" onclick="clear_rest_text();" autocomplete="off" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='endosernent_selector'>Endorsement</div>
+      <select class="inputer select_pdf" id="endosernent" onchange="select_endr(this.value)">
+       <option id='endosernent_option'>Select doc. Endosernent</option> 
+       <input class="inputer on_top_input" type="text" id="endosernent_txt" onclick="clear_endr_text();" autocomplete="off" required>  
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_six_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='discriminator_selector'>Discriminator</div>
+      <div class="inp_height">
+      <label class="new_label"><input class="inputer_with_auto" type="text" id="discriminator" onclick="discriminator_number_copy(event)" required></label>
+      <button type="button"  id="discriminator_gen_b" class="gen_button" onclick="generate_discriminator();">Auto</button>
+      </div>
+      </div>
+      <div id="inv_html" class= "col-4">
+      <div class="label_pdf" id='inventory_selector'>Inventory</div>
+      <div class="inp_height">
+      <input class="inputer_with_auto" type="text" id="inventory" required>
+      <button type="button" id="inventory_gen_b" class="gen_button" onclick="generate_inventory()">Auto</button>
+      </div>
+      </div>
+      <div id="aud_html" class= "col-4">
+      <div class="label_pdf" id='audit_selector'>Audit</div>
+      <div class="inp_height">
+      <input class="inputer_with_auto" type="text" id="audit" required>
+      <button type="button" id="audit_gen_b" class="gen_button" onclick="generate_audit();">Auto</button>
+      </div>
+      </div>
+      </div>
+      <div class='form_error' id='error_seven_row' style="display: none;"></div>
+      <div class="row"> 
+      <div class="col-4">
+      <div class="label_pdf" id='sex_selector'>Sex</div>
+      <select class="inputer select_pdf" id="sex" required>
+       <option id='sex_option'>Select sex</option>  
+       <option value="U" id='u_option'>U</option>
+       <option value="M" id='m_option'>M</option>
+       <option value="F" id='f_option'>F</option>
+       <option value="O" id='o_option'>O</option>  
+      </select>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='hair_selector'>Hair color</div>
+      <select class="inputer select_pdf" id="hair" required>
+       <option id='hair_option'>Select hair color</option> 
+       <option value="BAL" id='hair_col_bal'>BAL</option>
+       <option value="BLK" id='hair_col_blk'>BLK</option>
+       <option value="BLN" id='hair_col_bln'>BLN</option>
+       <option value="BRN" id='hair_col_brn'>BRN</option> 
+       <option value="GRY" id='hair_col_gry'>GRY</option>
+       <option value="RED" id='hair_col_red'>RED</option>
+       <option value="SDY" id='hair_col_sdy'>SDY</option>
+       <option value="WHI" id='hair_col_whi'>WHI</option>
+       <option value="UNK" id='hair_col_unk'>UNK</option>   
+      </select>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='eyes_selector'>Eyes color</div>
+      <select class="inputer select_pdf" id="eyes" required>
+       <option id='eyes_option'>Select eyes color</option>
+       <option value="BLK" id='eyes_col_blk'>BLK</option>  
+       <option value="BLU" id='eyes_col_blu'>BLU</option>    
+       <option value="BRN" id='eyes_col_brn'>BRN</option>  
+       <option value="GRY" id='eyes_col_gry'>GRY</option> 
+       <option value="HAZ" id='eyes_col_haz'>HAZ</option>  
+       <option value="MAR" id='hair_col_mar'>MAR</option>    
+       <option value="PNK" id='eyes_col_pnk'>PNK</option>  
+       <option value="DIC" id='eyes_col_dic'>DIC</option>
+       <option value="UNK" id='eyes_col_unk'>UNK</option>  
+       <option value="GRN" id='eyes_col_grn'>GRN</option>  
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_eight_row' style="display: none;"></div>
+      <div class="row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='height_selector'>Height</div>
+      <div class="inp_height">
+      <input class="inputer" type="text" id="height_one" onkeyup="only_numbers(this.id);" required><p id="height_label_one">'</p>
+      <input class="inputer" type="text" id="height_two" onkeyup="only_numbers(this.id);" required><p id="height_label_two">"</p>
+      </div>
+      </div>
+      <div class= "col-4">
+      <div id="weight_label" class="label_pdf">Weight (lbs)</div>
+      <input class="inputer" type="text" id="weight" onkeyup="only_numbers(this.id);" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='skin_selector'>Skin color</div>
+      <select class="inputer select_pdf" id="scin_color" required>
+       <option id='skin_col_ai' value="AI">Alaskan or American Indian</option>
+       <option id='skin_col_ap' value="AP">Asian or Pacific Islander</option>    
+       <option id='skin_col_bk' value="BK">Black</option>  
+       <option id='skin_col_w' value="W" selected>White</option> 
+       <option id='skin_col_h' value="H">Hispanic Origin</option>    
+       <option id='skin_col_u' value="U">Unknown</option>  
+      </select>
+      </div>
+      </div>
+      <div class='form_error' id='error_nine_row' style="display: none;"></div>
+      <div class = "row"> 
+      <div class= "col-4">
+      <div class="label_pdf" id='address_selector'>Street and house number</div>
+      <input class="inputer" type="text" id="address" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='city_selector'>City</div>
+      <input class="inputer" type="text" id="city" required>
+      </div>
+      <div class= "col-4">
+      <div class="label_pdf" id='zip_selector'>Zip code</div>
+      <input class="inputer" type="text" id="zipcode" required>
+      </div>
+      </div>
+      <div class='form_error' id='error_ten_row' style="display: none;"></div>
+      <div class="row" id="adds_row"> 
+      </div>
+       <div class = "row"> 
+        <div id="left_column_result" class="col-6">
+        </div>
+        <div id="right_column_result" class="col-6">
+          <button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>
+        </div>
+      </div>     
+    </div>
+    </form>
+</div>
+<div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+</main>
+</body>
+</html>
+
+
+====== ./pdf417_generator/maine ======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M4R3WNZR');</script>
