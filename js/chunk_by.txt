@@ -1,0 +1,500 @@
+    document.getElementById('idate').value = egenyear + '-' + egenmonth + '-' + egenday;
+  } else {
+    document.getElementById('idate').value = egenmonth + '/' + egenday + '/' + egenyear;
+  }
+
+  if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision'] ) {
+    select_revision();
+  } 
+
+
+  if ( document.getElementById("bdate").value.length == 10 &&
+       document.getElementById("idate").value.length == 10 && 
+       document.getElementById("country").value != languages[active_language]['select_country'] &&
+       document.getElementById("state").value != languages[active_language]['select_state'] ) {
+    issue_date(); 
+  } 
+
+}
+
+
+function select_country() {
+  if ( document.getElementById("country").value == 'USA' ) {
+  	document.getElementById("state").innerHTML = usa_states;
+    document.getElementById("weight_label").innerHTML = languages[active_language]['weight'] + ' (' + languages[active_language]['lbs']  + ')';
+    document.getElementById("height_label_one").innerHTML = "'";
+    document.getElementById("height_label_two").innerHTML = '"';
+   
+    document.getElementById("doc_type").disabled = 0;
+
+    document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>';   
+    document.getElementById("hair").value = languages[active_language]['sel_hair'];
+    document.getElementById("hair").disabled = 0;
+
+    document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+    document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+    document.getElementById("eyes").disabled = 0; 
+
+    document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+    document.getElementById("scin_color").value = 'W';
+    document.getElementById("scin_color").disabled = 0; 
+
+    document.getElementById("restriction").disabled = 0;
+    document.getElementById("restriction_txt").value = languages[active_language]['sel_doc_rest'];
+    document.getElementById("restriction_txt").disabled = 0;
+
+    document.getElementById("endosernent").disabled = 0;
+    document.getElementById("endosernent_txt").value = languages[active_language]['sel_doc_endr'];
+    document.getElementById("endosernent_txt").disabled = 0;
+
+    document.getElementById("height_one").value = "";
+    document.getElementById("height_one").disabled = 0;
+    document.getElementById("height_two").value = "";
+    document.getElementById("height_two").disabled = 0;
+
+    document.getElementById("weight").value = "";
+    document.getElementById("weight").disabled = 0;
+
+    document.getElementById("address").value = "";
+    document.getElementById("address").disabled = 0;
+
+    document.getElementById("city").value = "";
+    document.getElementById("city").disabled = 0;
+
+    document.getElementById("zipcode").value = "";
+    document.getElementById("zipcode").disabled = 0;
+
+    if( format_type != 'USA' ) {
+       change_date_format('USA');
+    }
+
+  } else if ( document.getElementById("country").value == 'CAN' ) {
+    document.getElementById("state").innerHTML = can_states;
+    document.getElementById("weight_label").innerHTML = languages[active_language]['weight'] + ' (' + languages[active_language]['kg']  + ')';
+    document.getElementById("height_label_one").innerHTML = languages[active_language]['meter']; 
+    document.getElementById("height_label_two").innerHTML = languages[active_language]['centimeter'];
+    
+    document.getElementById("doc_type").disabled = 0;
+    
+    document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>';   
+    document.getElementById("hair").value = languages[active_language]['sel_hair'];
+    document.getElementById("hair").disabled = 0;
+
+    document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+    document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+    document.getElementById("eyes").disabled = 0; 
+
+    document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+    document.getElementById("scin_color").value = 'W';
+    document.getElementById("scin_color").disabled = 0; 
+
+    document.getElementById("restriction").disabled = 0;
+    document.getElementById("restriction_txt").value = languages[active_language]['sel_doc_rest'];
+    document.getElementById("restriction_txt").disabled = 0;
+
+    document.getElementById("endosernent").disabled = 0;
+    document.getElementById("endosernent_txt").value = languages[active_language]['sel_doc_endr'];
+    document.getElementById("endosernent_txt").disabled = 0;
+
+    document.getElementById("height_one").value = "";
+    document.getElementById("height_one").disabled = 0;
+    document.getElementById("height_two").value = "";
+    document.getElementById("height_two").disabled = 0;
+
+    document.getElementById("weight").value = "";
+    document.getElementById("weight").disabled = 0;
+
+    document.getElementById("address").value = "";
+    document.getElementById("address").disabled = 0;
+
+    document.getElementById("city").value = "";
+    document.getElementById("city").disabled = 0;
+
+    document.getElementById("zipcode").value = "";
+    document.getElementById("zipcode").disabled = 0;
+
+    if( format_type != 'CAN' ) {
+       change_date_format('CAN');
+    }
+
+  } else if ( document.getElementById("country").value == 'ARG' ) {
+    document.getElementById("state").innerHTML = '<option value="All">All states</option>';
+    document.getElementById("weight_label").innerHTML = languages[active_language]['weight'] + ' (' + languages[active_language]['kg']  + ')';
+    document.getElementById("height_label_one").innerHTML = languages[active_language]['meter']; 
+    document.getElementById("height_label_two").innerHTML = languages[active_language]['centimeter'];
+
+    var possible_classes = '<option>'+languages[active_language]['doc_class_option']+'</option><option value="A">A</option><option value="B">B</option><option value="D">D</option>';
+    document.getElementById("doc_class").innerHTML = possible_classes;
+    document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+    document.getElementById("inventory_gen_b").setAttribute('onclick', 'generate_inventory()');
+    document.getElementById('aud_html').innerHTML = '';
+    document.getElementById('adds_row').innerHTML = ''; 
+   
+    document.getElementById("doc_type").value = 'ID';
+    document.getElementById("doc_type").disabled = 1;
+
+    document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+    document.getElementById("hair").value = 'UNK';
+    document.getElementById("hair").disabled = 1; 
+
+    document.getElementById("eyes").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+    document.getElementById("eyes").value = 'UNK';
+    document.getElementById("eyes").disabled = 1; 
+
+    document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+    document.getElementById("scin_color").value = 'U';
+    document.getElementById("scin_color").disabled = 1; 
+
+    var possible_restriction = '<option value="NONE">'+languages[active_language]['none']+'</option>';
+    var possible_endorsment = '<option value="NONE">'+languages[active_language]['none']+'</option>'; 
+    
+    document.getElementById("restriction").innerHTML = possible_restriction;
+    document.getElementById("restriction").disabled = 1;
+    document.getElementById("restriction_txt").value = "NONE";
+    document.getElementById("restriction_txt").disabled = 1;
+
+    document.getElementById("endosernent").innerHTML = possible_endorsment;  
+    document.getElementById("endosernent").disabled = 1; 
+    document.getElementById("endosernent_txt").value = "NONE";
+    document.getElementById("endosernent_txt").disabled = 1;
+
+    document.getElementById("height_one").value = languages[active_language]['doesnotrequired'];
+    document.getElementById("height_one").disabled = 1;
+    document.getElementById("height_two").value = languages[active_language]['doesnotrequired'];
+    document.getElementById("height_two").disabled = 1;
+
+    document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+    document.getElementById("weight").disabled = 1;
+
+    document.getElementById("address").value = languages[active_language]['doesnotrequired'];
+    document.getElementById("address").disabled = 1;
+
+    document.getElementById("city").value = languages[active_language]['doesnotrequired'];
+    document.getElementById("city").disabled = 1;
+
+    document.getElementById("zipcode").value = languages[active_language]['doesnotrequired'];
+    document.getElementById("zipcode").disabled = 1;
+
+    if( format_type != 'ARG' ) {
+       change_date_format('ARG');
+    }
+     
+  }
+  selected_revision();
+}
+
+function dateDiffInDays(a, b) {
+  const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+  // Discard the time and time-zone information.
+  const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+ 
+  return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+
+
+
+function revisions(state) {
+  var array_revisions = [];
+
+  if ( document.getElementById("revision").value != languages[active_language]['sel_revision'] ) {
+    var temp_revision = document.getElementById("revision").value;
+  } else {
+    var temp_revision = 'NO';
+  }
+
+  if ( document.getElementById("country").value == 'USA' ) {
+    switch(state) {
+      case 'AL':
+        array_revisions.push('11012014');
+        array_revisions.push('11062009');
+        array_revisions.push('01012001');
+      break;
+      case 'AK':
+        array_revisions.push('11012018');
+        array_revisions.push('02062014');
+      break;
+      case 'AZ':
+        array_revisions.push('02282023');
+        array_revisions.push('02142014');
+        array_revisions.push('01012000');
+      break;
+      case 'AR':
+        array_revisions.push('03012018');
+        array_revisions.push('01012001');
+      break;
+      case 'CA':
+        array_revisions.push('08292017');
+        array_revisions.push('04162010');
+        array_revisions.push('01012001');
+      break;
+      case 'CO':
+        array_revisions.push('02282022');
+        array_revisions.push('10302015');
+        array_revisions.push('06012013');
+        array_revisions.push('01012001');
+      break;
+      case 'CT':
+        array_revisions.push('02102017');
+        array_revisions.push('01012000');
+      break;
+      case 'DC':
+        array_revisions.push('01022015');
+        array_revisions.push('09172013');
+        array_revisions.push('01012000');
+      break;
+      case 'DE':
+        array_revisions.push('08022017');
+        array_revisions.push('08022010');
+        array_revisions.push('01012000');
+      break;
+      case 'FL':
+        array_revisions.push('03012020');
+        array_revisions.push('05012019');
+        array_revisions.push('03162017');
+        array_revisions.push('06012014');
+        array_revisions.push('09012012');
+        array_revisions.push('07012011');
+        array_revisions.push('01012000');
+      break;
+      case 'GA':
+        array_revisions.push('01022019');
+        array_revisions.push('07012015');
+        array_revisions.push('05162014');
+        array_revisions.push('01012000');
+      break;
+      case 'HI':
+        array_revisions.push('01012020');
+      break;
+      case 'ID':
+        array_revisions.push('01312023');
+        array_revisions.push('09152016');
+        array_revisions.push('04012015');
+        array_revisions.push('01012000');
+      break;
+      case 'IL':
+        array_revisions.push('09172015');
+        array_revisions.push('01012000');
+      break;
+      case 'IN':
+        array_revisions.push('07242018');
+        array_revisions.push('09212009');
+        array_revisions.push('01012000');
+      break;
+      case 'IA':
+        array_revisions.push('06292017');
+        array_revisions.push('07252011');
+        array_revisions.push('01012000');
+      break;
+      case 'KS':
+        array_revisions.push('02242017');
+        array_revisions.push('06012012');
+        array_revisions.push('01012000');
+      break;
+      case 'KY':
+        array_revisions.push('08312018');
+        array_revisions.push('03162012');
+        array_revisions.push('01012000');
+      break;
+      case 'LA':
+        array_revisions.push('02102015');
+        array_revisions.push('07252013');
+        array_revisions.push('01012000');
+      break;
+      case 'ME':
+        array_revisions.push('01042019');
+        array_revisions.push('01012000');
+      break;
+      case 'MD':
+        array_revisions.push('08262019');
+        array_revisions.push('06202016');
+        array_revisions.push('01012000');
+      break;
+      case 'MA':
+        array_revisions.push('02222016');
+        array_revisions.push('07152009');
+        array_revisions.push('01012000');
+      break;
+      case 'MI':
+        array_revisions.push('01022024');
+        array_revisions.push('07012012');
+        array_revisions.push('01212011');
+        array_revisions.push('01012000');
+      break;
+      case 'MN':
+        array_revisions.push('10232017');
+        array_revisions.push('01012000');
+      break;
+      case 'MS':
+        array_revisions.push('09152023');
+        array_revisions.push('05142021');
+        array_revisions.push('02222016');
+        array_revisions.push('01012000');
+      break;
+      case 'MO':
+        array_revisions.push('01272020');
+        array_revisions.push('12102012');
+        array_revisions.push('01012000');
+      break;
+      case 'MT':
+        array_revisions.push('10072015');
+        array_revisions.push('01012000');
+      break;
+      case 'NE':
+        array_revisions.push('04052021');
+        array_revisions.push('02282017');
+        array_revisions.push('07082009');
+        array_revisions.push('01012000');
+      break;
+      case 'NV':
+        array_revisions.push('05242021');
+        array_revisions.push('10102008');
+        array_revisions.push('01012000');
+      break;
+      case 'NH':
+        array_revisions.push('06092016');
+        array_revisions.push('01012000');
+      break;
+      case 'NJ':
+        array_revisions.push('01082020');
+        array_revisions.push('07232010');
+        array_revisions.push('01012000');
+      break;
+      case 'NM':
+        array_revisions.push('11012020');
+        array_revisions.push('08232019');
+        array_revisions.push('06162016');
+        array_revisions.push('11152015');
+        array_revisions.push('01012000');
+      break;
+      case 'NY':
+        array_revisions.push('03072022');
+        array_revisions.push('09282017');
+        array_revisions.push('01012010');
+        array_revisions.push('01012001');
+      break;
+      case 'NC':
+        array_revisions.push('10242014');
+        array_revisions.push('01012000');
+      break;
+      case 'ND':
+        array_revisions.push('04302018');
+        array_revisions.push('01082014');
+        array_revisions.push('01012000');
+      break;
+      case 'OH':
+        array_revisions.push('07012018');
+        array_revisions.push('12042013');
+        array_revisions.push('01012000');
+      break;
+      case 'OK':
+        array_revisions.push('01132020');
+        array_revisions.push('01012000');
+      break;
+      case 'OR':
+        array_revisions.push('12082018');
+        array_revisions.push('07092018');
+        array_revisions.push('02202013');
+        array_revisions.push('01012000');
+      break;
+      case 'PA':
+        array_revisions.push('03252022');
+        array_revisions.push('06072016');
+        array_revisions.push('01012000');
+      break;
+      case 'PR':
+        array_revisions.push('01012016');
+      break;
+      case 'RI':
+        array_revisions.push('01262016');
+        array_revisions.push('01012000');
+      break;
+      case 'SC':
+        array_revisions.push('01012018');
+        array_revisions.push('01012000');
+      break;
+      case 'SD':
+        array_revisions.push('06292017');
+        array_revisions.push('01012000');
+      break;
+      case 'TN':
+        array_revisions.push('12022011');
+        array_revisions.push('10292010');
+        array_revisions.push('01012000');
+      break;
+      case 'TX':
+        array_revisions.push('07162021');
+        array_revisions.push('02232020');
+        array_revisions.push('10102016');
+        array_revisions.push('05012007');
+        array_revisions.push('01012000');
+      break;
+      case 'UT':
+        array_revisions.push('06012021');
+        array_revisions.push('04152016');
+        array_revisions.push('01012013');
+        array_revisions.push('01012000');
+      break;
+      case 'VT':
+        array_revisions.push('10162018');
+        array_revisions.push('02202013');
+        array_revisions.push('01012000');
+      break;
+      case 'VA':
+        array_revisions.push('12102008');
+        array_revisions.push('01012000');
+      break;
+      case 'WA':
+        array_revisions.push('11122019');
+        array_revisions.push('09042018');
+        array_revisions.push('02092016');
+        array_revisions.push('09162009');
+        array_revisions.push('01012000');
+      break;
+      case 'WV':
+        array_revisions.push('06042019');
+        array_revisions.push('12182014');
+        array_revisions.push('01012000');
+      break;
+      case 'WI':
+        array_revisions.push('06012023');
+        array_revisions.push('09012015');
+        array_revisions.push('03162012');
+        array_revisions.push('01012000');
+      break;
+      case 'WY':
+        array_revisions.push('11142018');
+        array_revisions.push('06082014');
+        array_revisions.push('01012000');
+      break;
+    }
+  } else if ( document.getElementById("country").value == 'CAN' ) {
+    switch(state) {
+      case 'AB':
+        array_revisions.push('01012016');
+        array_revisions.push('01012000');
+      break;
+      case 'BC':
+        array_revisions.push('05122022');
+        array_revisions.push('03082020');
+        array_revisions.push('01012000');
+      break;
+      case 'MB':
+        array_revisions.push('01012016');
+        array_revisions.push('01012000');
+      break;
+      case 'NB':
+        array_revisions.push('01012016');
+        array_revisions.push('01012000');           
+      break;
+      case 'NL':
+        array_revisions.push('01012016');
+        array_revisions.push('01012000');
+      break;
+      case 'NS':
+        array_revisions.push('01012016');
+        array_revisions.push('01012000');
+      break;
+      case 'ON':
+        array_revisions.push('01012016');
+        array_revisions.push('01012000');

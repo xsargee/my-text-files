@@ -1,0 +1,500 @@
+.btn.btn-border-d:hover,
+.btn.btn-border-d:focus {
+  background: #111111;
+  color: #fff;
+}
+
+.btn.btn-font-w {
+  background: rgba(255, 255, 255, 0.8);
+  color: #fff;
+}
+
+.btn.btn-font-w:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Buttons size */
+.btn.btn-lg {
+  padding: 12px 45px;
+  font-size: 13px;
+}
+
+.btn.btn-sm {
+  padding: 6px 25px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.btn.btn-xs {
+  padding: 4px 19px;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.btn-list .btn {
+  margin: 5px 0;
+}
+
+.search-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  top: 50%;
+  right: 1px;
+  width: 42px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  outline: none;
+  color: #999;
+  margin-top: -20px;
+}
+
+.image-button {
+  margin: 0px 5px;
+}
+
+/*--------------------------------------------------------------
+	Forms
+--------------------------------------------------------------*/
+/* Selection */
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #000;
+  color: #fff;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+/* Forms common style */
+.form-control {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  height: 33px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.form-control:focus {
+  border-color: #CACACA;
+}
+
+/* Forms size */
+.input-lg,
+.form-horizontal .form-group-lg .form-control {
+  height: 43px;
+  font-size: 13px;
+}
+
+.input-sm, .form-horizontal .form-group-sm .form-control {
+  height: 29px;
+  font-size: 10px;
+}
+
+.rqst-form {
+  margin-top: 27px;
+}
+
+.rqst-form .btn {
+  margin-top: 5px;
+}
+
+.input-group-addon {
+  border: 1px solid #e4e4e4 !important;
+}
+
+/*--------------------------------------------------------------
+	Typography
+--------------------------------------------------------------*/
+a {
+  color: #111;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: #aaa;
+  outline: 0;
+}
+
+.bg-dark a {
+  color: #aaa;
+}
+
+.bg-dark a:hover, .bg-dark a:focus {
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+p, ol, ul, blockquote {
+  margin: 0 0 20px;
+}
+
+blockquote {
+  border: 0;
+  font-style: italic;
+  font-size: 15px;
+  padding: 0;
+}
+
+.font-alt {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.font-new-alt {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.font-serif {
+  font-family: Volkhov, "Times New Roman", sans-serif;
+  font-style: italic;
+}
+
+.large-text {
+  font-size: 18px !important;
+  font: 400 12px/1.8 "Open Sans", sans-serif;
+  font-family: Volkhov, "Times New Roman", sans-serif;
+  font-style: italic;
+}
+
+.add-main-text {
+  font: 400 12px/1.8 "Open Sans", sans-serif;
+  font-family: Volkhov, "Times New Roman", sans-serif;
+  font-style: italic; 
+}
+
+.center-logo {
+  text-align: center;
+}
+
+.rotate {
+  text-shadow: none !important;
+}
+
+.module-title {
+  position: relative;
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  color: #111;
+  margin: 0 0 70px;
+}
+
+.check-title {
+  position: relative;
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  color: #111;
+  margin: 0 0 40px;
+}
+
+
+.module-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 70px;
+}
+
+.module-icon {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.module-title + .module-subtitle {
+  margin-top: -35px;
+}
+
+/* Restaurant module header */
+.alt-module-subtitle {
+  display: table;
+}
+
+.alt-module-subtitle h5 {
+  display: table-cell;
+  white-space: pre;
+  padding: 0 8px;
+  color: #111;
+}
+
+/* Finance case study header */
+.finance-image-content {
+  border: 1px solid #e5e5e5;
+  padding: 60px 0px;
+}
+
+.finance-image-content .module-title {
+  margin-bottom: 20px;
+}
+
+.finance-image-content .alt-features-item {
+  margin-top: 40px;
+}
+
+/* Landing Page */
+.landing-reason .module-title {
+  color: #e6af4b;
+}
+
+.landing-reason .check-title {
+  color: #e6af4b;
+}
+
+.landing-reason .module-title + .module-subtitle {
+  margin-top: -60px;
+  margin-bottom: 40px;
+}
+
+.free-trial {
+  background-color: rgba(88, 20, 158, 0.9);
+  color: #FFFFFF;
+}
+
+.free-trial .color-golden {
+  color: #e6af4b;
+}
+
+/*  Special Portfolio Page  */
+.special-portfolio-header-title {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 50px;
+  padding: 40px 0px;
+  letter-spacing: 8px;
+}
+
+/*--------------------------------------------------------------
+	Slider & Carousel
+--------------------------------------------------------------*/
+/* -------------------------------------------------------------------
+General Styles - FlexSlider
+------------------------------------------------------------------- */
+.flex-direction-nav a,
+.flex-control-nav > li > a {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.flex-direction-nav a {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+}
+
+.flex-direction-nav .flex-prev {
+  opacity: 0;
+  left: 0;
+  cursor: url(../images/prev-light.png), e-resize;
+}
+
+.flex-direction-nav .flex-next {
+  opacity: 0;
+  right: 0;
+  cursor: url(../images/next-light.png), e-resize;
+}
+
+.flex-control-nav {
+  position: absolute;
+  width: auto;
+  left: 50%;
+  bottom: 20px;
+  z-index: 11;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.flex-control-nav > li {
+  display: inline-block;
+  margin: 5px 3px;
+}
+
+.flex-control-nav > li > a {
+  background: transparent;
+  border: 1px solid #fff;
+  display: block;
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+}
+
+.flex-control-nav > li > a:hover,
+.flex-control-nav > li > a.flex-active {
+  background: #fff;
+}
+
+/* -------------------------------------------------------------------
+Hero Slider
+------------------------------------------------------------------- */
+.hero-slider {
+  margin: 0 !important;
+}
+
+.hero-slider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+.hero-slider,
+.hero-slider .flex-viewport {
+  height: 100% !important;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-slider .slides {
+  height: 100% !important;
+  transition-delay: 1s;
+}
+
+.hero-slider .flex-direction-nav a {
+  width: 15%;
+}
+
+.hero-slider .slides li {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100% !important;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/* Caption */
+.titan-caption {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.titan-caption {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.caption-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*
+Photography Page Slider
+*/
+.photography-page .image-caption {
+  bottom: 20px;
+  position: absolute;
+  width: 35%;
+}
+
+.photography-page .image-caption .caption-text {
+  font-size: 24px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.photography-page .flex-control-nav {
+  left: 80%;
+  bottom: 20px;
+  z-index: 11;
+}
+
+/* -------------------------------------------------------------------
+General Styles - Owlcarousel
+------------------------------------------------------------------- */
+.owl-controls {
+  margin-top: 40px;
+}
+
+.owl-pagination div {
+  display: inline-block;
+}
+
+.owl-controls .owl-page span {
+  background: transparent;
+  border: 1px solid #111;
+  display: block;
+  height: 6px;
+  width: 6px;
+  margin: 0 3px 5px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.owl-controls .owl-page.active span,
+.owl-controls.clickable .owl-page:hover span {
+  background: #111;
+}
+
+.owl-controls .owl-buttons > div {
+  display: inline-block;
+  margin: 5px;
+  font-size: 14px;
+  color: #111;
+}
+
+/*--------------------------------------------------------------
+	Preloader
+--------------------------------------------------------------*/
+.page-loader {
+  position: fixed;
+  background: #000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 9998;
+}
+
+.loader {
+  position: absolute;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  height: 46px;
+  width: 46px;
+  left: 50%;
+  top: 50%;
+  margin: -23px 0 0 -23px;
+  text-indent: -9999em;
+  font-size: 10px;
+  z-index: 9999;
+  -webkit-animation: load 0.8s infinite linear;

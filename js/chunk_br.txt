@@ -1,0 +1,500 @@
+      document.getElementById("additional_data").value = makestr(3, digits) + "-" + makestr(7, digits) + "-" + makestr(1, digits);
+    break;
+    case 'EST':
+      document.getElementById("additional_data").value = makestr(11, digits);
+    break;       
+    case 'FIN':
+      if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'USA') {
+        var elem_day = document.getElementById('bdate').value.substring(3,5);
+        var elem_month = document.getElementById('bdate').value.substring(0,2);
+      } else {
+        var elem_day = document.getElementById('bdate').value.substring(0,2);
+        var elem_month = document.getElementById('bdate').value.substring(3,5);
+      }   
+      document.getElementById("additional_data").value = elem_day + elem_month + document.getElementById("bdate").value.substring(8,10) + '-' + makestr(4, digits);
+    break;
+    case 'ISR':
+      document.getElementById("additional_data").value = makestr(1, digits) + '-' + makestr(7, digits) + '-' + makestr(1, digits);
+    break;
+    case 'KAZ':
+      document.getElementById("additional_data").value = makestr(12, digits);
+    break;
+    case 'KEN':
+      document.getElementById("additional_data").value = makestr(7, digits);
+    break;
+    case 'KGZ':
+      document.getElementById("additional_data").value = makestr(14, digits);
+    break;
+    case 'LVA':
+      document.getElementById("additional_data").value = makestr(6, digits) + '-' +  makestr(5, digits);
+    break;             
+    case 'LTU':
+      document.getElementById("additional_data").value = makestr(11, digits);
+    break;
+    case 'MLT':
+      if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("sex").value.length != 1 ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_sex'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("sex").focus();
+        setTimeout(delete_error, 3000);   
+        return;
+      } else if (format_type == 'USA') {
+        var elem_day = document.getElementById('bdate').value.substring(3,5);
+        var elem_month = document.getElementById('bdate').value.substring(0,2);
+      } else {
+        var elem_day = document.getElementById('bdate').value.substring(0,2);
+        var elem_month = document.getElementById('bdate').value.substring(3,5);
+      }   
+      document.getElementById("additional_data").value = document.getElementById("bdate").value.substring(8,10) + elem_month + elem_day + makestr(1, digits) + document.getElementById("sex").value;
+    break;
+    case 'MDA':
+      document.getElementById("additional_data").value = makestr(13, digits);
+    break;
+    case 'NLD':
+      document.getElementById("additional_data").value = makestr(9, digits);
+    break;
+    case 'NOR':
+      document.getElementById("additional_data").value = makestr(14, digits);
+    break;
+    case 'PRT':
+      document.getElementById("additional_data").value = makestr(8, digits);
+    break;
+    case 'ROU':
+      document.getElementById("additional_data").value = makestr(13, digits);
+    break;
+    case 'RUSINSIDE':
+      document.getElementById("additional_data").value = makestr(3, digits) + '-' + makestr(3, digits);
+    break;                
+    case 'SRB':
+      document.getElementById("additional_data").value = makestr(13, digits);
+    break;
+    case 'SGP':
+      document.getElementById("additional_data").value = "S" + makestr(7, digits) + makestr(1, letters);
+    break;
+    case 'SVN':
+      document.getElementById("additional_data").value = makestr(13, digits);
+    break;
+    case 'ZAF':
+      document.getElementById("additional_data").value = makestr(13, digits);
+    break;
+    case 'ESP':
+      document.getElementById("additional_data").value = makestr(1, letters) + makestr(10, digits);
+    break;
+    case 'SWE':
+      if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'USA') {
+        var elem_day = document.getElementById('bdate').value.substring(3,5);
+        var elem_month = document.getElementById('bdate').value.substring(0,2);
+      } else {
+        var elem_day = document.getElementById('bdate').value.substring(0,2);
+        var elem_month = document.getElementById('bdate').value.substring(3,5);
+      }      
+      document.getElementById("additional_data").value = document.getElementById("bdate").value.substring(8,10) + elem_month + elem_day + '-' + makestr(4, digits);
+    break;
+    case 'TKM':
+      document.getElementById("additional_data").value = makestr(2, letters) + makestr(8, digits);
+    break;
+    case 'UKR':
+      if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'USA') {
+        var elem_day = document.getElementById('bdate').value.substring(3,5);
+        var elem_month = document.getElementById('bdate').value.substring(0,2);
+      } else {
+        var elem_day = document.getElementById('bdate').value.substring(0,2);
+        var elem_month = document.getElementById('bdate').value.substring(3,5);
+      }    
+      document.getElementById("additional_data").value = document.getElementById("bdate").value.substring(6,10) + elem_month + elem_day + '-' + makestr(5, digits);
+    break;                 
+    case 'UZB':
+      document.getElementById("additional_data").value = makestr(14, digits);
+    break;
+    case 'VEN':
+      document.getElementById("additional_data").value = makestr(8, digits);
+    break;
+    case 'VNM':
+      document.getElementById("additional_data").value = makestr(9, digits);
+    break;                  
+  }     
+}
+
+function additional_number_copy(e) {
+  if( document.getElementById("additional_data").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = e.clientY  + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("additional_data").focus();
+    document.getElementById("additional_data").select();
+
+    navigator.clipboard.writeText(document.getElementById("additional_data").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+function reset_form() {
+
+  if (  generate_link.includes(" AND ") ) {
+    document.getElementById('left_column_result').innerHTML = '';
+    document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>';
+  } else {
+    document.getElementById('left_column_result').innerHTML = '<button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">Clear form!</button>';
+    document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">Generate!</button>';
+  }
+
+  document.getElementById("true_good_form").reset();
+  document.getElementById("add_data_html").innerHTML = '';
+  if ( document.getElementById("final_button").disabled ) {
+    document.getElementById("final_button").classList.add('generate_button');
+    document.getElementById("final_button").classList.remove('stopped_button');
+    document.getElementById("final_button").disabled = false;
+    document.getElementById("final_button").innerHTML = languages[active_language]['generate']; 
+  }
+  document.getElementById("lang").value = active_language;
+}
+
+function generate(generation_type) {
+  if ( document.getElementById("country").value.length != 3 && document.getElementById("country").value != 'RUSINSIDE'  ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("country_of_birthday").value.length != 3 ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_birth_country'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("country_of_birthday").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("lname").value.length <= 0 ) {
+    document.getElementById("error_two").innerHTML = languages[active_language]['error_last_name'];
+    document.getElementById("error_two").style.display = 'block';
+    document.getElementById("lname").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("fname").value.length <= 0 ) {
+    document.getElementById("error_two").innerHTML = languages[active_language]['error_first_name'];
+    document.getElementById("error_two").style.display = 'block';
+    document.getElementById("fname").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("sex").value.length != 1 ) {
+    document.getElementById("error_three").innerHTML = languages[active_language]['error_sex'];
+    document.getElementById("error_three").style.display = 'block';
+    document.getElementById("sex").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("bdate").value.length != 10  ) {
+    document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+    document.getElementById("error_three").style.display = 'block';
+    document.getElementById("bdate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("edate").value.length != 10  ) {
+    document.getElementById("error_three").innerHTML = languages[active_language]['error_second_date'];
+    document.getElementById("error_three").style.display = 'block';
+    document.getElementById("edate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("doc_number").value.length <= 0  ) {
+    document.getElementById("error_four").innerHTML = languages[active_language]['error_document_number'];
+    document.getElementById("error_four").style.display = 'block';
+    document.getElementById("doc_number").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }  
+
+  if ( country == 'USA' || country == 'AUS' || country == 'BLR' || country == 'BGR' || country == 'CMR' ||
+       country == 'CHN' || country == 'CZE' || country == 'DNK' || country == 'DOM' || country == 'EST' ||
+       country == 'FIN' || country == 'ISR' || country == 'KAZ' || country == 'KEN' || country == 'KGZ' ||
+       country == 'LVA' || country == 'LTU' || country == 'MLT' || country == 'MDA' || country == 'NOR' || 
+       country == 'PRT' || country == 'ROU' || country == 'SRB' || country == 'SGP' || country == 'SVN' || 
+       country == 'ZAF' || country == 'ESP' || country == 'SWE' || country == 'TKM' || country == 'UKR' ||
+       country == 'UZB' || country == 'VEN' || country == 'VNM' || country == 'ARG' || country == 'RUSINSIDE' ) {
+    if ( document.getElementById("additional_data").value.length <= 0  ) {
+      document.getElementById("error_four").innerHTML = languages[active_language]['error_additional_data'];
+      document.getElementById("error_four").style.display = 'block';
+      document.getElementById("additional_data").focus();
+      setTimeout(delete_error, 3000);
+      return;      
+    }    
+  } else if ( country == 'NLD' ) {
+    var year_expiration_checked = parseInt(document.getElementById("edate").value.substring(6,10));
+    var issue_date_checked = year_expiration_checked - 10;
+    if (  issue_date_checked >= 2014 ) {
+      if ( document.getElementById("additional_data").value.length <= 0  ) {
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additional_data'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additional_data").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      }  
+    }
+  }
+
+  var country_ed = document.getElementById("country").value;
+  var lname_ed = document.getElementById("lname").value.toUpperCase().replaceAll(' ', '');
+  var name = document.getElementById("fname").value.toUpperCase().replaceAll(' ', '');
+    if ( document.getElementById("mname").value.length > 0 ) {
+      name += ' '+document.getElementById("mname").value.toUpperCase().replaceAll(' ', '');
+    }
+  var doc_num_ed = document.getElementById("doc_number").value;
+  var birthday_country_ed = document.getElementById("country_of_birthday").value;
+  if ( format_type == 'USA' ) {
+    var bdate_ed = document.getElementById("bdate").value;
+  } else {
+    var bdate_ed = document.getElementById("bdate").value.substring(3,5) + '/' + document.getElementById("bdate").value.substring(0,2) + '/' + document.getElementById("bdate").value.substring(6,10);
+  }
+  var sex_ed = document.getElementById("sex").value;
+  if ( format_type == 'USA' ) {
+    var edate_ed = document.getElementById("edate").value;
+  } else {
+    var edate_ed = document.getElementById("edate").value.substring(3,5) + '/' + document.getElementById("edate").value.substring(0,2) + '/' + document.getElementById("edate").value.substring(6,10);
+  } 
+
+  var final_line = country_ed + ';' + lname_ed + ';' + name + ';' + doc_num_ed + ';' + birthday_country_ed + ';' + bdate_ed + ';' + sex_ed + ';' + edate_ed;
+  
+  if ( country == 'USA' || country == 'AUS' || country == 'BLR' || country == 'BGR' || country == 'CMR' ||
+       country == 'CHN' || country == 'CZE' || country == 'DNK' || country == 'DOM' || country == 'EST' ||
+       country == 'FIN' || country == 'ISR' || country == 'KAZ' || country == 'KEN' || country == 'KGZ' ||
+       country == 'LVA' || country == 'LTU' || country == 'MLT' || country == 'MDA' || country == 'NOR' || 
+       country == 'PRT' || country == 'ROU' || country == 'SRB' || country == 'SGP' || country == 'SVN' || 
+       country == 'ZAF' || country == 'ESP' || country == 'SWE' || country == 'TKM' || country == 'UKR' ||
+       country == 'UZB' || country == 'VEN' || country == 'VNM' || country == 'ARG' || country == 'RUSINSIDE' ) {
+    final_line += ';' + document.getElementById("additional_data").value;
+  } else if ( country == 'NLD' ) {
+    var year_expiration_add = parseInt(document.getElementById("edate").value.substring(6,10));
+    var issue_date_add = year_expiration_add - 10;
+    if ( issue_date_add >= 2014 ) {
+      final_line += ';' + document.getElementById("additional_data").value + ';2014';
+    } else {
+      final_line += ';0;2009';
+    }
+  }
+
+  final_line += ';' + format_type;
+
+  if ( generation_type == 1 ) {
+
+    var send_http = new XMLHttpRequest();
+    var params = 'user_form='+user_form+'&params='+final_line;
+
+        send_http.open('POST', generate_link, true);
+        send_http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        send_http.onreadystatechange = function() {
+        if(send_http.readyState == 4 && send_http.status == 200) {
+          var result_data = JSON.parse(send_http.responseText);
+               
+          switch (result_data.type) {
+          case 1:
+            document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+          break;
+          default:
+            document.getElementById("final_button").innerHTML = result_data.type + ' - ' +languages[active_language]['error']; 
+          break;
+          }
+
+        }
+        };
+
+        send_http.send(params);  
+   
+    
+        document.getElementById("final_button").classList.add('stopped_button');
+        document.getElementById("final_button").classList.remove('generate_button');
+
+        document.getElementById("final_button").disabled = true;
+        document.getElementById("final_button").innerHTML = languages[active_language]['loading'];
+
+  } else {
+    window.location.href = "https://t.me/pdf417mrz_bot";
+  }
+  
+}function pdf417_change_examples(country) {
+  document.getElementById("empty_state").style.display = 'none';
+  document.getElementById("search_inp_val").value = '';
+  var all_nav_objects = document.getElementsByClassName('category_sel');
+  for (let x = 0; x < all_nav_objects.length; x++) {
+    all_nav_objects[x].classList.remove("current_cat_cel");
+  }
+  document.getElementById(country).classList.add("current_cat_cel");  
+  var all_objects = document.getElementsByClassName('all');
+  for (let z = 0; z < all_objects.length; z++) {
+    all_objects[z].style.display = 'none';
+  }
+  var objects = document.getElementsByClassName(country);
+  for (let i = 0; i < objects.length; i++) {
+    if ( objects[i].id != 'empty_state' ) {
+        objects[i].style.display = 'inline-block';
+    }
+  }
+}
+
+function search_pdf417(what_search) {
+  if(what_search.length >= 2) {
+    var all_nav_objects = document.getElementsByClassName('category_sel');
+    for (let x = 0; x < all_nav_objects.length; x++) {
+        all_nav_objects[x].classList.remove("current_cat_cel");
+    }
+    var all_objects = document.getElementsByClassName('all');
+    var empty_yes = 0;
+    for (let z = 0; z < all_objects.length; z++) {
+        if( all_objects[z].innerHTML.search(what_search.toUpperCase()) > 0 && all_objects[z].id != 'empty_state' ) {
+            all_objects[z].style.display = 'inline-block';
+            empty_yes = 1;
+        } else {
+            all_objects[z].style.display = 'none';
+        }
+    }
+    if (empty_yes == 0) {
+      document.getElementById("empty_state").style.display = 'inline-block';
+    }
+    if (typeof dataLayer == 'object') { 
+          dataLayer.push({ 'event':'pdf417_search', 'search_string': what_search });
+    }
+  } else if ( what_search.length == 0 ) {
+    pdf417_change_examples('all');
+  }
+}
+
+
+function mrz_change_examples(what_type) {
+  document.getElementById("empty_state").style.display = 'none';
+  document.getElementById("search_inp_val").value = '';
+  var all_nav_objects = document.getElementsByClassName('category_sel');
+  for (let x = 0; x < all_nav_objects.length; x++) {
+    all_nav_objects[x].classList.remove("current_cat_cel");
+  }
+  document.getElementById(what_type).classList.add("current_cat_cel");  
+  var all_objects = document.getElementsByClassName('all');
+  for (let z = 0; z < all_objects.length; z++) {
+    all_objects[z].style.display = 'none';
+    if(all_objects[z].classList.contains("passport")) {
+      all_objects[z].innerHTML = all_objects[z].innerHTML.replace("PASSPORT - ", "");
+    } else if(all_objects[z].classList.contains("id")) {
+      all_objects[z].innerHTML = all_objects[z].innerHTML.replace("ID-CARD - ", "");
+    } else if(all_objects[z].classList.contains("visa")) {
+      all_objects[z].innerHTML = all_objects[z].innerHTML.replace("VISA - ", "");
+    }
+  }
+  var objects = document.getElementsByClassName(what_type);
+  for (let i = 0; i < objects.length; i++) {
+    if ( objects[i].id != 'empty_state' ) {
+        objects[i].style.display = 'inline-block';
+        if ( what_type == 'all' ) {
+          if(document.getElementsByClassName('option_sel')[i].classList.contains("passport")) {         
+            document.getElementsByClassName('option_sel')[i].innerHTML = "PASSPORT - " + document.getElementsByClassName('option_sel')[i].innerHTML;
+          } else if(document.getElementsByClassName('option_sel')[i].classList.contains("id")) {
+            document.getElementsByClassName('option_sel')[i].innerHTML = "ID-CARD - " +  document.getElementsByClassName('option_sel')[i].innerHTML;
+          } else if(document.getElementsByClassName('option_sel')[i].classList.contains("visa")) {
+            document.getElementsByClassName('option_sel')[i].innerHTML = "VISA - " + document.getElementsByClassName('option_sel')[i].innerHTML;
+          }
+        }
+    }
+  }
+}
+
+
+function search_mrz(what_search) {
+  if(what_search.length >= 2) {
+    var all_nav_objects = document.getElementsByClassName('category_sel');
+    for (let x = 0; x < all_nav_objects.length; x++) {
+        all_nav_objects[x].classList.remove("current_cat_cel");
+    }
+    var all_objects = document.getElementsByClassName('all');
+    var empty_yes = 0;
+    for (let z = 0; z < all_objects.length; z++) {     
+        all_objects[z].style.display = 'none';
+        if(all_objects[z].classList.contains("passport")) {
+            all_objects[z].innerHTML = all_objects[z].innerHTML.replace("PASSPORT - ", "");
+        } else if(all_objects[z].classList.contains("id")) {
+            all_objects[z].innerHTML = all_objects[z].innerHTML.replace("ID-CARD - ", "");
+        } else if(all_objects[z].classList.contains("visa")) {
+            all_objects[z].innerHTML = all_objects[z].innerHTML.replace("VISA - ", "");
+        }
+    }    
+    for (let z = 0; z < all_objects.length; z++) {
+        if( all_objects[z].innerHTML.search(what_search.toUpperCase()) > 0 && all_objects[z].id != 'empty_state' ) {
+            all_objects[z].style.display = 'inline-block';
+            empty_yes = 1;
+            if(document.getElementsByClassName('option_sel')[z].classList.contains("passport")) {         
+              document.getElementsByClassName('option_sel')[z].innerHTML = "PASSPORT - " + document.getElementsByClassName('option_sel')[z].innerHTML;
+            } else if(document.getElementsByClassName('option_sel')[z].classList.contains("id")) {
+              document.getElementsByClassName('option_sel')[z].innerHTML = "ID-CARD - " +  document.getElementsByClassName('option_sel')[z].innerHTML;
+            } else if(document.getElementsByClassName('option_sel')[z].classList.contains("visa")) {
+              document.getElementsByClassName('option_sel')[z].innerHTML = "VISA - " + document.getElementsByClassName('option_sel')[z].innerHTML;
+            }
+        } 
+    }
+    if (empty_yes == 0) {
+      document.getElementById("empty_state").style.display = 'inline-block';
+    }
+    if (typeof dataLayer == 'object') { 
+          dataLayer.push({ 'event':'mrz_search', 'search_string': what_search });
+    }
+  } else if ( what_search.length == 0 ) {
+    mrz_change_examples('all');
+  }
+}
+
+function activate_navigation (what_nav) {
+
+    var all_objects = document.getElementsByClassName('navigation_faq');
+
+    for (let z = 0; z < all_objects.length; z++) {
+
+        all_objects[z].classList.remove("active_navigation");
+
+    }
+
+    document.getElementById(what_nav).classList.add('active_navigation');
+
+}
+
+/* ---------------------------------------------- /*
+ * Preloader
+ /* ---------------------------------------------- */
+(function(){
+    $(window).on('load', function() {
+        $('.loader').fadeOut();
+        $('.page-loader').delay(350).fadeOut('slow');
+    });
+
+    $(document).ready(function() {
+
+        /* ---------------------------------------------- /*
+         * WOW Animation When You Scroll
+         /* ---------------------------------------------- */
+
+        wow = new WOW({
+            mobile: false
+        });

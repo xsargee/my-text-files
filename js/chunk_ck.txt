@@ -1,0 +1,500 @@
+        let issue_date_compare = new Date(parseInt(isu_year) ,  parseInt(isu_mouth) - 1, parseInt(isu_day));
+        let compare_date = new Date('2018-03-01');
+        if ( issue_date_compare >= compare_date ) {
+          inventory = '02101' + makestr(11, digits); 
+        } else {
+          inventory = '11141' + makestr(5, digits);  
+        }
+      }      
+    break;
+    case 'CO':
+      inventory = 'C000' + makestr(7, digits);  
+    break;
+    case 'CA':
+      if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_year_two = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_year_two = document.getElementById("idate").value.substring(2,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_year_two = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }
+
+      let issue_date_compare = new Date(parseInt(isu_year) ,  parseInt(isu_mouth) - 1, parseInt(isu_day));
+      let prev_is_year =  parseInt(isu_year) - 1;
+      let compare_date = new Date(prev_is_year + '-12-31');
+      let diffTime = Math.abs(issue_date_compare - compare_date);
+      let diffDays = toD(Math.ceil(diffTime / (1000 * 60 * 60 * 24)), 3); 
+      inventory = isu_year_two + diffDays + document.getElementById("doc_number").value;
+      if ( document.getElementById("revision").value == '08292017' ) {
+        inventory += '0401';
+      } else {
+        inventory += '0901';
+      }
+    break;
+    case 'CT':
+      if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      }
+      inventory = document.getElementById("doc_number").value + 'CT' + makestr(4, all_char) + '01';
+    break; 
+    case 'DC':
+      inventory = '000' + makestr(7, digits);
+    break;
+    case 'DE':
+      inventory = '01103' +  makestr(11, digits);
+    break;
+    case 'FL':
+      inventory = '011000' +  makestr(10, digits);
+    break; 
+    case 'GA':
+      if ( document.getElementById("revision").value == '01022019' ) {
+        inventory = '1000' +  makestr(7, digits);
+      } else {
+        inventory = makestr(10, digits) + '100401';
+      }
+    break;
+    case 'HI':
+      inventory = makestr(8, digits);
+    break; 
+    case 'ID':
+      if ( document.getElementById("revision").value == '01312023' ) {
+        if ( document.getElementById("doc_number").value.length == 0 ) {
+          document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+          document.getElementById("error_four_row").style.display = 'block';
+          document.getElementById("doc_number").focus();
+          setTimeout(delete_error, 3000);
+          return;   
+        }
+        inventory = document.getElementById("doc_number").value +  makestr(6, digits) + '001';
+      } else {
+        if ( document.getElementById("idate").value.length != 10  ) {
+          document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+          document.getElementById("error_third_row").style.display = 'block';
+          document.getElementById("idate").focus();
+          setTimeout(delete_error, 3000);
+          return;       
+        } else if (format_type == 'ARG') {
+          var isu_year = document.getElementById("idate").value.substring(6,10);
+          var isu_mouth = document.getElementById("idate").value.substring(3,5);
+          var isu_day = document.getElementById("idate").value.substring(0,2);
+        } else if ( format_type == 'CAN') {
+          var isu_year = document.getElementById("idate").value.substring(0,4);
+          var isu_mouth = document.getElementById("idate").value.substring(5,7);
+          var isu_day = document.getElementById("idate").value.substring(8,10);
+        } else if ( format_type == 'USA') {
+          var isu_year = document.getElementById("idate").value.substring(6,10);
+          var isu_mouth = document.getElementById("idate").value.substring(0,2);
+          var isu_day = document.getElementById("idate").value.substring(3,5);
+        }     
+        inventory = '0002' +  makestr(6, digits);
+      }
+    break; 
+    case 'IL':
+      if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } 
+
+      inventory = document.getElementById("doc_number").value.replaceAll('-', '') +  'IL' + makestr(1, letters) + makestr(1, digits) + makestr(2, letters) + '01';   
+      
+    break;
+    case 'IN':
+      inventory = '03701' + makestr(11, digits);
+    break;
+    case 'IA':
+      if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      }
+      inventory = document.getElementById("doc_number").value + isu_year + makestr(3, digits) + '0101';      
+    break;
+    case 'KS':
+      if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if ( document.getElementById("discriminator").value.length == 0  ) {
+        document.getElementById("error_six_row").innerHTML = languages[active_language]['error_disc'];
+        document.getElementById("error_six_row").style.display = 'block';
+        document.getElementById("discriminator").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      }
+
+      inventory = isu_year + document.getElementById("discriminator").value.substring(1,4) + document.getElementById("doc_number").value.replaceAll('-', '') + "0101";
+    break;
+    case 'KY':
+      inventory = '0460' + makestr(12, digits);
+    break;
+    case 'LA':
+      inventory = '00700' + makestr(11, digits);
+    break;
+    case 'ME':
+      if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      }
+
+      inventory = 'F' + isu_year + makestr(3, digits) + document.getElementById("doc_number").value  + "0101";      
+    break;
+    case 'MD':
+      inventory = '100' + makestr(7, digits);
+    break; 
+    case 'MA':
+       if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      }
+           
+      inventory = isu_year + makestr(3, digits) + document.getElementById("doc_number").value + "0601";
+    break;
+    case 'MI':
+       if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if ( document.getElementById("edate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_expiry'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("edate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var exp_year = document.getElementById("edate").value.substring(6,10);
+        var bth_year = document.getElementById("bdate").value.substring(6,10);
+        var exp_mouth = document.getElementById("edate").value.substring(3,5);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var bth_mouth = document.getElementById("bdate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+        var bth_day = document.getElementById("bdate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var exp_year = document.getElementById("edate").value.substring(0,4);
+        var bth_year = document.getElementById("bdate").value.substring(0,4);
+        var exp_mouth = document.getElementById("edate").value.substring(5,7);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var bth_mouth = document.getElementById("bdate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+        var bth_day = document.getElementById("bdate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var exp_year = document.getElementById("edate").value.substring(6,10);
+        var bth_year = document.getElementById("bdate").value.substring(6,10);
+        var exp_mouth = document.getElementById("edate").value.substring(0,2);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var bth_mouth = document.getElementById("bdate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+        var bth_day = document.getElementById("bdate").value.substring(3,5);
+      }
+
+      if ( document.getElementById("revision").value == '01022024' ||
+           document.getElementById("revision").value == '07012012' ) {
+        inventory = document.getElementById("doc_number").value.replaceAll(' ', '') + bth_year + bth_mouth + bth_day + exp_year.substring(2,4) + bth_mouth + "01";
+      } else {
+        inventory = document.getElementById("doc_number").value.replaceAll(' ', '') + bth_year + bth_mouth + bth_day + exp_year;
+      }
+    break; 
+    case 'MN':
+       if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }
+      var issue_date_compare_mn = new Date(parseInt(isu_year) ,  parseInt(isu_mouth) - 1, parseInt(isu_day));
+      var minus_one_year = parseInt(isu_year) - 1;
+      var compare_date_mn = new Date(minus_one_year + '-12-31'); 
+      var daydiffernces = dateDiffInDays(compare_date_mn, issue_date_compare_mn);
+
+      inventory = document.getElementById("doc_number").value.replaceAll('-', '') + '01' + toD(daydiffernces,3) + '01';
+    break;
+    case 'MS':
+      inventory = '0510' + makestr(12, digits);
+    break;
+    case 'MO':
+       if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      } else if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_year_two = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_year_two = document.getElementById("idate").value.substring(2,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_year_two = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }
+      var issue_date_compare_mn = new Date(parseInt(isu_year) ,  parseInt(isu_mouth) - 1, parseInt(isu_day));
+      var compare_date_mn = new Date(document.getElementById("idate").value.substring(6,10) + '-01-01'); 
+      var daydiffernces = dateDiffInDays(compare_date_mn, issue_date_compare_mn);
+
+      inventory = isu_year_two + toD(daydiffernces,3) + document.getElementById("doc_number").value + '0101';
+    break;  
+    case 'MT':
+      inventory = '110' + makestr(9, all_char) + 'MT' + makestr(3, letters) + '001';
+    break;
+    case 'NE':
+      if ( document.getElementById("discriminator").value.length == 0  ) { 
+        document.getElementById("error_six_row").innerHTML = languages[active_language]['error_disc'];
+        document.getElementById("error_six_row").style.display = 'block';
+        document.getElementById("discriminator").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } 
+
+      inventory = document.getElementById("discriminator").value;
+      
+    break;
+    case 'NV':
+      if ( document.getElementById("revision").value == '05242021' ) {
+        inventory = '002' + makestr(8, digits) + '01';
+      } else {
+        inventory = '001' + makestr(8, digits) + '01';
+      }
+    break; 
+    case 'NH':
+      if ( document.getElementById("discriminator").value.length == 0  ) {
+        document.getElementById("error_six_row").innerHTML = languages[active_language]['error_disc'];
+        document.getElementById("error_six_row").style.display = 'block';
+        document.getElementById("discriminator").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } 
+
+      inventory = document.getElementById("discriminator").value;
+      
+    break; 
+    case 'NJ':
+      if ( document.getElementById("revision").value == '01082020' ) {
+        inventory = makestr(10, all_char) + "NJ" + makestr(4, all_char) + '01';
+      } else {
+        inventory = '036' + makestr(13, digits);  
+      }    
+    break;
+    case 'NM':
+      if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } 
+
+      inventory = document.getElementById("doc_number").value + '01'; 
+    break;                    
+    case 'NY':
+      inventory = '0121' + makestr(12, digits);
+    break;
+    case 'NC':
+      if ( document.getElementById("doc_number").value.length == 0 ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      }      
+      inventory = document.getElementById("doc_number").value + 'NC' + makestr(4, all_char) + '01'; 
+    break;
+    case 'ND':
+      inventory = '03400' + makestr(11, digits);
+    break;
+    case 'OH':
+      inventory = '';
+    break;
+    case 'OK':
+      if ( document.getElementById("doc_number").value.length == 0  ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } 
+      inventory = document.getElementById("doc_number").value + 'OK' + makestr(2, letters) + 'SL01'; 
+    break;
+    case 'OR':
+      if ( document.getElementById("doc_number").value.length == 0  ) {
+        document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+        document.getElementById("error_four_row").style.display = 'block';
+        document.getElementById("doc_number").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } 
+
+      if (format_type == 'ARG') {
+        var bth_year = document.getElementById("bdate").value.substring(6,10);
+        var bth_mouth = document.getElementById("bdate").value.substring(3,5);
+        var bth_day = document.getElementById("bdate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var bth_year = document.getElementById("bdate").value.substring(0,4);
+        var bth_mouth = document.getElementById("bdate").value.substring(5,7);
+        var bth_day = document.getElementById("bdate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var bth_year = document.getElementById("bdate").value.substring(6,10);
+        var bth_mouth = document.getElementById("bdate").value.substring(0,2);
+        var bth_day = document.getElementById("bdate").value.substring(3,5);
+      }
+
+      inventory = document.getElementById("doc_number").value + bth_mouth + bth_day + bth_year; 
+    break;
+    case 'PA':
+      if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if (format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+      }     
+      inventory = '02500' + makestr(6, digits) + isu_year + makestr(3, digits);
+    break;
+    case 'PR':
+      inventory = '000000000' + makestr(7, digits);
+    break; 

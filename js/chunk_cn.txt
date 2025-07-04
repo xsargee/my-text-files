@@ -1,0 +1,500 @@
+        document.getElementById("nj_option3").focus(); 
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'ND' &&  document.getElementById("nd_option_1").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_issue_office'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("nd_option_1").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'NV' && document.getElementById("nv_name_sufix").value.length == 0 ) {   
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("nv_name_sufix").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+
+  if ( state == 'OH' &&  document.getElementById("oh_name_sufix").value.length == 0 ) {   
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("oh_name_sufix").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'OH' &&  document.getElementById("oh_state_birth").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_birthstate'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("oh_state_birth").focus();
+        setTimeout(delete_error, 3000); 
+        return;    
+  }
+
+  if ( state == 'PA' &&  document.getElementById("pa_dups").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_dups'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("pa_dups").focus();
+        setTimeout(delete_error, 3000); 
+        return;
+  }
+
+  if ( state == 'PA' &&  document.getElementById("pa_is_office").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_issue_office'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("pa_is_office").focus();
+        setTimeout(delete_error, 3000); 
+        return; 
+  }
+
+  if ( state == 'TX' &&  document.getElementById("tx_name_sufix").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("tx_name_sufix").focus();
+        setTimeout(delete_error, 3000); 
+        return;
+  }
+
+  if ( state == 'ON' &&  document.getElementById("on_vnumber").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_on_vehicle_number'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("on_vnumber").focus();
+        setTimeout(delete_error, 3000); 
+        return;
+  }
+
+  if ( state == 'OK' &&  document.getElementById("ok_name_sufix").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_region'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ok_name_sufix").focus();
+        setTimeout(delete_error, 3000); 
+        return;
+  }
+
+
+  if ( state == 'OK' &&  document.getElementById("ok_state_birth").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_birthstate'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ok_state_birth").focus();
+        setTimeout(delete_error, 3000); 
+        return;    
+  }
+
+  if ( state == 'OK' &&  document.getElementById("ok_additional").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_additional'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ok_additional").focus();
+        setTimeout(delete_error, 3000); 
+        return;    
+  }
+
+  if ( state == 'OR' &&  document.getElementById("or_name_sufix").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("or_name_sufix").focus();
+        setTimeout(delete_error, 3000); 
+        return;
+  }
+
+  if ( state == 'UT' &&  document.getElementById("ut_is_office").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_issue_office'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ut_is_office").focus();
+        setTimeout(delete_error, 3000); 
+        return; 
+  }
+
+
+  var country_ed = document.getElementById("country").value;
+  var state_ed = document.getElementById("state").value; 
+  var doc_type_ed = document.getElementById("doc_type").value;
+  var lname_ed = document.getElementById("lname").value;
+  var fname_ed = document.getElementById("fname").value;
+  var mname_ed = document.getElementById("mname").value;
+  if (format_type == 'ARG') {
+    var bdate_ed = document.getElementById("bdate").value.substring(3,5) + "/" + document.getElementById("bdate").value.substring(0,2) + "/" + document.getElementById("bdate").value.substring(6,10);
+    var idate_ed = document.getElementById("idate").value.substring(3,5) + "/" + document.getElementById("idate").value.substring(0,2) + "/" + document.getElementById("idate").value.substring(6,10);
+    var edate_ed = document.getElementById("edate").value.substring(3,5) + "/" + document.getElementById("edate").value.substring(0,2) + "/" + document.getElementById("edate").value.substring(6,10);
+  } else if ( format_type == 'CAN') {
+    var bdate_ed = document.getElementById("bdate").value.substring(5,7) + "/" + document.getElementById("bdate").value.substring(8,10) + "/" + document.getElementById("bdate").value.substring(0,4);
+    var idate_ed = document.getElementById("idate").value.substring(5,7) + "/" + document.getElementById("idate").value.substring(8,10) + "/" + document.getElementById("idate").value.substring(0,4);
+    var edate_ed = document.getElementById("edate").value.substring(5,7) + "/" + document.getElementById("edate").value.substring(8,10) + "/" + document.getElementById("edate").value.substring(0,4);
+  } else if ( format_type == 'USA') {
+    var bdate_ed = document.getElementById("bdate").value.substring(0,2) + "/" + document.getElementById("bdate").value.substring(3,5) + "/" + document.getElementById("bdate").value.substring(6,10);
+    var idate_ed = document.getElementById("idate").value.substring(0,2) + "/" + document.getElementById("idate").value.substring(3,5) + "/" + document.getElementById("idate").value.substring(6,10);
+    var edate_ed = document.getElementById("edate").value.substring(0,2) + "/" + document.getElementById("edate").value.substring(3,5) + "/" + document.getElementById("edate").value.substring(6,10);
+  } 
+  
+  var sex_ed = document.getElementById("sex").value;
+  var hair_ed = document.getElementById("hair").value;
+  var eyes_ed = document.getElementById("eyes").value;
+
+  if ( document.getElementById("height_one").value == languages[active_language]['doesnotrequired'] && document.getElementById("height_two").value == languages[active_language]['doesnotrequired']  ) {
+    var height_ed = "5'5\"";
+  } else {
+    var height_ed = document.getElementById("height_one").value.replaceAll('0', '') + "'" + document.getElementById("height_two").value + '"';
+  }
+  
+
+  if ( document.getElementById("weight").value == languages[active_language]['doesnotrequired'] ) {
+    var weight_ed = "0";
+  } else {
+    var weight_ed = document.getElementById("weight").value;
+  }
+  
+  var street_ed = document.getElementById("address").value;
+  var city_ed = document.getElementById("city").value;
+  var zip_ed = document.getElementById("zipcode").value;
+
+  if ( document.getElementById("zipcode").value == languages[active_language]['doesnotrequired']  ) {
+    var zip_ed = "000000000";
+  } else {
+    if ( country_ed == 'USA' ) {
+      var zip_ed = afterD(document.getElementById("zipcode").value, 9);
+    } else {
+      var zip_ed = document.getElementById("zipcode").value;
+    }
+  }
+
+  var doc_class_ed = document.getElementById("doc_class_txt").value;
+  var comp_ed = document.getElementById("doc_comp").value;
+  var arrays_with_adds = [];
+  if ( veteran == 'VETERAN' ) {
+        arrays_with_adds.push("VETERAN");
+  }
+  if ( donor == 'DONOR' ) {
+        arrays_with_adds.push("DONOR");
+  }    
+  if ( safe == 'SAFE' ) {
+        arrays_with_adds.push("SAFE");
+  } 
+  var badges_ed = arrays_with_adds.join(',');
+  var doc_num_ed = document.getElementById("doc_number").value;
+  var rest_ed = document.getElementById("restriction_txt").value;
+  var endr_ed = document.getElementById("endosernent_txt").value;
+  var disc_ed = document.getElementById("discriminator").value;
+  if ( document.getElementById("inventory") != null ) {
+    var inv_ed = document.getElementById("inventory").value;
+  } else {
+    var inv_ed = '';
+  }
+  if ( document.getElementById("audit") != null ) {
+    var audit_ed = document.getElementById("audit").value;
+  } else {
+    var audit_ed = '';
+  }
+  
+  var skin_ed = document.getElementById("scin_color").value;
+    
+  var rev_ed = document.getElementById("revision").value;
+  var truncation_ed = document.getElementById("truncation").value;
+
+  var final_line = country_ed + ';' + state_ed + ';' + doc_type_ed + ';' + lname_ed + ';' + fname_ed + ';' + mname_ed + ';' + bdate_ed + ';' + idate_ed + ';' + edate_ed + ';' + sex_ed + ';' + hair_ed + ';' + eyes_ed + ';' + height_ed + ';' + weight_ed + ';' + street_ed + ';' + city_ed + ';' + zip_ed + ';' + doc_class_ed + ';' + comp_ed + ';' + badges_ed + ';' + doc_num_ed + ';' + rest_ed + ';' + endr_ed + ';' + disc_ed + ';' + inv_ed + ';' + audit_ed + ';' + skin_ed + ';' + rev_ed + ';' + truncation_ed;
+  if ( state == 'CT' ) {
+    final_line += ';NONE;' + document.getElementById("ct_name_sufix").value.toUpperCase();
+  }
+  if ( state == 'DE' ) {
+    final_line += ';' + document.getElementById("de_address2").value.toUpperCase();
+  }
+  if ( state == 'GA' ) {
+    final_line += ';NONE;NONE;NONE;' + document.getElementById("country_ge").value.toUpperCase();
+  }
+  if ( state == 'HI' ) {
+    final_line += ';' + document.getElementById("hi_address2").value.toUpperCase();
+  }
+  if ( state == 'IN' ) {
+    final_line += ';NONE;' + document.getElementById("in_name_sufix").value.toUpperCase() + ';' + document.getElementById("in_issuecode").value;
+  } 
+  if ( state == 'LA' ) {
+    final_line += ';' + document.getElementById("la_address2").value + ';NONE;' + document.getElementById("la_issueoffice").value + ';NONE;NONE;' + document.getElementById("la_parish").value;
+  }  
+  if ( state == 'ME' ) {
+    final_line += ';NONE;' + document.getElementById("me_name_sufix").value;
+  } 
+  if ( state == 'MA' ) {
+    final_line += ';' + document.getElementById("ma_address2").value;
+  }
+  if ( state == 'MI' ) {
+    final_line += ';' + document.getElementById("mi_address2").value;
+  }
+  if ( state == 'NE' ) {
+    final_line += ';NONE;' + document.getElementById("ne_name_sufix").value;
+  }   
+  if ( state == 'NH' ) {
+    final_line += ';' + document.getElementById("nh_address2").value;
+  } 
+  if ( state == 'NJ' ) {
+    final_line += ';NONE;NONE;NONE;NONE;NONE;NONE;' + document.getElementById("nj_option3").value + ';' + document.getElementById("nj_option1").value + ';' + document.getElementById("nj_option2").value;
+  }       
+  if ( state == 'ND' ) {
+    final_line += ';NONE;NONE;' + document.getElementById("nd_option_1").value;
+  }  
+  if ( state == 'NV' ) {
+    final_line += ';' + document.getElementById("nv_address2").value + ';' + document.getElementById("nv_name_sufix").value.toUpperCase();
+  }    
+  if ( state == 'OH' ) {
+    final_line += ';' + document.getElementById("oh_address2").value + ';' + document.getElementById("oh_name_sufix").value + ';NONE;NONE;' + document.getElementById("oh_state_birth").value.toUpperCase();
+  }
+  if ( state == 'OK' ) {
+    final_line += ';NONE;' + document.getElementById("ok_name_sufix").value  + ';NONE;' + document.getElementById("ok_state_birth").value.toUpperCase() + ';NONE;NONE;' + document.getElementById("ok_additional").value;
+  }  
+  if ( state == 'OR' ) {
+    final_line += ';' + document.getElementById("or_address2").value +  ';' + document.getElementById("or_name_sufix").value;;
+  }    
+  if ( state == 'PA' ) {
+    final_line += ';NONE;NONE;' + document.getElementById("pa_is_office").value + ';NONE;NONE;' + document.getElementById("pa_dups").value;
+  }
+  if ( state == 'TN' ) {
+    final_line += ';' + document.getElementById("tn_address2").value;
+  }
+  if ( state == 'TX' ) {
+    final_line += ';NONE;' + document.getElementById("tx_name_sufix").value;
+  }
+  if ( state == 'UT' ) {
+    final_line += ';NONE;NONE;' + document.getElementById("ut_is_office").value;
+  }
+  if ( state == 'BC' ) {
+    final_line += ';NONE;NONE;NONE;NONE;NONE;NONE;NONE;NONE;NONE;' + document.getElementById("bc_phn").value;
+  }
+  if ( state == 'ON' ) {
+    final_line += ';NONE;NONE;NONE;NONE;NONE;NONE;NONE;NONE;NONE;NONE;' + document.getElementById("on_vnumber").value;
+  }
+  if ( state == 'SK' ) {
+    final_line += ';' + document.getElementById("sk_address_2").value;
+  }
+
+  if ( generation_type == 1 ) {
+
+    var send_http = new XMLHttpRequest();
+    var params = 'user_form='+user_form+'&params='+final_line;
+
+        send_http.open('POST', generate_link, true);
+        send_http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        send_http.onreadystatechange = function() {
+        if(send_http.readyState == 4 && send_http.status == 200) {
+
+          var result_data = JSON.parse(send_http.responseText);
+               
+          switch (result_data.type) {
+          case 1:
+            if( result_data.status == 0 ) {
+              var http_for_minus_generations = new XMLHttpRequest();
+              var params_for_minus_generations = 'user_form='+user_form;
+
+                  http_for_minus_generations.open('POST', 'https://pdf417mrz.xyz/minus_generation', true);
+                  http_for_minus_generations.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                  http_for_minus_generations.onreadystatechange = function() { 
+                    if(http_for_minus_generations.readyState == 4 && http_for_minus_generations.status == 200) {
+                      document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+                    }
+                  };
+                  http_for_minus_generations.send(params_for_minus_generations);  
+            } else {
+              document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+            }          
+          break;
+          default:
+            document.getElementById("final_button").innerHTML = result_data.type + ' - ' +languages[active_language]['error']; 
+          break;
+          }
+
+        } else if (send_http.readyState == 4 && send_http.status == 500) {
+          setTimeout(retry_again(1, final_line), 5000);
+        }
+        };
+
+        send_http.send(params);  
+   
+    
+    document.getElementById("final_button").classList.add('stopped_button');
+    document.getElementById("final_button").classList.remove('generate_button');
+
+    document.getElementById("final_button").disabled = true;
+    document.getElementById("final_button").innerHTML = languages[active_language]['loading']; 
+  } else {
+    window.location.href = "https://t.me/pdf417mrz_bot";
+  }
+}const all_char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const digits = '1234567890';
+const languages = {'en': 
+                    { 'auto': 'Auto',
+                      'additonal_data': 'Additional data',
+                      'additonal_data_more': 'Additional data 2',
+                      'error_country': 'Please, select the country of the document',
+                      'error_vtype': 'Please, provide type of the ID ( Not more than 2 symbols )',
+                      'error_nationality': 'Please, provide the country of birthday of the client',
+                      'error_last_name': 'Please, provide the last name of the client',
+                      'error_first_name': 'Please, provide the first name of the client',
+                      'error_sex': 'Please, select the sex of the client',
+                      'error_first_date': 'Please, provide the birthday date of the client',
+                      'error_second_date': 'Please, provide the expiry date of the document',
+                      'error_document_number': 'Please, provide the document number of the document',
+                      'error_additonal_data': 'Please, provide the additonal data for the document',
+                      'error_additonal_data_more': 'Please, provide the additonal data 2 for the document',
+                      'generate': 'Generate!',
+                      'generated_b': 'Generated! Сheck telegram bot.',
+                      'loading': 'Loading...',
+                      'error': 'Unexpected error',
+                      'format': 'Format',
+                      'buy_label': 'Buy',
+                      'text_buy_label': '<b>Attention!</b> You are generating barcodes for the template of the document showed above. Please, make sure that your have a right template or TEMPLATE_NAME from us.',
+                      'light': ' Light',
+                      'dark': '  Dark',
+                      'new_generation': 'New generation!'
+                    }, 
+                   'cn': 
+                    { 'auto': ' 汽车 ',
+                      'additonal_data': '附加数据',
+                      'additonal_data_more': '附加数据2',                      
+                      'error_country': '请选择文件的国家',
+                      'error_vtype': '请提供 ID 类型（最多 2 个字符）',
+                      'error_nationality': '请提供客户的生日国家',
+                      'error_last_name': '请提供客户的姓氏',
+                      'error_first_name': '请提供客户的名字',
+                      'error_sex': '请选择客户的性别',
+                      'error_first_date': '请提供客户的生日日期',
+                      'error_second_date': '请提供文件的到期日期',
+                      'error_document_number': '请提供文件的文件编号',
+                      'error_additonal_data': '请提供文档的附加数据',
+                      'error_additonal_data_more': '请提供补充数据2',
+                      'generate': '产生!',
+                      'generated_b': '已生成! 请检查电报机器人',
+                      'loading': '正在加载...',
+                      'error': '意外的错误',
+                      'format': '格式',
+                      'buy_label': '购买',
+                      'text_buy_label': '<b>注意！</b>您正在为所显示文档的模板生成条形码。请确保您拥有正确的模板或从我们这里TEMPLATE_NAME。',
+                      'light': '     光',
+                      'dark': '   黑暗的',
+                      'new_generation': '新一代!'
+                   },
+                   'hi': 
+                    { 'auto': 'ऑटो',
+                      'additonal_data': 'अतिरिक्त डेटा',
+                      'additonal_data_more': 'अतिरिक्त डेटा 2',
+                      'error_country': 'कृपया, दस्तावेज़ का देश चुनें',
+                      'error_vtype': 'कृपया एक आईडी प्रकार प्रदान करें (अधिकतम 2 अक्षर)',
+                      'error_nationality': 'कृपया, ग्राहक के जन्मदिन का देश प्रदान करें',
+                      'error_last_name': 'कृपया, ग्राहक का अंतिम नाम प्रदान करें',
+                      'error_first_name': 'कृपया, क्लाइंट का पहला नाम प्रदान करें',
+                      'error_sex': 'कृपया, ग्राहक के लिंग का चयन करें',
+                      'error_first_date': 'कृपया, ग्राहक की जन्म तिथि प्रदान करें',
+                      'error_second_date': 'कृपया, दस्तावेज़ की समाप्ति तिथि प्रदान करें',
+                      'error_document_number': 'कृपया, दस्तावेज़ की दस्तावेज़ संख्या प्रदान करें',
+                      'error_additonal_data': 'कृपया दस्तावेज़ के लिए अतिरिक्त डेटा प्रदान करें',
+                      'error_additonal_data_more': 'कृपया अतिरिक्त डेटा प्रदान करें 2',
+                      'generate': 'उत्पन्न!',
+                      'generated_b': 'उत्पन्न! कृपया, टेलीग्राम बॉट की जाँच करें।',
+                      'loading': 'लोड हो रहा है...',
+                      'error': 'अप्रत्याशित त्रुटि',
+                      'format': 'प्रारूप',
+                      'buy_label': 'खरीदें',
+                      'text_buy_label': '<b>ध्यान दें!</b> आप दिखाए गए दस्तावेज़ के टेम्पलेट के लिए बारकोड बना रहे हैं। कृपया, सुनिश्चित करें कि आपके पास सही टेम्पलेट है या हमसे TEMPLATE_NAME।',
+                      'light': '   रोशनी',
+                      'dark': '   अँधेरा',
+                      'new_generation': 'नई पीढ़ी!'
+                   },
+                   'ru': 
+                    { 'auto': 'Авто',
+                      'additonal_data': 'Дополнительные данные',
+                      'additonal_data_more': 'Дополнительные данные 2',
+                      'error_country': 'Пожалуйста, выберите страну документа',
+                      'error_vtype': 'Пожалуйста, предоставьте тип ID ( не больше 2 символов )',
+                      'error_nationality': 'Пожалуйста, предоставьте страну рождения клиента',
+                      'error_last_name': 'Пожалуйста, предоставьте фамилию клиента',
+                      'error_first_name': 'Пожалуйста, предоставьте имя клиента',
+                      'error_sex': 'Пожалуйста, выберите пол клиента',
+                      'error_first_date': 'Пожалуйста, предоставьте дату рождения клиента',
+                      'error_second_date': 'Пожалуйста, предоставьте дату окончания действительности документа',
+                      'error_document_number': 'Пожалуйста, предоставьте номер документа',
+                      'error_additonal_data': 'Пожалуйста, предоставьте дополнительные данные для документа',
+                      'error_additonal_data_more': 'Пожалуйста, предоставьте дополнительные данные 2 для документа',
+                      'generate': 'Сгенирировать!',
+                      'generated_b': 'Сгенерировано! Проверьте телеграмм бота.',
+                      'loading': 'Загрузка',
+                      'error': 'Неожиданная ошибка',
+                      'format': 'Формат',
+                      'buy_label': 'Купить',
+                      'text_buy_label': '<b>Внимание!</b> Вы генерируете штрихкоды для шаблона документа, показанного выше. Пожалуйста, убедитесь, что у вас правильный шаблон или TEMPLATE_NAME у нас.',
+                      'light': 'Светлая',
+                      'dark': 'Тёмная',
+                      'new_generation': 'Новая генерация!'
+                   },
+                   'ua':
+                    { 'auto': 'Авто',
+                      'additonal_data': 'Додаткові дані',
+                      'additonal_data_more': 'Додаткові дані 2',                      
+                      'error_country': 'Оберіть, будь ласка, країну документу',
+                      'error_vtype': 'Надайте, будь ласка, тип ID ( не більше 2 символів )',
+                      'error_nationality': 'Надайте, будь ласка, країну народження клієнта',
+                      'error_last_name': 'Надайте, будь ласка, призвище клієнта',
+                      'error_first_name': 'Надайте, будь ласка, ім\'я клієнта',
+                      'error_sex': 'Оберіть, будь ласка, стать клієнта',
+                      'error_first_date': 'Надайте, будь ласка, дату народження клієнта',
+                      'error_second_date': 'Надайте, будь ласка, термін придатності документу',
+                      'error_document_number': 'Надайте, будь ласка, номер документу',
+                      'error_additonal_data': 'Будь ласка, надайте додаткові дані для документа',
+                      'error_additonal_data_more': 'Будь ласка, надайте додаткові дані 2 для документа',
+                      'generate': 'Згенерувати!',
+                      'generated_b': 'Згенеровано! Перевірте телеграм-бот.',
+                      'loading': 'Завантаження...',
+                      'error': 'Неочікувана помилка',
+                      'format': 'Формат',
+                      'buy_label': 'Купити',
+                      'text_buy_label': '<b>Увага!</b> Ви генеруєте штрих-коди для шаблону документа, що показоно вище. Будь ласка, переконайтеся, що у вас є правильний шаблон, або TEMPLATE_NAME у нас.',
+                      'light': 'Світла',
+                      'dark': ' Темна',
+                      'new_generation': 'Нова генерація!'
+                    },
+                  }
+
+
+var country = '';
+
+function new_toggleThemeColor() {
+  var body = document.getElementById("body");
+  if ( body.className == 'dark-mode') {
+    body.className = "dark-mode"  == "light-mode" ? "dark-mode" : "light-mode";
+  } else {
+    body.className = "light-mode"  == "light-mode" ? "dark-mode" : "dark-mode";
+  }
+}
+
+function toggleLight() {
+  var body = document.getElementById("body");
+  var currentClass = body.className;
+  body.className = currentClass == "dark-mode" ? "light-mode" : "light-mode";
+}
+
+function toggleDark() {
+  var body = document.getElementById("body");
+  var currentClass = body.className;
+  body.className = currentClass == "light-mode" ? "dark-mode" : "dark-mode";
+}
+
+$(".ld-mode > .btn").click(function(){
+  $(".ld-mode > .btn").removeClass("active");
+  $(this).addClass("active");
+});
+
+function makestr(length, what) {
+    let result = '';
+    const charactersLength = what.length;
+    let counter = 0;
+    while (counter < length) {
+      result += what.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
+function delete_error() {
+  for (var i = 0; i < document.getElementsByClassName('form_error').length; i++) {
+    document.getElementsByClassName('form_error')[i].style.display = 'none';
+  }

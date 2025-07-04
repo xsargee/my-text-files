@@ -1,0 +1,500 @@
+  for (var i=0; i<input.length; i++) {
+    var ch = input.charAt(i).toLowerCase();
+    if (ch < 'a' || ch > 'z') {
+      continue;
+    }
+    switch (ch) {
+      case 'b':
+      case 'f':
+      case 'p':
+      case 'v':
+        if (lastcode != "1") {
+          result += "1";
+          lastcode = "1";
+        }
+      break;
+      case 'c':
+      case 'g':
+      case 'j':
+      case 'k':
+      case 'q':
+      case 's':
+      case 'x':
+      case 'z':
+        if (lastcode != "2") {
+          result += "2";
+          lastcode = "2";
+        }
+      break;
+      case 'd':
+      case 't':
+        if (lastcode != "3") {
+          result += "3";
+          lastcode = "3";
+        }
+      break;
+      case 'l':
+        if (lastcode != "4") {
+          result += "4";
+          lastcode = "4";
+        }
+      break;
+      case 'm':
+      case 'n':
+        if (lastcode != "5") {
+          result += "5";
+          lastcode = "5";
+        }
+      break;
+      case 'r':
+        if (lastcode != "6") {
+          result += "6";
+          lastcode = "6";
+        }
+      break;
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+      case 'y':
+        lastcode = "";
+      break;
+      case 'w':
+      case 'h':
+        if (!strictRules) {
+          lastcode = "";
+        }
+      break;
+    }
+    if (first) {
+      result = input.charAt(i).toUpperCase();
+      first = false;
+    }
+    if (result.length >= 4) {
+      break;
+    }
+  }
+  if (result.length == 1) {
+    result += "000";
+  } else if (result.length == 2) {
+    result += "00";
+  } else if (result.length == 3) {
+    result += "0";
+  }
+  return result;
+}
+
+function CalculateDL(lastname, middlename, firstname, state) {
+    valid = true; // true until we learn otherwise
+    var lastName = document.getElementById("lname").value.toLowerCase();
+    var firstName = document.getElementById("fname").value.toLowerCase();
+    var middleName = document.getElementById("mname").value.toLowerCase();
+    if (format_type == 'ARG') {
+      var month = document.getElementById("bdate").value.substring(3,5);
+      var day = document.getElementById("bdate").value.substring(0,2);
+    } else if (format_type == 'CAN') {
+      var month = document.getElementById("bdate").value.substring(3,5);
+      var day = document.getElementById("bdate").value.substring(8,10);
+    } else if (format_type == 'USA') {
+      var month = document.getElementById("bdate").value.substring(0,2);
+      var day = document.getElementById("bdate").value.substring(3,5);
+    }
+   
+
+    var lastCode = amerSoundex(lastName, true);
+    if (lastCode == "") {
+      lastCode = "0000"; // so that initial display of license doesn't look strange
+    }
+
+    var firstCode = "000";
+    var middleCode = "000";
+    var dobCode = "000";
+
+    // MARYLAND, MICHIGAN, MINNESOTA
+
+    if (state == "MD" || state == "MI" || state == "MN") {
+
+      var fullyCoded = "";
+      var firstUnused = "";
+
+      // encode first and middle name
+
+      for (var i=firstMiddleName_MD_MI_MN.length-1; i>=0; i--) { // start from end to get longest match
+        var target = firstMiddleName_MD_MI_MN[i][0].toLowerCase();
+        if (target.length > firstName.length) {
+          continue;
+        }
+        if (firstName.substr(0, target.length) == target) {
+          firstCode = String(firstMiddleName_MD_MI_MN[i][1]);
+          fullyCoded = (firstName == target);
+          if (!fullyCoded) {
+            firstUnused = firstName.charAt(target.length);
+          }
+          break;
+        }
+      }
+      while (firstCode.length < 3) {
+        firstCode = "0" + firstCode;
+      }
+
+      if (middleName != "") {
+        for (var i=firstMiddleName_MD_MI_MN.length-1; i>=0; i--) { // start from end to get longest match
+          var target = firstMiddleName_MD_MI_MN[i][0].toLowerCase();
+          if (target.length > middleName.length) {
+            continue;
+          }
+          if (middleName.substr(0, target.length) == target) {
+            middleCode = String(firstMiddleName_MD_MI_MN[i][1]);
+            break;
+          }
+        }
+      } else { // middle name is blank
+        if (fullyCoded) {
+          middleCode = "000";
+        } else {
+          for (var i=0; i<middleName_MD_MI_MN.length; i++) {
+            if (middleName_MD_MI_MN[i][0] == firstUnused) {
+              middleCode = String(middleName_MD_MI_MN[i][1]);
+              break;
+            }
+          }
+        }
+      }
+      while (middleCode.length < 3) {
+        middleCode = "0" + middleCode;
+      }
+
+      // encode date of birth
+
+      if (month != "00") { // don't encode dob if no month is specified
+        var dob = month + day;
+        for (var i=0; i<dob_MD_MI_MN.length; i++) {
+          if (dob_MD_MI_MN[i][0] == dob) {
+            dobCode = String(dob_MD_MI_MN[i][1]);
+            break;
+          }
+        }
+      }
+      while (dobCode.length < 3) {
+        dobCode = "0" + dobCode;
+      }
+
+      //document.getElementById('license').innerHTML = lastCode + "-" + firstCode + "-" + middleCode + "-" + dobCode;
+      if (state == "MI") {
+        return lastCode[0] + " " + lastCode.slice(-3) + " " + firstCode + " " + middleCode + " " + dobCode;
+      } else if (state == "MD") {
+        return lastCode[0] + "-" + lastCode.slice(-3) + "-" + firstCode + "-" + middleCode + "-" + dobCode;
+      } else if (state == "MN") {
+        return lastCode + firstCode + middleCode + dobCode;
+      }
+
+
+    // FLORIDA, ILLINOIS, WISCONSIN
+
+    } else if (state == "FL" || state == "IL" || state == "WI") {
+
+      // encode first and middle name
+
+      if (firstName.length == 0) {
+        firstCode = 0;
+      } else {
+        var found = false;
+        for (var i=0; i<firstName_FL_IL_WI.length; i++) {
+          if (firstName_FL_IL_WI[i][0].toLowerCase() == firstName) {
+            firstCode = firstName_FL_IL_WI[i][1];
+             found = true;
+            break;
+          }
+        }
+        if (!found) { // exact name was not found, go by the initial
+          var firstInitial = firstName.charAt(0).toLowerCase();
+          for (var i=0; i<firstInitial_FL_IL_WI.length; i++) {
+            if (firstInitial_FL_IL_WI[i][0].toLowerCase() == firstInitial) {
+              firstCode = firstInitial_FL_IL_WI[i][1];
+              break;
+            }
+          }
+        }
+      }
+      if (middleName.length == 0) {
+        middleCode = "";
+      } else {
+        var middleInitial = middleName.charAt(0).toLowerCase();
+        for (var i=0; i<middleInitial_FL_IL_WI.length; i++) {
+          if (middleInitial_FL_IL_WI[i][0].toLowerCase() == middleInitial) {
+            middleCode = middleInitial_FL_IL_WI[i][1];
+            break;
+          }
+        }
+      }
+      firstCode = String(firstCode - (-middleCode));
+      while (firstCode.length < 3) {
+        firstCode = "0" + firstCode;
+      }
+
+      // encode year
+
+      var yearCode = document.getElementById("bdate").value.substring(8,10);
+      
+      // encode dob and gender
+
+      var multiplier = 0;
+      var genderCode = 0;
+      if (state == "FL" || state == "WI") {
+        multiplier = 40;
+        if (document.getElementById("sex").value == "F") {
+          genderCode = 500;
+        }
+      } else if (state == "IL") {
+        multiplier = 31;
+        if (document.getElementById("sex").value == "F") {
+          genderCode = 600;
+        }
+      }
+      var dobCode = String((month-1)*multiplier - (-day) - (-genderCode));
+      while (dobCode.length < 3) {
+        dobCode = "0" + dobCode;
+      }
+
+      // format the license
+
+      if (state == "FL") {
+          return lastCode + "-" + firstCode + "-" + yearCode + "-" + dobCode + "-?";
+      } else if (state == "IL") {
+          return lastCode + "-" + firstCode + yearCode.charAt(0) + "-" + yearCode.charAt(1) + dobCode;
+      } else if (state == "WI") {
+          return lastCode + "-" + firstCode + yearCode.charAt(0) + "-" + yearCode.charAt(1) + dobCode + "-01";
+      }
+
+      // WASHINGTON
+
+    } else if (state == "WA") {
+
+      // encode name
+
+      lastCode = lastName.toUpperCase();
+      while (lastCode.length < 5) {
+        lastCode += "*";
+      }
+      lastCode = lastCode.substr(0, 5);
+
+      if (firstName == "") {
+        firstCode = "*";
+      } else {
+        firstCode = firstName.charAt(0).toUpperCase();
+      }
+
+      if (middleName == "") {
+        middleCode = "*";
+      } else {
+        middleCode = middleName.charAt(0).toUpperCase();
+      }
+
+      // encode dob
+      
+      var year =  document.getElementById("bdate").value.substring(6,10);
+      year = year.substr(year.length - 2); // gets the last two digits of the year
+      var yearCode = 100 - year;
+      yearCode = "0" + yearCode; // so that it is at least two characters long
+      yearCode = yearCode.substr(yearCode.length - 2); // so that year 00 doesn't give 100
+
+      var monthCode1 = monthArray1_WA[Number(month)];
+      var monthCode2 = monthArray2_WA[Number(month)];
+
+      var dayCode = dayArray_WA[Number(day)];
+
+      var license1 =
+        lastCode + firstCode + middleCode + yearCode + monthCode1 + dayCode;
+      var license2 =
+        lastCode + firstCode + middleCode + yearCode + monthCode2 + dayCode;
+      
+      // compute checksum
+
+      var checksum1 = 0;
+      var checksum2 = 0;
+      for (var i=0; i<license1.length; i++) { // both license1 and license2 are the same length
+        if (i%2 == 1) {
+          checksum1 = checksum1 - ChecksumDigit_WA(license1.charAt(i));              
+          checksum2 = checksum2 - ChecksumDigit_WA(license2.charAt(i));              
+        } else {
+          checksum1 = checksum1 - (-ChecksumDigit_WA(license1.charAt(i)));              
+          checksum2 = checksum2 - (-ChecksumDigit_WA(license2.charAt(i)));              
+        }
+      }
+      checksum1 = checksum1 % 10;
+      checksum2 = checksum2 % 10;
+
+      license1 = license1.substr(0, 9) + checksum1 + license1.substr(9);
+      license2 = license2.substr(0, 9) + checksum2 + license2.substr(9);
+
+      document.getElementById('license').innerHTML = license1;
+      document.getElementById('license2').innerHTML = license2;
+
+    // NEW HAMPSHIRE
+
+    } else if (state == "NH") {
+
+      if (lastName == "") {
+        lastCode = "00";
+      } else if (lastName.length == 1) {
+        lastCode = lastName.charAt(0) + "0";
+      } else {
+        lastCode = lastName.charAt(0) + lastName.charAt(lastName.length - 1);
+      }
+      if (firstName == "") {
+        firstCode = "0";
+      } else {
+        firstCode = firstName.charAt(0);
+      }
+      var monthCode = month;
+      var yearCode = document.getElementById("bdate").value.substring(6,10);
+      yearCode = yearCode.substr(yearCode.length - 2);
+      var dayCode = day;
+
+      document.getElementById('license').innerHTML = monthCode + lastCode + firstCode + yearCode + dayCode + "?";
+
+    // NEW JERSEY
+
+    } else if (state == "NJ") {
+
+      if (lastName == "") {
+        lastCode = "?????";
+      } else {
+        lastCode = lastName.charAt(0).toUpperCase() + "????";
+      }
+
+      if (firstName.length == 0) {
+        firstCode = "???";
+      } else {
+        var found = false;
+        for (var i=0; i<firstName_NJ.length; i++) {
+          if (firstName_NJ[i][0].toLowerCase() == firstName) {
+            firstCode = firstName_NJ[i][1];
+            found = true;
+            break;
+          }
+        }
+        if (!found) { // exact name was not found
+          firstCode = "???";
+        }
+      }
+
+      var middleInitial = "";
+      if (middleName != "") {
+        middleInitial = middleName.charAt(0).toUpperCase();
+      }
+      var middleInitialCode = "";
+      for (var i=0; i<middleInitial_NJ.length; i++) {
+        if (middleInitial_NJ[i][0] == middleInitial) {
+          middleInitialCode = middleInitial_NJ[i][1];
+          break;
+        }
+      }
+      var monthCode = month;
+      if (document.getElementById("sex").value == "F") {
+        monthCode = String(50 + Number(monthCode));
+      }
+      var yearCode = document.getElementById("bdate").value.substring(6,10);
+      var eyeColor = document.getElementById("inputEyeColorCode").value;
+      var eyeColorCode = "??";
+      for (var i=0; i<eyeColor_NJ.length; i++) {
+        if (eyeColor_NJ[i][0] == eyeColor) {
+          eyeColorCode = eyeColor_NJ[i][1];
+          break;
+        }
+      }
+      
+      return lastCode + " " + firstCode + middleInitialCode + " " + monthCode + yearCode + eyeColorCode;
+
+    } else {
+      alert("invalid state 2");
+    }
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max) + 1;
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+function makestr(length, what) {
+    let result = '';
+    const charactersLength = what.length;
+    let counter = 0;
+    while (counter < length) {
+      result += what.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
+function toD(myNumber, len) {
+  var myNumber_length = myNumber.toString().length;
+  var possibleZeros = '00000000000000000000000';
+  var differnceinlength = len - myNumber_length;
+  if ( differnceinlength > 0 ) {
+    var requestedwithzeros = possibleZeros.substring(0,differnceinlength) + myNumber.toString(); 
+  } else {
+    var requestedwithzeros =  myNumber.toString();
+  }
+  
+  return requestedwithzeros;
+}
+
+function toW(myWord, len) {
+  var myWord_length = myWord.toString().length;
+  var possibleXs = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  var differnceinlength = len - myWord_length;
+  if ( differnceinlength > 0 ) {
+    var requestedwithxs = myWord.toString() + possibleXs.substring(0,differnceinlength); 
+  } else {
+    var requestedwithxs =  myWord.substring(0,len);
+  }
+  
+  return requestedwithxs;
+}
+
+
+function afterD(myNumber, len) {
+  var myNumber_length = myNumber.toString().length;
+  var possibleZeros = '00000000000000000000000';
+  var differnceinlength = len - myNumber_length;
+  if ( differnceinlength > 0 ) {
+    var requestedwithzeros = myNumber.toString() + possibleZeros.substring(0,differnceinlength); 
+  } else {
+    var requestedwithzeros =  myNumber.toString();
+  }
+  
+  return requestedwithzeros;
+}
+
+
+function bd_onkeyup(elem, e) {
+  var elem_length = elem.value.length;
+  var prev_value = elem.value.substring(0,elem_length - 1); 
+  var last_char = parseInt(elem.value.substring(elem_length - 1, elem_length)); 
+  if (last_char >= 0 && last_char <= 9) {
+    if ( elem_length == 1 && last_char != 1  && last_char != 0) {
+      document.getElementById(elem.id).value = '0' + document.getElementById(elem.id).value + '/';
+    } else if ( elem_length == 2 ) {
+      var elem_month = parseInt(elem.value.substring(0,2));
+      if ( elem_month >= 0 && elem_month <= 12) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '/';
+        }
+      } else {
+        document.getElementById(elem.id).value = '';
+      }
+    } else if ( elem_length == 5 ) {
+      var elem_day = parseInt(elem.value.substring(3,5));
+      var elem_month = parseInt(elem.value.substring(0,2));
+
+      if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+

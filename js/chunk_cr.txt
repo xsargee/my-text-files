@@ -1,0 +1,155 @@
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additonal_data").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      }
+    }
+  } else if ( country == 'SVN' ) {
+    if ( document.getElementById("vtype").value == 'I' ) {
+      if ( document.getElementById("additonal_data").value.length <= 0  ) {    
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additonal_data").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      }
+    }
+  } else if ( country == 'CHE' ) {
+    if ( document.getElementById("vtype").value != 'ID' ) {
+      if ( document.getElementById("additonal_data").value.length <= 0  ) {    
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additonal_data").focus();
+        setTimeout(delete_error, 3000);
+        return;   
+      }
+    }
+  }
+
+  if ( country == 'BEL' || country == 'BGR' || country == 'CAN' ) {
+    if ( document.getElementById("additonal_data_more").value.length <= 0 ) {   
+      document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data_more'];
+      document.getElementById("error_four").style.display = 'block';
+      document.getElementById("additonal_data_more").focus();
+      setTimeout(delete_error, 3000);
+      return;      
+    }
+  } else if ( country == 'CZE' ) {
+    if ( document.getElementById("vtype").value == 'IR' ) {
+      if ( document.getElementById("additonal_data_more").value.length <= 0 ) { 
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data_more'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additonal_data_more").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+    }
+  } else if ( country == 'POL' ) {
+    if ( document.getElementById("vtype").value == 'I' ) {
+      if ( document.getElementById("additonal_data_more").value.length <= 0 ) { 
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data_more'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additonal_data_more").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+    }
+  } else if ( country == 'USA' ) {
+    if ( document.getElementById("vtype").value == 'IP' ) {
+      if ( document.getElementById("additonal_data_more").value.length <= 0 ) { 
+        document.getElementById("error_four").innerHTML = languages[active_language]['error_additonal_data_more'];
+        document.getElementById("error_four").style.display = 'block';
+        document.getElementById("additonal_data_more").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+    }
+  }
+
+  var country_ed = document.getElementById("country").value;
+  var id_type_ed = document.getElementById("vtype").value;
+  var lname_ed = document.getElementById("lname").value.toUpperCase().replaceAll(' ', '');
+  var name = document.getElementById("fname").value.toUpperCase().replaceAll(' ', '');
+    if ( document.getElementById("mname").value.length > 0 ) {
+      name += ' '+document.getElementById("mname").value.toUpperCase().replaceAll(' ', '');
+    }
+  var doc_num_ed = document.getElementById("doc_number").value;
+  var nationality_ed = document.getElementById("nationality").value;
+  if ( format_type == 'USA' ) {
+    var bdate_ed = document.getElementById("bdate").value;
+  } else {
+    var bdate_ed = document.getElementById("bdate").value.substring(3,5) + '/' + document.getElementById("bdate").value.substring(0,2) + '/' + document.getElementById("bdate").value.substring(6,10);
+  }
+  var sex_ed = document.getElementById("sex").value;
+  if ( format_type == 'USA' ) {
+    var edate_ed = document.getElementById("edate").value;
+  } else {
+    var edate_ed = document.getElementById("edate").value.substring(3,5) + '/' + document.getElementById("edate").value.substring(0,2) + '/' + document.getElementById("edate").value.substring(6,10);
+  }  
+
+  var final_line = country_ed + ';' + id_type_ed + ';' + lname_ed + ';' + name + ';' + doc_num_ed + ';' + nationality_ed + ';' + bdate_ed + ';' + sex_ed + ';' + edate_ed;
+
+  if ( country == 'CAN' || country == 'HRV' || country == 'EST' && id_type_ed != 'IR' ||
+       country == 'IRL' && id_type_ed == 'IR' || country == 'KAZ' || country == 'KGZ' ||
+       country == 'LVA' && id_type_ed != 'IR' || country == 'LTU' || country == 'LUX' ||
+       country == 'MLT' || country == 'MDA'   || country == 'NOR' || country == 'SEN' ||
+      country == 'PRT' && id_type_ed == 'I' || country == 'PRT' && id_type_ed == 'ID' ||
+       country == 'ROU' || country == 'UKR'   || country == 'ARE' || country == 'USA' ||
+       country == 'SVK' ||  country == 'SVN' && id_type_ed == 'I' || country == 'ESP' ||
+       country == 'CHE' && id_type_ed != 'ID' || country == 'SWE' ) {
+    var ad_data_ed = document.getElementById("additonal_data").value;
+    final_line += ';' + ad_data_ed;
+  }
+
+  if ( country == 'BEL' || country == 'CZE' && id_type_ed == 'IR' ||
+       country == 'BGR' || country == 'POL' && id_type_ed ==  'I'  ) {
+    var ad_data_more_ed = document.getElementById("additonal_data_more").value;
+    final_line += ';_;' + ad_data_more_ed;
+  }
+
+  if ( country == 'CAN' || country == 'USA' && id_type_ed == 'IP' ) {
+    var ad_data_more_ed = document.getElementById("additonal_data_more").value;
+    final_line += ';' + ad_data_more_ed;
+  }
+
+  final_line += ';' + format_type;
+
+  if ( generation_type == 1 ) {
+
+    var send_http = new XMLHttpRequest();
+    var params = 'user_form='+user_form+'&params='+final_line;
+
+        send_http.open('POST', generate_link, true);
+        send_http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        send_http.onreadystatechange = function() {
+        if(send_http.readyState == 4 && send_http.status == 200) {
+          
+          var result_data = JSON.parse(send_http.responseText);
+               
+          switch (result_data.type) {
+          case 1:
+            document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+          break;
+          default:
+            document.getElementById("final_button").innerHTML = result_data.type + ' - ' +languages[active_language]['error']; 
+          break;
+          }
+
+        }
+        };
+
+        send_http.send(params);  
+   
+    
+        document.getElementById("final_button").classList.add('stopped_button');
+        document.getElementById("final_button").classList.remove('generate_button');
+
+        document.getElementById("final_button").disabled = true;
+        document.getElementById("final_button").innerHTML = languages[active_language]['loading']; 
+
+    } else {
+      window.location.href = "https://t.me/pdf417mrz_bot";
+    }
+  
+}

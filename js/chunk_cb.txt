@@ -1,0 +1,500 @@
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0;
+      break;          
+      case 'NY':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="C">C</option><option value="M">M</option>';
+        var possible_restriction = '<option value=""></option><option value="B">B</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'NC':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="C">C</option>';
+        var possible_restriction = '<option value=""></option><option value="1">1</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>'; 
+        document.getElementById("hair").value = languages[active_language]['sel_hair'];
+        document.getElementById("hair").disabled = 0;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+        document.getElementById("scin_color").value = 'W';
+        document.getElementById("scin_color").disabled = 0;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'ND':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option><option value="M">M</option>';
+        var possible_restriction = '<option value=""></option><option value="1">1</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-4"><div class="label_pdf">'+languages[active_language]['in_issue_office']+'</div><input class="inputer" type="text" id="nd_option_1" value="'+makestr(3, digits)+'" required></div>';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'OH':
+        document.getElementById('inv_html').innerHTML = '';
+        document.getElementById('aud_html').innerHTML = '';  
+        var possible_classes = '<option value=""></option><option value="D">D</option>';
+        var possible_restriction = '<option value=""></option><option value="A">A</option><option value="B">B</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="M">M</option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '<div class="col-4"><div class="label_pdf">'+languages[active_language]['sufix']+'</div><select class="inputer select_pdf" id="oh_name_sufix" required><option vale="NONE" selected>NONE</option><option vale="JR">JR</option><option vale="SR">SR</option><option vale="1ST">1ST</option><option vale="2ST">2ST</option><option vale="3ST">3ST</option><option vale="4ST">4ST</option><option vale="5ST">5ST</option><option vale="6ST">6ST</option></select></div><div class="col-4"><div class="label_pdf">'+languages[active_language]['state_birth']+'</div><input class="inputer" type="text" id="oh_state_birth" value="Ohio" required></div><div class="col-4"><div class="label_pdf">'+languages[active_language]['address_line_2']+'</div><input class="inputer" type="text" id="oh_address2" value=""></div>';
+
+        document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>'; 
+        document.getElementById("hair").value = languages[active_language]['sel_hair'];
+        document.getElementById("hair").disabled = 0;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0;
+      break;
+      case 'OK':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option>';
+        var possible_restriction = '<option value=""></option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="M">M</option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-4"><div class="label_pdf">'+languages[active_language]['sufix']+'</div><select class="inputer select_pdf" id="ok_name_sufix" required><option vale="NONE" selected>NONE</option><option vale="JR">JR</option><option vale="SR">SR</option><option vale="1ST">1ST</option><option vale="2ST">2ST</option><option vale="3ST">3ST</option><option vale="4ST">4ST</option><option vale="5ST">5ST</option><option vale="6ST">6ST</option><option vale="I">I</option><option vale="II">II</option><option vale="III">III</option></select></div><div class="col-4"><div class="label_pdf">'+languages[active_language]['country']+'</div><input class="inputer" type="text" id="ok_state_birth" value="OK" required></div><div class="col-4"><div class="label_pdf">'+languages[active_language]['additional']+'</div><input class="inputer" type="text" id="ok_additional" value="77.00" required></div>';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0;
+      break;
+      case 'OR':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="C">C</option>';
+        var possible_restriction = '<option value=""></option><option value="D">D</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="M">M</option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-4"><div class="label_pdf">'+languages[active_language]['address_line_2']+'</div><input class="inputer" type="text" id="or_address2" value=""></div><div class= "col-4"><div class="label_pdf">'+languages[active_language]['sufix']+'</div><select class="inputer select_pdf" id="or_name_sufix" required><option vale="NONE" selected>NONE</option><option vale="JR">JR</option><option vale="SR">SR</option><option vale="1ST">1ST</option><option vale="2ST">2ST</option><option vale="3ST">3ST</option><option vale="4ST">4ST</option><option vale="5ST">5ST</option><option vale="6ST">6ST</option><option vale="I">I</option><option vale="II">II</option><option vale="III">III</option></select></div>';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0;
+      break;
+      case 'PA':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="C">C</option><option value="M">M</option>';
+        var possible_restriction = '<option value=""></option><option value="L">L</option><option value="1">1</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-6"><div class="label_pdf">Dups</div><input class="inputer" type="text" id="pa_dups" value="00"></div><div class= "col-6"><div class="label_pdf">'+languages[active_language]['in_issue_office']+'</div><input class="inputer" type="text" id="pa_is_office" value="603"></div>';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'PR':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="3">3</option>';
+        var possible_restriction = '<option value=""></option><option value="7">7</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'RI':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="10">10</option>';
+        var possible_restriction = '<option value=""></option><option value="A">A</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>'; 
+        document.getElementById("hair").value = languages[active_language]['sel_hair'];
+        document.getElementById("hair").disabled = 0;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0;
+      break;
+      case 'SC':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option>';
+        var possible_restriction = '<option value=""></option><option value="A">A</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+        document.getElementById("scin_color").value = 'W';
+        document.getElementById("scin_color").disabled = 0;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0;
+      break;
+      case 'SD':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="1">1</option>';
+        var possible_restriction = '<option value=""></option><option value="B">B</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0; 
+      break;
+      case 'TN':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option>';
+        var possible_restriction = '<option value=""></option><option value="01">01</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-4"><div class="label_pdf">'+languages[active_language]['address_line_2']+'</div><input class="inputer" type="text" id="tn_address2" value=""></div>';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'TX':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="C">C</option><option value="M">M</option><option value="CM">CM</option><option value="A">A</option>';
+        var possible_restriction = '<option value=""></option><option value="A">A</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option><option value="X">X</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-4"><div class="label_pdf">'+languages[active_language]['sufix']+'</div><select class="inputer select_pdf" id="tx_name_sufix" required><option vale="NONE" selected>NONE</option><option vale="JR">JR</option><option vale="SR">SR</option><option vale="1ST">1ST</option><option vale="2ST">2ST</option><option vale="3ST">3ST</option><option vale="4ST">4ST</option><option vale="5ST">5ST</option><option vale="6ST">6ST</option><option vale="I">I</option><option vale="II">II</option><option vale="III">III</option></select></div>';
+
+        document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>'; 
+        document.getElementById("hair").value = languages[active_language]['sel_hair'];
+        document.getElementById("hair").disabled = 0;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+        document.getElementById("scin_color").value = 'W';
+        document.getElementById("scin_color").disabled = 0;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0; 
+      break;
+      case 'UT':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option><option value="B">B</option>';
+        var possible_restriction = '<option value=""></option><option value="A">A</option><option value="B">B</option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option><option value="MN">MN</option>';
+        document.getElementById('adds_row').innerHTML = '<div class= "col-4"><div class="label_pdf">'+languages[active_language]['ut_issue_office']+'</div><input class="inputer" type="text" id="ut_is_office" value="H" required></div>';
+
+        document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>'; 
+        document.getElementById("hair").value = languages[active_language]['sel_hair'];
+        document.getElementById("hair").disabled = 0;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0; 
+      break;
+      case 'VT':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option>';
+        var possible_restriction = '<option value=""></option><option value="NONE">NONE</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0; 
+      break;
+      case 'VA':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="D">D</option><option value="M">M</option>';
+        var possible_restriction = '<option value=""></option><option value="NONE">NONE</option><option value="C">C</option><option value="X">X</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+        document.getElementById("weight").disabled = 1;
+      break;
+      case 'WA':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '<div class="label_pdf" id="audit_selector">'+languages[active_language]['audit']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="audit" onclick="audit_number_copy(event)"></label><button type="button" id="audit_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        var possible_classes = '<option value=""></option><option value="A">A</option><option value="NONE">NONE</option>';
+        var possible_restriction = '<option value=""></option><option value="NONE">NONE</option><option value="B">B</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("scin_color").value = 'U';
+        document.getElementById("scin_color").disabled = 1;
+
+        document.getElementById("height_one").value = "";
+        document.getElementById("height_one").disabled = 0;
+        document.getElementById("height_two").value = "";
+        document.getElementById("height_two").disabled = 0;
+
+        document.getElementById("weight").value = "";
+        document.getElementById("weight").disabled = 0; 
+      break;
+      case 'WV':
+        document.getElementById('inv_html').innerHTML = '<div class="label_pdf" id="inventory_selector">'+languages[active_language]['inventory']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto" type="text" id="inventory" onclick="inventory_number_copy(event)"></label><button type="button" id="inventory_gen_b" class="gen_button">'+languages[active_language]['auto']+'</button></div>';
+        document.getElementById('aud_html').innerHTML = '';
+        var possible_classes = '<option value=""></option><option value="E">E</option>';
+        var possible_restriction = '<option value=""></option><option value="NONE">NONE</option><option value="2">2</option>';
+        var possible_endorsment = '<option value=""></option><option value="NONE">NONE</option>';
+        document.getElementById('adds_row').innerHTML = '';
+
+        document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+        document.getElementById("hair").value = 'UNK';
+        document.getElementById("hair").disabled = 1;
+
+        document.getElementById("eyes").innerHTML = '<option id="eyes_option">'+languages[active_language]['sel_eyes']+'</option><option value="BLK" id="eyes_col_blk">BLK</option><option value="BLU" id="eyes_col_blu">BLU</option><option value="BRO" id="eyes_col_brn">BRO</option><option value="GRY" id="eyes_col_gry">GRY</option><option value="HAZ" id="eyes_col_haz">HAZ</option><option value="MAR" id="hair_col_mar">MAR</option><option value="PNK" id="eyes_col_pnk">PNK</option><option value="DIC" id="eyes_col_dic">DIC</option><option value="UNK" id="eyes_col_unk">UNK</option><option value="GRN" id="eyes_col_grn">GRN</option>';
+        document.getElementById("eyes").value = languages[active_language]['sel_eyes'];
+        document.getElementById("eyes").disabled = 0;
+
+        document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';

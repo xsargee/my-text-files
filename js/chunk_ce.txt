@@ -1,0 +1,500 @@
+
+             document.getElementById("eyes").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+             document.getElementById("eyes").value = 'UNK';
+             document.getElementById("eyes").disabled = 1;
+
+             document.getElementById("height_one").value = languages[active_language]['doesnotrequired'];
+             document.getElementById("height_one").disabled = 1;
+             document.getElementById("height_two").value = languages[active_language]['doesnotrequired'];
+             document.getElementById("height_two").disabled = 1;
+
+             document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+             document.getElementById("weight").disabled = 1;
+
+             document.getElementById('inv_html').innerHTML = '';
+           }
+         break;
+         case 'AR':
+           if (  document.getElementById("revision").value == '03012018' ) {
+             document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+             document.getElementById("scin_color").value = 'U';
+             document.getElementById("scin_color").disabled = 1;
+           } else {
+             document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+             document.getElementById("scin_color").value = 'W';
+             document.getElementById("scin_color").disabled = 0;
+           }
+         break;
+         case 'CO':
+           if ( document.getElementById("revision").value == '02282022' || document.getElementById("revision").value == '10302015' ) {
+             document.getElementById("hair").innerHTML = '<option id="hair_option">'+languages[active_language]['sel_hair']+'</option> <option value="BAL" id="hair_col_bal">BAL</option><option value="BLK" id="hair_col_blk">BLK</option><option value="BLN" id="hair_col_bln">BLN</option><option value="BRO" id="hair_col_brn">BRO</option> <option value="GRY" id="hair_col_gry">GRY</option><option value="RED" id="hair_col_red">RED</option><option value="SDY" id="hair_col_sdy">SDY</option><option value="WHI" id="hair_col_whi">WHI</option><option value="UNK" id="hair_col_unk">UNK</option>'; 
+             document.getElementById("hair").value = languages[active_language]['sel_hair'];
+             document.getElementById("hair").disabled = 0;
+
+             document.getElementById("scin_color").innerHTML = '<option id="skin_col_ai" value="AI">'+languages[active_language]['skin_col_ai']+'</option><option id="skin_col_ap" value="AP">'+languages[active_language]['skin_col_ap']+'</option><option id="skin_col_bk" value="BK">'+languages[active_language]['skin_col_bk']+'</option><option id="skin_col_w" value="W">'+languages[active_language]['skin_col_w']+'</option><option id="skin_col_h" value="H">'+languages[active_language]['skin_col_h']+'</option><option id="skin_col_u" value="U">'+languages[active_language]['skin_col_u']+'</option>';
+             document.getElementById("scin_color").value = 'W';
+             document.getElementById("scin_color").disabled = 0;
+
+             document.getElementById("weight").value = "";
+             document.getElementById("weight").disabled = 0;
+           } else {
+             document.getElementById("hair").innerHTML = '<option value="UNK">'+languages[active_language]['doesnotrequired']+'</option>';
+             document.getElementById("hair").value = 'UNK';
+             document.getElementById("hair").disabled = 1;
+
+             document.getElementById("scin_color").innerHTML = '<option value="U">'+languages[active_language]['doesnotrequired']+'</option>';
+             document.getElementById("scin_color").value = 'U';
+             document.getElementById("scin_color").disabled = 1;
+
+             document.getElementById("weight").value = languages[active_language]['doesnotrequired'];
+             document.getElementById("weight").disabled = 1;
+           }
+         break;
+       }     
+
+     }
+
+     var revision_in_public_format = document.getElementById('revision').value.substring(0,2)+"/"+document.getElementById('revision').value.substring(2,4)+"/"+document.getElementById('revision').value.substring(4,8);
+    
+     var send_http_for_template = new XMLHttpRequest();
+     var params_for_template = 'country='+document.getElementById("country").value+'&state='+document.getElementById("state").value+'&revision='+revision_in_public_format+'&type=DL';
+
+         send_http_for_template.open('POST', 'https://pdf417mrz.xyz/api/find-template', true);
+         send_http_for_template.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+         send_http_for_template.onreadystatechange = function() {
+         if(send_http_for_template.readyState == 4 && send_http_for_template.status == 200) {
+
+          var result_data_for_template = JSON.parse(send_http_for_template.responseText);
+               
+          switch (result_data_for_template.type) {
+          case 1:
+            var link_for_template = "https://pdf417mrz.xyz/";
+
+            switch(active_language) {
+             case 'cn':
+              link_for_template += active_language+'/';
+              var seo_link_name = '购买 '+result_data_for_template.title;
+              break;
+             case 'hi':
+              link_for_template += active_language+'/';
+              var seo_link_name = result_data_for_template.title+' खरीदें';
+              break;
+             case 'ru':
+              link_for_template += active_language+'/';
+              var seo_link_name = 'Купить '+result_data_for_template.title;
+              break;
+             case 'ua':
+              link_for_template += active_language+'/';
+              var seo_link_name = 'Купити '+result_data_for_template.title;
+              break;
+             default:
+              var seo_link_name = 'Buy '+result_data_for_template.title;
+              break;
+            }
+
+            link_for_template += 'psd-templates/'+result_data_for_template.handle;
+
+            document.getElementById('left_column_result').innerHTML = '<div class="col-sm-6 col-md-3 col-lg-3"><div class="shop-item"><div class="shop-item-image"><img class="two_img_inside_item" src="/static/img/templates/'+result_data_for_template.front+'" alt="'+result_data_for_template.title+' - Front"/><img class="two_img_inside_item" src="/static/img/templates/'+result_data_for_template.back+'" alt="'+result_data_for_template.title+' - Back"/><div class="shop-item-detail"><a href="'+link_for_template+'" target="_blank" class="btn btn-round btn-b"><span class="icon-basket">'+languages[active_language]['buy_label']+'</span></a></div></div><h4 class="shop-item-title font-alt"><a href="'+link_for_template+'">'+result_data_for_template.title+' - '+result_data_for_template.price+'$</a></h4>'+languages[active_language]['text_buy_label'].replace('TEMPLATE_NAME','<a target="_blank" href="'+link_for_template+'">'+seo_link_name+'</a>' )+'</div></div>';
+            if (  generate_link.includes(" AND ") ) {
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">'+languages[active_language]['generate']+'</button>';
+            } else {
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">'+languages[active_language]['generate']+'</button><button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">'+languages[active_language]['new_generation']+'</button>';
+            }
+          break;
+          default:
+            if (  generate_link.includes(" AND ") ) {
+              document.getElementById('left_column_result').innerHTML = '';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">'+languages[active_language]['generate']+'</button>';
+            } else {
+              document.getElementById('left_column_result').innerHTML = '<button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">'+languages[active_language]['new_generation']+'</button>';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">'+languages[active_language]['generate']+'</button>';
+            }
+          break;
+          }
+
+         } else if (send_http_for_template.readyState == 4 && send_http_for_template.status == 404) {
+            if (  generate_link.includes(" AND ") ) {
+              document.getElementById('left_column_result').innerHTML = '';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>';
+            } else {
+              document.getElementById('left_column_result').innerHTML = '<button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">Clear form!</button>';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">Generate!</button>';
+            }
+         }
+        };
+
+        send_http_for_template.send(params_for_template);      
+
+  } else {
+    if (  generate_link.includes(" AND ") ) {
+      document.getElementById('left_column_result').innerHTML = '';
+      document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>';
+    } else {
+      document.getElementById('left_column_result').innerHTML = '<button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">Clear form!</button>';
+      document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">Generate!</button>';
+    }    
+  }
+}
+
+function only_numbers( input_id ) {
+  var new_value = document.getElementById(input_id).value;
+  var new_good_value = new_value.replace(/[^\d.-]/g, '');
+  document.getElementById(input_id).value = new_good_value;
+}
+
+
+function birthday_date_doc_n() {
+  if( document.getElementById("bdate").value.length >= 10 ) {
+    if ( state == 'CT' ) {
+      generate_doc_number();
+    } 
+  }
+}
+
+function birthday_date_discriminator() {
+  if( document.getElementById("bdate").value.length >= 10 ) {  
+    if ( state == 'AZ' ) {
+      generate_discriminator();
+    } 
+  }
+}
+
+function sex_discriminator() {
+  if ( state == 'AZ' ) {
+    generate_discriminator();
+  } 
+}
+
+function issue_date() {
+  if ( document.getElementById("bdate").value.length == 0 ) {
+    document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+    document.getElementById("error_third_row").style.display = 'block';
+    document.getElementById("bdate").focus();
+    setTimeout(delete_error, 3000);
+    return;
+  } else if ( document.getElementById("idate").value.length == 0 ) {
+    document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+    document.getElementById("error_third_row").style.display = 'block';
+    document.getElementById("idate").focus();
+    setTimeout(delete_error, 3000);
+    return;
+  } else if ( document.getElementById("country").value == languages[active_language]['select_country']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);
+    return;  
+  } else if ( document.getElementById("state").value == languages[active_language]['select_state']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_state'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("state").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( format_type == 'ARG') {
+    var bth_year = document.getElementById("bdate").value.substring(6,10);
+    var isu_year = document.getElementById("idate").value.substring(6,10);
+    var bth_mouth = document.getElementById("bdate").value.substring(3,5);
+    var isu_mouth = document.getElementById("idate").value.substring(3,5);
+    var bth_day = document.getElementById("bdate").value.substring(0,2);
+    var isu_day = document.getElementById("idate").value.substring(0,2);
+  } else if ( format_type == 'CAN') {
+    var bth_year = document.getElementById("bdate").value.substring(0,4);
+    var isu_year = document.getElementById("idate").value.substring(0,4);
+    var bth_mouth = document.getElementById("bdate").value.substring(5,7);
+    var isu_mouth = document.getElementById("idate").value.substring(5,7);
+    var bth_day = document.getElementById("bdate").value.substring(8,10);
+    var isu_day = document.getElementById("idate").value.substring(8,10);
+  } else if ( format_type == 'USA') {
+    var bth_year = document.getElementById("bdate").value.substring(6,10);
+    var isu_year = document.getElementById("idate").value.substring(6,10);
+    var bth_mouth = document.getElementById("bdate").value.substring(0,2);
+    var isu_mouth = document.getElementById("idate").value.substring(0,2);
+    var bth_day = document.getElementById("bdate").value.substring(3,5);
+    var isu_day = document.getElementById("idate").value.substring(3,5);
+  }
+
+  if( document.getElementById("country").value == 'USA' ) { 
+  switch(state) {
+    case 'AL':
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = isu_mouth;
+      var exp_day = isu_day;
+    break;
+    case 'AK':
+
+      if (  document.getElementById("revision").value == '11012018' ) {
+        var exp_year = parseInt(isu_year) + 8 ;
+      } else {
+        var exp_year = parseInt(isu_year) + 5;
+      }
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;  
+    case 'AZ':
+      var az_year_difference = parseInt(isu_year) - parseInt(bth_year);
+      if ( az_year_difference >= 65 ) {
+        var exp_year = parseInt(isu_year) + 5;
+        var exp_moth = bth_mouth;
+        var exp_day = bth_day;
+      } else {
+        var exp_year = parseInt(bth_year) + 65;
+        var exp_moth = bth_mouth;
+        var exp_day = bth_day;
+      }
+    break;
+    case 'AR':
+      var exp_year = parseInt(isu_year) + 8;
+      if ( parseInt(bth_mouth) > parseInt(isu_mouth) ) {
+        exp_year = exp_year - 1;
+      } else if ( parseInt(bth_mouth) == parseInt(isu_mouth) ) {
+        if ( parseInt(bth_day) > parseInt(isu_day) ) {
+           exp_year = exp_year - 1;
+        }   
+      } 
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    break;
+    case 'CA':
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'CO':      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    break;
+    case 'CT':
+
+      var exp_year = parseInt(isu_year) + getRandomInt(5, 7);
+      if ( parseInt(bth_mouth) > parseInt(isu_mouth) ) {
+        exp_year = exp_year - 1;
+      } else if ( parseInt(bth_mouth) == parseInt(isu_mouth) ) {
+        if ( parseInt(bth_day) > parseInt(isu_day) ) {
+           exp_year = exp_year - 1;
+        }   
+      } 
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    break; 
+    case 'DC':      
+      var exp_year = parseInt(isu_year) + getRandomInt(6, 8);
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    break;          
+    case 'DE':
+
+      var exp_year = parseInt(isu_year) + 8;
+      if ( parseInt(bth_mouth) > parseInt(isu_mouth) ) {
+        exp_year = exp_year - 1;
+      } else if ( parseInt(bth_mouth) == parseInt(isu_mouth) ) {
+        if ( parseInt(bth_day) > parseInt(isu_day) ) {
+           exp_year = exp_year - 1;
+        }   
+      } 
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    break;
+    case 'FL':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'GA':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'HI':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'ID':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 62  ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 8;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'IL':
+
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    
+    break;
+    case 'IN':
+      
+      var exp_year = parseInt(isu_year) + 6;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    
+    break;
+    case 'IA':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    
+    break; 
+    case 'KS':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 62 || dif_years < 21  ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 6;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break; 
+    case 'KY':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 62 || dif_years < 21  ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 8;
+      }
+      var exp_moth = toD(parseInt(bth_mouth) + 1, 2);
+      var exp_day = bth_day;
+
+    break;
+    case 'LA':
+
+      var exp_year = parseInt(isu_year) + parseInt(makestr(1, digits_for_louisiana));
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'ME':
+ 
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 65  ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 6;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MD':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MA':
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MI':
+      
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MN':
+      
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MS':
+
+      if (  document.getElementById("revision").value == '09152023' ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 5;
+      }
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+    break;
+    case 'MO':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 70 || dif_years < 21  ) {
+        var exp_year = parseInt(isu_year) + 3;
+      } else {
+        var exp_year = parseInt(isu_year) + 6;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MT':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 75 ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 8;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break; 
+    case 'NE':
+
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NV':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NH':
+
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NJ':
+
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NM':
+
+      if ( parseInt(isu_day) == 1 ) {
+        var exp_year = parseInt(isu_year) + 8;
+        var exp_moth = parseInt(isu_mouth) - 1;
+        if ( exp_moth == 0 ) {
+          exp_year = exp_year - 1;
+          exp_moth = '12';

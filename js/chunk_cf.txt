@@ -1,0 +1,500 @@
+          exp_day = '31';
+        } else {
+          if ( exp_moth == 2 ) {
+            var exp_day = '28';
+          } else if ( exp_moth == 1 || exp_moth == 3 || exp_moth == 5 || exp_moth == 7 || exp_moth == 8 || exp_moth == 10 || exp_moth == 12 ) {
+            var exp_day = '31';
+          } else {
+            var exp_day = '30';       
+          }
+        }
+      } else {
+        var exp_year = parseInt(isu_year) + 8;
+        var exp_moth = isu_mouth;
+        var exp_day = parseInt(isu_day) - 1;     
+      }
+
+    break;     
+    case 'NY':
+
+      var exp_year = parseInt(isu_year) + getRandomInt(2, 8);
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NC':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'ND':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 78 ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 6;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'OH':
+
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'OK':
+
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      if ( exp_moth == '02' ) {
+        var exp_day = '28';
+      } else if ( exp_moth == '01' || exp_moth == '03' || exp_moth == '05' || exp_moth == '07' || exp_moth == '08' || exp_moth == '10' || exp_moth == '12' ) {
+        var exp_day = '31';
+      } else {
+        var exp_day = '30';       
+      }
+     
+    break;
+    case 'OR':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'PA':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years >= 65  ) {
+        var exp_year = parseInt(isu_year) + 2;
+      } else {
+        var exp_year = parseInt(isu_year) + 4;
+      }
+
+      if ( bth_mouth == '02' ) {
+        if( bth_day == '28' ) {
+          var exp_moth = '03';
+          var exp_day = '01';
+        } else {
+          var exp_moth = bth_mouth;
+          var exp_day = parseInt(bth_day) + 1;
+        }
+        var exp_day = '28';
+      } else if ( bth_mouth == '01'|| bth_mouth == '03' || bth_mouth == '05' || bth_mouth == '07' || bth_mouth == '08' || bth_mouth == '10' || bth_mouth == '12'  ) {
+        if( bth_day == '31' ) {
+          if ( bth_mouth == '12'  ) {
+            exp_year = exp_year + 1;
+            var exp_moth = '01';  
+          } else {
+            var exp_moth = parseInt(bth_mouth) + 1;  
+          }          
+          var exp_day = '01';  
+        } else {
+          var exp_moth = bth_mouth;
+          var exp_day = parseInt(bth_day) + 1;         
+        }
+      } else {
+        if( bth_day == '30' ) {
+          var exp_moth = parseInt(bth_mouth) + 1;  
+          var exp_day = '01';   
+        } else {
+          var exp_moth = bth_mouth;
+          var exp_day = parseInt(bth_day) + 1;         
+        }
+      }
+    break;
+    case 'PR':
+
+      var exp_year = parseInt(isu_year) + getRandomInt(6, 8);
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'RI':
+
+      var dif_years = new Date().getFullYear() - parseInt(bth_year);
+      if( dif_years > 73  ) {
+        var exp_year = parseInt(isu_year) + 2;
+      } else if( dif_years > 71 && dif_years <= 73  ) {
+        var exp_year = parseInt(isu_year) + 3;
+      } else if( dif_years > 70 && dif_years <= 71  ) {
+        var exp_year = parseInt(isu_year) + 4;
+      } else {
+        var exp_year = parseInt(isu_year) + 5;
+      }
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'SC':
+
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = isu_mouth;
+      var exp_day = isu_day;
+
+    break;
+    case 'SD':
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'TN':
+      
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = isu_mouth;
+      var exp_day = isu_day;
+
+    break;
+    case 'TX':
+
+      if (  document.getElementById("revision").value == '07162021' ) {
+        var exp_year = parseInt(isu_year) + getRandomInt(6, 9);
+      } else {
+        var exp_year = parseInt(isu_year) + 6;
+      }
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'UT':
+
+      if (  document.getElementById("revision").value == '06012021' ) {
+        var exp_year = parseInt(isu_year) + 8;
+      } else {
+        var exp_year = parseInt(isu_year) + 5;
+      }
+
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'VT':
+      
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'VA':
+      
+      var exp_year = parseInt(isu_year) + 8;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'WA':
+      
+      var exp_year = parseInt(isu_year) + getRandomInt(4, 6);
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'WV':
+      
+      var exp_year = parseInt(isu_year) + getRandomInt(3, 5);
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'WI':
+      
+      var exp_year = parseInt(isu_year) + getRandomInt(5, 9);
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'WY':
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;      
+  }
+  } else if ( document.getElementById("country").value == 'CAN' ) {
+  switch(state) {
+    case 'AB':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'BC':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'MB':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = parseInt(isu_mouth) - getRandomInt(0, 3);
+      if (exp_moth <= 0) {
+        exp_moth = '01';
+      } else {
+        var exp_moth = String(exp_moth);
+        if (exp_moth.length == 1 ) {
+          exp_moth = "0" + exp_moth;
+        }
+      }
+
+      var exp_day = parseInt(isu_day) - getRandomInt(5, 15);
+      if (exp_day <= 0) {
+        exp_day = '01';
+      } else {
+        var exp_day = String(exp_day);
+        if (exp_day.length == 1 ) {
+          exp_day = "0" + exp_day;
+        }        
+      }
+
+    break;
+    case 'NB':    
+      
+      var exp_year = parseInt(isu_year) + 4;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NL':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'NS':    
+
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'ON':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;     
+    case 'PE':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;
+    case 'SK':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      if ( exp_moth == '02' ) {
+        var exp_day = '28';
+      } else if ( exp_moth == '01'|| exp_moth == '03' || exp_moth == '05' || exp_moth == '07' || exp_moth == '08' || exp_moth == '10' || exp_moth == '12'  ) {
+        var exp_day = '31';
+      } else {
+        var exp_day = '30';
+      }
+      
+    break;
+    case 'QC':    
+      
+      var exp_year = parseInt(isu_year) + 5;
+      var exp_moth = bth_mouth;
+      var exp_day = bth_day;
+
+    break;    
+  }
+  } else if ( document.getElementById("country").value == 'ARG' ) {
+
+    var exp_year = parseInt(isu_year) + 15;
+    var exp_moth = bth_mouth;
+    var exp_day = bth_day;
+
+  }
+
+  if (format_type == 'ARG') {
+    var exp_data = toD(exp_day, 2) + '.' + toD(exp_moth, 2) + '.' + exp_year;
+  } else if ( format_type == 'CAN') {
+    var exp_data = exp_year + '-' + toD(exp_moth, 2) + '-' + toD(exp_day, 2);
+  } else if ( format_type == 'USA') {
+    var exp_data = toD(exp_moth, 2) + '/' + toD(exp_day, 2) + '/' + exp_year;
+  } 
+  
+  document.getElementById("edate").value = exp_data;  
+ 
+}
+
+function generate_doc_number() {
+  if ( document.getElementById("country").value == languages[active_language]['select_country']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("state").value == languages[active_language]['select_state']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_state'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("state").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if( document.getElementById("country").value == 'USA' ) { 
+  switch(state) {
+    case 'AL':
+      var doc_num = makestr(8, digits);
+    break;
+    case 'AK':
+      var doc_num = makestr(7, digits);
+    break; 
+    case 'AZ':
+      var doc_num = "D" + makestr(8, digits);
+    break;
+    case 'AR':
+      var doc_num = '9' + makestr(8, digits);
+    break;
+    case 'CO':
+      var doc_num = '17-' + makestr(3, digits) + '-' + makestr(4, digits);
+    break;
+    case 'CA':
+      var doc_num = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'CT':
+      if ( document.getElementById("bdate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("bdate").setAttribute('onchange', 'birthday_date_doc_n()');
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var bth_mouth = document.getElementById("bdate").value.substring(3,5);
+      } else if ( format_type == 'CAN') {
+        var bth_mouth = document.getElementById("bdate").value.substring(5,7);
+      } else if ( format_type == 'USA') {
+        var bth_mouth = document.getElementById("bdate").value.substring(0,2);
+      }
+      var doc_num = bth_mouth + makestr(7, digits);
+    break; 
+    case 'DC':
+      var doc_num = makestr(7, digits);
+    break;
+    case 'DE':
+      var doc_num = "2" + makestr(6, digits);
+    break;
+    case 'FL':
+      if ( document.getElementById("bdate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("bdate").setAttribute('onchange', 'birthday_date_doc_n()');
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( document.getElementById("lname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("lname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( format_type == 'ARG') {
+        var bth_year = document.getElementById("bdate").value.substring(8,10);
+        var bth_day = document.getElementById("bdate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var bth_year = document.getElementById("bdate").value.substring(2,4);
+        var bth_day = document.getElementById("bdate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var bth_year = document.getElementById("bdate").value.substring(8,10);
+        var bth_day = document.getElementById("bdate").value.substring(3,5);
+      }
+
+      var doc_num = document.getElementById("lname").value.substring(0,1).toUpperCase() + makestr(3, digits_six) + '-' + makestr(3, digits_six) + '-' + bth_year + '-' + makestr(1, digits) + bth_day + '-0';  
+    break;
+    case 'GA':
+      var doc_num = '0' + makestr(8, digits);
+    break; 
+    case 'HI':
+      if ( document.getElementById("doc_type").value == languages[active_language]['select_type']  ) {
+        document.getElementById("error_first_row").innerHTML = languages[active_language]['error_type'];
+        document.getElementById("error_first_row").style.display = 'block'; 
+        document.getElementById("doc_type").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+
+      if ( document.getElementById("doc_type").value == 'DL' ) {
+        var doc_num_pref = "H00";
+      } else {
+        var doc_num_pref = "S00";
+      }
+
+      var doc_num = doc_num_pref + makestr(6, digits);
+    break;  
+    case 'ID':
+      var doc_num = makestr(2, letters) + makestr(6, digits) + makestr(1, letters);
+    break;
+    case 'IL':
+      if ( document.getElementById("lname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("lname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("doc_type").value == languages[active_language]['select_type']  ) {
+        document.getElementById("error_first_row").innerHTML = languages[active_language]['error_type'];
+        document.getElementById("error_first_row").style.display = 'block'; 
+        document.getElementById("doc_type").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } 
+
+      if ( document.getElementById("doc_type").value == 'DL' ) {
+        var doc_num = document.getElementById("lname").value.substring(0,1).toUpperCase() + makestr(3, digits) + '-' + makestr(4, digits) + '-' + makestr(4, digits);
+      } else {
+        var doc_num = makestr(4, digits) + '-' + makestr(4, digits) + '-' + makestr(3, digits) + document.getElementById("lname").value.substring(0,1).toUpperCase();
+      }
+    break;
+    case 'IN':
+      var doc_num = makestr(4, digits) + '-' + makestr(2, digits) + '-' + makestr(4, digits);
+    break;
+    case 'IA':
+      var doc_num = makestr(3, digits) + makestr(2, letters) + makestr(4, digits);
+    break;
+    case 'KS':
+      var doc_num = 'K0' + makestr(1, digits_two) + '-' + makestr(2, digits) + '-' + makestr(4, digits);
+    break;
+    case 'KY':
+      if ( document.getElementById("lname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("lname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+      var doc_num = document.getElementById("lname").value.substring(0,1).toUpperCase() + makestr(2, digits) + '-' + makestr(3, digits) + '-' + makestr(3, digits);
+    break;
+    case 'LA':
+      var doc_num = "00" + makestr(7, digits);
+    break;    
+    case 'ME':
+      var doc_num = makestr(7, digits);
+    break;
+    case 'MD':
+      if ( document.getElementById("lname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("lname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("fname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_first_name'];
+        document.getElementById("error_second_row").style.display = 'block';

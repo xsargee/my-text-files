@@ -1,0 +1,500 @@
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '/';
+        }
+      } else {
+        document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,3);
+      }
+
+    } else if ( elem_length == 10 ) {
+      if ( elem.id == 'bdate' ) {
+        document.getElementById('idate').focus();
+      } else if ( elem.id == 'idate') {
+        if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision'] ) {
+          select_revision();
+        }
+        document.getElementById('edate').focus();
+      }
+    }
+  } else if ( elem_length == 5 && e.which == 191  ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,3) + '0' + document.getElementById(elem.id).value.substring(3,4) + '/';
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } else if ( elem_length == 10 ) {
+    if ( elem.id == 'bdate' ) {
+      document.getElementById('idate').focus();
+    } else if ( elem.id == 'idate') {
+      if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision'] ) {
+        select_revision();
+      }
+      document.getElementById('edate').focus();
+    }
+  }
+ 
+}
+
+function bd_onkeyup_arg(elem, e) {
+  var elem_length = elem.value.length;
+  var prev_value = elem.value.substring(0,elem_length - 1); 
+  var last_char = parseInt(elem.value.substring(elem_length - 1, elem_length)); 
+  if (last_char >= 0 && last_char <= 9) {
+    if ( elem_length == 2 ) {
+      var elem_day = parseInt(elem.value.substring(0,2));
+      if ( elem_day > 31 ) {
+        document.getElementById(elem.id).value = prev_value;
+      }
+    } else if ( elem_length == 3 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 5 ) {
+
+      var elem_day = parseInt(elem.value.substring(0,2));
+      var elem_month = parseInt(elem.value.substring(3,5));
+
+      if ( elem_month > 12 || elem_month < 1 ) {
+        document.getElementById(elem.id).value = prev_value;
+      } else if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '.';
+        }
+      } else {
+        document.getElementById(elem.id).value = prev_value;
+      }
+
+    } else if ( elem_length == 6 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 10 ) {
+      if ( elem.id == 'bdate' ) {
+        document.getElementById('idate').focus();
+      } else if ( elem.id == 'idate') {
+        if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision'] ) {
+          select_revision();
+        }
+        document.getElementById('edate').focus();
+      }
+    } else if ( elem_length > 10 ) {
+      document.getElementById(elem.id).value = prev_value;
+    }
+
+  } else if ( elem_length == 2 && e.which == 190  ) {
+    document.getElementById(elem.id).value = '0' + document.getElementById(elem.id).value.substring(0,1) + '.';
+  } else if ( elem_length == 3 && e.which == 190 ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value;
+  } else if ( elem_length == 5 && e.which == 190  ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,2) + '.0' + document.getElementById(elem.id).value.substring(3,4) + '.';
+    
+    var month_cur_change =  document.getElementById(elem.id).value.substring(3,5);
+      var day_cur_change = parseInt(document.getElementById(elem.id).value.substring(0,2));
+    if( month_cur_change == '02' ) {
+      if ( day_cur_change > 29 ) {
+        document.getElementById(elem.id).value = '28.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '01' || month_cur_change == '03' || month_cur_change == '05' || month_cur_change == '07' || month_cur_change == '08' || month_cur_change == '10' || month_cur_change == '12' ) {
+      if ( day_cur_change > 31 ) {
+        document.getElementById(elem.id).value = '31.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '04' || month_cur_change == '06' || month_cur_change == '09' || month_cur_change == '11' ) {
+      if ( day_cur_change > 30 ) {
+        document.getElementById(elem.id).value = '30.0' + month_cur_change + '.';
+      }
+    } else {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( elem_length == 6 && e.which == 190 ) {
+    var month_cur_change =  document.getElementById(elem.id).value.substring(3,5);
+      var day_cur_change = parseInt(document.getElementById(elem.id).value.substring(0,2));
+    if( month_cur_change == '02' ) {
+      if ( day_cur_change > 29 ) {
+        document.getElementById(elem.id).value = '28.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '01' || month_cur_change == '03' || month_cur_change == '05' || month_cur_change == '07' || month_cur_change == '08' || month_cur_change == '10' || month_cur_change == '12' ) {
+      if ( day_cur_change > 31 ) {
+        document.getElementById(elem.id).value = '31.0' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '04' || month_cur_change == '06' || month_cur_change == '09' || month_cur_change == '11' ) {
+      if ( day_cur_change > 30 ) {
+        document.getElementById(elem.id).value = '30.0' + month_cur_change + '.';
+      }
+    } else {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } else if ( elem_length == 10 ) {
+    if ( elem.id == 'bdate' ) {
+      document.getElementById('idate').focus();
+    } else if ( elem.id == 'idate') {
+      if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision'] ) {
+        select_revision();
+      }
+      document.getElementById('edate').focus();
+    }
+  } else if ( elem_length > 10 ) {
+    document.getElementById(elem.id).value = prev_value;
+  }
+ 
+}
+
+function bd_onkeyup_can(elem, e) {
+  var elem_length = elem.value.length;
+  var prev_value = elem.value.substring(0,elem_length - 1); 
+  var last_char = parseInt(elem.value.substring(elem_length - 1, elem_length)); 
+  if (last_char >= 0 && last_char <= 9) {
+    if ( elem_length == 5 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 8 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 10 ) {
+      var elem_day = parseInt(elem.value.substring(8,10));
+      var elem_month = parseInt(elem.value.substring(5,7));
+
+      if ( elem_month > 12 || elem_month < 1 ) {
+        document.getElementById(elem.id).value = prev_value;
+      } else if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          if ( elem.id == 'bdate' ) {       
+            document.getElementById('idate').focus();
+          } else if ( elem.id == 'idate') {
+            if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision'] ) {
+              select_revision();
+            }
+            document.getElementById('edate').focus();
+          }
+        }
+      } else {
+        document.getElementById(elem.id).value = prev_value;
+      }
+
+    }
+  } else if ( elem_length == 4 && e.which == 189 || elem_length == 4 && e.which == 190  ) {
+    document.getElementById(elem.id).value = '1' + document.getElementById(elem.id).value.substring(0,3) + '-';
+  } else if ( elem_length == 5 && e.which == 189 || elem_length == 5 && e.which == 190 ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value;
+  } else if ( elem_length == 7 && e.which == 189 || elem_length == 7 && e.which == 190 ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,4) + '-0' + document.getElementById(elem.id).value.substring(5,6) + '-';
+  } else if ( elem_length == 8 && e.which == 189 || elem_length == 8 && e.which == 190 ) {
+    var elem_month = parseInt(elem.value.substring(5,7));
+    if ( elem_month > 12 ) {
+      document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,4) + '-';
+    } else {
+      document.getElementById(elem.id).value = document.getElementById(elem.id).value;
+    }
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } else if ( elem_length == 10 ) {
+    if ( elem.id == 'bdate' ) {
+      document.getElementById('idate').focus();
+    } else if ( elem.id == 'idate') { 
+      if ( document.getElementById('revision').length > 1 && document.getElementById('revision').value == languages[active_language]['sel_revision']) {
+        select_revision();
+      }  
+      document.getElementById('edate').focus();
+    }
+  } else if ( elem_length > 10 ) {
+    document.getElementById(elem.id).value = '';
+  }
+
+}
+
+function change_date_format(new_format_type) {
+
+  var prev_format_type = format_type;
+
+  format_type = new_format_type;
+
+  if ( format_type == 'ARG' ) {
+    document.getElementById('bdate').placeholder='DD.MM.YYYY';
+    document.getElementById('idate').placeholder='DD.MM.YYYY';
+    document.getElementById('edate').placeholder='DD.MM.YYYY';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup_arg(this, event)');
+    document.getElementById('idate').setAttribute('onkeyup','bd_onkeyup_arg(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup_arg(this, event)');
+    var next_form = 'USA';
+  } else if ( format_type == 'CAN' ) {
+    document.getElementById('bdate').placeholder= 'YYYY-MM-DD';
+    document.getElementById('idate').placeholder= 'YYYY-MM-DD';
+    document.getElementById('edate').placeholder= 'YYYY-MM-DD';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup_can(this, event)');
+    document.getElementById('idate').setAttribute('onkeyup','bd_onkeyup_can(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup_can(this, event)');
+    var next_form = 'ARG';
+  } else if ( format_type == 'USA' ) {
+    document.getElementById('bdate').placeholder='MM/DD/YYYY';
+    document.getElementById('idate').placeholder='MM/DD/YYYY';
+    document.getElementById('edate').placeholder='MM/DD/YYYY';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+    document.getElementById('idate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+    var next_form = 'CAN';
+  }
+
+  for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+    document.getElementsByClassName('gen_button_new')[i].innerHTML = languages[active_language]['format'] + ': ' +format_type;
+    document.getElementsByClassName('gen_button_new')[i].setAttribute('onclick','change_date_format("'+next_form+'")');
+  }
+
+  if ( document.getElementById("state").value != languages[active_language]['select_state']) {
+    revisions( document.getElementById("state").value );
+  }
+
+  if ( document.getElementById('bdate').value.length != 10 ) {
+    document.getElementById('bdate').value = '';
+  } else {
+
+    if (prev_format_type == 'ARG') {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(3,5));
+
+      var text_elem_day = document.getElementById('bdate').value.substring(0,2);
+      var text_elem_month = document.getElementById('bdate').value.substring(3,5);
+      var text_elem_year = document.getElementById('bdate').value.substring(6,10);
+
+    } else if (prev_format_type == 'CAN') {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(8,10));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(5,7));
+
+      var text_elem_day = document.getElementById('bdate').value.substring(8,10);
+      var text_elem_month = document.getElementById('bdate').value.substring(5,7);
+      var text_elem_year = document.getElementById('bdate').value.substring(0,4);
+
+    } else if (prev_format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(0,2));
+
+      var text_elem_day = document.getElementById('bdate').value.substring(3,5);
+      var text_elem_month = document.getElementById('bdate').value.substring(0,2);
+      var text_elem_year = document.getElementById('bdate').value.substring(6,10);
+
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {
+      var day_in_month = 31;             
+    }
+
+    if ( elem_day > 0 && elem_day <= day_in_month) {
+      if (format_type == 'ARG') {
+        document.getElementById('bdate').value = text_elem_day + "." + text_elem_month + "." + text_elem_year;
+      } else if (format_type == 'CAN') {
+        document.getElementById('bdate').value = text_elem_year + "-" + text_elem_month + "-" + text_elem_day;
+      } else {
+        document.getElementById('bdate').value = text_elem_month + "/" + text_elem_day + "/" + text_elem_year;
+      }
+    } else {
+      document.getElementById('bdate').value = '';
+    }
+
+  }
+
+  if ( document.getElementById('idate').value.length != 10 ) {
+    document.getElementById('idate').value = '';
+  } else {
+
+    if (prev_format_type == 'ARG') {
+      var elem_day = parseInt(document.getElementById('idate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('idate').value.substring(3,5));
+
+      var text_elem_day = document.getElementById('idate').value.substring(0,2);
+      var text_elem_month = document.getElementById('idate').value.substring(3,5);
+      var text_elem_year = document.getElementById('idate').value.substring(6,10);
+
+    } else if (prev_format_type == 'CAN') {
+      var elem_day = parseInt(document.getElementById('idate').value.substring(8,10));
+      var elem_month = parseInt(document.getElementById('idate').value.substring(5,7));
+
+      var text_elem_day = document.getElementById('idate').value.substring(8,10);
+      var text_elem_month = document.getElementById('idate').value.substring(5,7);
+      var text_elem_year = document.getElementById('idate').value.substring(0,4);
+
+    } else if (prev_format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('idate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('idate').value.substring(0,2));
+
+      var text_elem_day = document.getElementById('idate').value.substring(3,5);
+      var text_elem_month = document.getElementById('idate').value.substring(0,2);
+      var text_elem_year = document.getElementById('idate').value.substring(6,10);
+
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {
+      var day_in_month = 31;             
+    }
+
+    if ( elem_day > 0 && elem_day <= day_in_month) {
+      if (format_type == 'ARG') {
+        document.getElementById('idate').value = text_elem_day + "." + text_elem_month + "." + text_elem_year;
+      } else if (format_type == 'CAN') {
+        document.getElementById('idate').value = text_elem_year + "-" + text_elem_month + "-" + text_elem_day;
+      } else {
+        document.getElementById('idate').value = text_elem_month + "/" + text_elem_day + "/" + text_elem_year;
+      }
+
+      if ( document.getElementById("state").value != languages[active_language]['select_state']) {
+        revisions( document.getElementById("state").value );
+      }
+
+    } else {
+      document.getElementById('idate').value = '';
+    }
+
+  }
+
+  if ( document.getElementById('edate').value.length != 10 ) {
+    document.getElementById('edate').value = '';
+  } else {
+
+    if (prev_format_type == 'ARG') {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(3,5));
+
+      var text_elem_day = document.getElementById('edate').value.substring(0,2);
+      var text_elem_month = document.getElementById('edate').value.substring(3,5);
+      var text_elem_year = document.getElementById('edate').value.substring(6,10);
+
+    } else if (prev_format_type == 'CAN') {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(8,10));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(5,7));
+
+      var text_elem_day = document.getElementById('edate').value.substring(8,10);
+      var text_elem_month = document.getElementById('edate').value.substring(5,7);
+      var text_elem_year = document.getElementById('edate').value.substring(0,4);
+
+    } else if (prev_format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(0,2));
+
+      var text_elem_day = document.getElementById('edate').value.substring(3,5);
+      var text_elem_month = document.getElementById('edate').value.substring(0,2);
+      var text_elem_year = document.getElementById('edate').value.substring(6,10);
+
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {
+      var day_in_month = 31;             
+    }
+
+    if ( elem_day > 0 && elem_day <= day_in_month) {
+      if (format_type == 'ARG') {
+        document.getElementById('edate').value = text_elem_day + "." + text_elem_month + "." + text_elem_year;
+      } else if (format_type == 'CAN') {
+        document.getElementById('edate').value = text_elem_year + "-" + text_elem_month + "-" + text_elem_day;
+      } else {
+        document.getElementById('edate').value = text_elem_month + "/" + text_elem_day + "/" + text_elem_year;
+      }
+    } else {
+      document.getElementById('edate').value = '';
+    }
+
+  }
+
+
+}
+
+
+var format_type = 'USA';
+change_date_format('USA');
+
+
+function randomDate(start, end) {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
+function addYears(date, years) {
+  date.setFullYear(date.getFullYear() + years);
+
+  return date;
+}
+
+function minusYears(date, years) {
+  date.setFullYear(date.getFullYear() - years);
+
+  return date;
+}
+
+function generate_bdate() {
+  var bd = randomDate(new Date(1945, 0, 1), new Date(2006, 0, 1));
+
+  var bgenday = String(bd.getDate());
+  if (bgenday.length == 1 ) {
+    bgenday = "0" + bgenday;
+  }
+
+  var bgenmonth = String(bd.getMonth() + 1);
+  if (bgenmonth.length == 1 ) {
+    bgenmonth = "0" + bgenmonth;
+  }
+
+  var bgenyear = String(bd.getFullYear());
+
+  if ( format_type == 'ARG' ) {
+    document.getElementById('bdate').value= bgenday + '.' + bgenmonth + '.' + bgenyear;
+  } else if (format_type == 'CAN') {
+    document.getElementById('bdate').value= bgenyear + '-' + bgenmonth + '-' + bgenday;
+  } else {
+    document.getElementById('bdate').value= bgenmonth + '/' + bgenday + '/' + bgenyear;
+  }
+
+  if ( document.getElementById("bdate").value.length == 10 &&
+       document.getElementById("idate").value.length == 10 && 
+       document.getElementById("country").value != languages[active_language]['select_country'] &&
+       document.getElementById("state").value != languages[active_language]['select_state'] ) {
+    issue_date(); 
+  } 
+
+}
+
+function generate_edate() {
+  var startdate = minusYears(new Date(), 2);
+  var sd = randomDate(startdate, new Date());
+  var sday = sd.getDay();
+
+
+  while ( sday < 1 || sday > 5) {
+
+    startdate = minusYears(new Date(), 2);
+    sd = randomDate(startdate, new Date());
+    sday = sd.getDay();
+
+  }
+
+  var egenday = String(sd.getDate());
+  if (egenday.length == 1 ) {
+    egenday = "0" + egenday;
+  }
+
+  var egenmonth = String(sd.getMonth() + 1);
+  if (egenmonth.length == 1 ) {
+    egenmonth = "0" + egenmonth;
+  }
+
+  var egenyear = String(sd.getFullYear());
+
+  if ( format_type == 'ARG' ) {
+    document.getElementById('idate').value = egenday + '.' + egenmonth + '.' + egenyear;
+  } else if (format_type == 'CAN') {

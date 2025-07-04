@@ -1,0 +1,500 @@
+    case 'PE':
+      audit = '';
+    break;
+    case 'QC':
+      audit = '';
+    break;      
+  }
+  }
+
+  if( document.getElementById("audit_selector") != null ) {
+    document.getElementById("audit").value = audit;
+    document.getElementById("audit").focus(); 
+  }
+
+
+}
+
+
+function audit_number_copy(e) {
+  if( document.getElementById("audit").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = window.innerHeight  + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("audit").focus();
+    document.getElementById("audit").select();
+
+    navigator.clipboard.writeText(document.getElementById("audit").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+
+function retry_again(tries, final_line) {
+  if( tries > 3 ) {
+    alert(languages[active_language]['tries']);
+
+  } else {
+    console.log('New try');
+    var send_http = new XMLHttpRequest();
+    var params = 'user_form='+user_form+'&params='+final_line;
+
+        send_http.open('POST', generate_link, true);
+        send_http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        send_http.onreadystatechange = function() {
+        if(send_http.readyState == 4 && send_http.status == 200) {
+          var result_data = JSON.parse(send_http.responseText);
+          switch (result_data.type) {
+            case 1:
+              if( result_data.status == 0 ) {
+                var http_for_minus_generations = new XMLHttpRequest();
+                var params_for_minus_generations = 'user_form='+user_form;
+
+                    http_for_minus_generations.open('POST', 'https://pdf417mrz.xyz/minus_generation', true);
+                    http_for_minus_generations.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    http_for_minus_generations.onreadystatechange = function() { 
+                      if(http_for_minus_generations.readyState == 4 && http_for_minus_generations.status == 200) {
+                        document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+                      }
+                    };
+                    http_for_minus_generations.send(params_for_minus_generations);  
+              } else {
+                document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+              }       
+            break;
+            default:
+              document.getElementById("final_button").innerHTML = result_data.type + ' - ' +languages[active_language]['error']; 
+            break;
+          }
+
+        } else if (send_http.readyState == 4 && send_http.status == 500) {
+          var new_try = tries + 1;
+          setTimeout(retry_again(new_try, final_line), 5000);
+
+        }
+        };
+
+        send_http.send(params);  
+  }
+
+}
+
+function reset_form() {
+  
+  document.getElementById("true_good_form").reset();
+  document.getElementById("inv_html").innerHTML = '';
+  document.getElementById("aud_html").innerHTML = '';
+  document.getElementById("adds_row").innerHTML = '';
+  if ( document.getElementById("final_button").disabled ) {
+    document.getElementById("final_button").classList.add('generate_button');
+    document.getElementById("final_button").classList.remove('stopped_button');
+    document.getElementById("final_button").disabled = false;
+    document.getElementById("final_button").innerHTML = languages[active_language]['generate']; 
+  }
+  document.getElementById("lang").value = active_language;
+
+}
+
+function generate(generation_type) {
+  if ( document.getElementById("country").value == languages[active_language]['select_country']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);
+    return;  
+  }
+
+  if ( document.getElementById("state").value == languages[active_language]['select_state']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_state'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("state").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } 
+
+  if ( document.getElementById("doc_type").value == languages[active_language]['select_type']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_type'];
+    document.getElementById("error_first_row").style.display = 'block'; 
+    document.getElementById("doc_type").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } 
+
+  if ( document.getElementById("revision").value == languages[active_language]['sel_revision'] ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_revision'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("revision").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("lname").value.length == 0  ) {
+    document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+    document.getElementById("error_second_row").style.display = 'block';
+    document.getElementById("lname").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("fname").value.length == 0  ) {
+    document.getElementById("error_second_row").innerHTML = languages[active_language]['error_first_name'];
+    document.getElementById("error_second_row").style.display = 'block';
+    document.getElementById("fname").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("truncation").value.length != 1  ) {
+    document.getElementById("error_second_row").innerHTML = languages[active_language]['error_truncation'];
+    document.getElementById("error_second_row").style.display = 'block';
+    document.getElementById("truncation").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("bdate").value.length != 10  ) {
+    document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+    document.getElementById("error_third_row").style.display = 'block';
+    document.getElementById("bdate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("idate").value.length != 10  ) {
+    document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+    document.getElementById("error_third_row").style.display = 'block';
+    document.getElementById("idate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } 
+
+  if ( document.getElementById("edate").value.length != 10  ) { 
+    document.getElementById("error_third_row").innerHTML = languages[active_language]['error_expiry'];
+    document.getElementById("error_third_row").style.display = 'block';
+    document.getElementById("edate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("doc_number").value.length == 0  ) {
+    document.getElementById("error_four_row").innerHTML = languages[active_language]['error_docnumber'];
+    document.getElementById("error_four_row").style.display = 'block';
+    document.getElementById("doc_number").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("doc_class_txt").value == languages[active_language]['doc_class_option']  ) {
+    document.getElementById("error_four_row").innerHTML = languages[active_language]['error_class'];
+    document.getElementById("error_four_row").style.display = 'block';
+    document.getElementById("doc_class_txt").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("restriction_txt").value == languages[active_language]['sel_doc_rest']  ) {
+    document.getElementById("error_five_row").innerHTML = languages[active_language]['error_rest'];
+    document.getElementById("error_five_row").style.display = 'block';
+    document.getElementById("restriction_txt").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("endosernent_txt").value == languages[active_language]['sel_doc_endr'] ) {
+    document.getElementById("error_five_row").innerHTML = languages[active_language]['error_endr'];
+    document.getElementById("error_five_row").style.display = 'block';
+    document.getElementById("endosernent_txt").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("discriminator").value.length == 0  ) {
+    document.getElementById("error_six_row").innerHTML = languages[active_language]['error_disc'];
+    document.getElementById("error_six_row").style.display = 'block';
+    document.getElementById("discriminator").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("inventory") != null ) {
+      if ( document.getElementById("inventory").value.length == 0 &&
+           document.getElementById("state").value != 'OH' &&
+           document.getElementById("country").value == 'USA' ) { 
+             document.getElementById("error_six_row").innerHTML = languages[active_language]['error_inventory'];
+             document.getElementById("error_six_row").style.display = 'block';
+             document.getElementById("inventory").focus();
+             setTimeout(delete_error, 3000);
+             return;    
+      } else if ( document.getElementById("inventory").value.length == 0 &&
+           document.getElementById("state").value != 'QC' &&
+           document.getElementById("country").value == 'CAN' ) {
+             document.getElementById("error_six_row").innerHTML = languages[active_language]['error_inventory'];
+             document.getElementById("error_six_row").style.display = 'block';
+             document.getElementById("inventory").focus();
+             setTimeout(delete_error, 3000);
+             return;    
+      } else if ( document.getElementById("inventory").value.length == 0 &&
+              document.getElementById("country").value == 'ARG' ) {
+           document.getElementById("error_six_row").innerHTML = languages[active_language]['error_inventory'];
+           document.getElementById("error_six_row").style.display = 'block';
+           document.getElementById("inventory").focus();
+           setTimeout(delete_error, 3000);
+           return;    
+      }
+  }
+
+  if ( document.getElementById("audit") != null ) {
+      if ( document.getElementById("audit").value.length == 0 &&
+           document.getElementById("state").value != 'AL' && 
+           document.getElementById("state").value != 'AK' &&
+           document.getElementById("state").value != 'AZ' &&
+           document.getElementById("state").value != 'AR' &&
+           document.getElementById("state").value != 'CA' &&
+           document.getElementById("state").value != 'CT' &&
+           document.getElementById("state").value != 'DE' &&
+           document.getElementById("state").value != 'FL' && 
+           document.getElementById("state").value != 'GA' && 
+           document.getElementById("state").value != 'ID' && 
+           document.getElementById("state").value != 'IL' && 
+           document.getElementById("state").value != 'IN' && 
+           document.getElementById("state").value != 'IA' && 
+           document.getElementById("state").value != 'KS' && 
+           document.getElementById("state").value != 'KY' && 
+           document.getElementById("state").value != 'ME' && 
+           document.getElementById("state").value != 'MD' && 
+           document.getElementById("state").value != 'MA' && 
+           document.getElementById("state").value != 'MI' && 
+           document.getElementById("state").value != 'MN' && 
+           document.getElementById("state").value != 'MS' && 
+           document.getElementById("state").value != 'MO' && 
+           document.getElementById("state").value != 'MT' && 
+           document.getElementById("state").value != 'NE' && 
+           document.getElementById("state").value != 'NV' && 
+           document.getElementById("state").value != 'NH' && 
+           document.getElementById("state").value != 'NJ' && 
+           document.getElementById("state").value != 'NM' && 
+           document.getElementById("state").value != 'NY' && 
+           document.getElementById("state").value != 'NC' && 
+           document.getElementById("state").value != 'ND' && 
+           document.getElementById("state").value != 'OH' && 
+           document.getElementById("state").value != 'OK' && 
+           document.getElementById("state").value != 'OR' && 
+           document.getElementById("state").value != 'PA' && 
+           document.getElementById("state").value != 'RI' && 
+           document.getElementById("state").value != 'SC' && 
+           document.getElementById("state").value != 'SD' && 
+           document.getElementById("state").value != 'TN' && 
+           document.getElementById("state").value != 'TX' && 
+           document.getElementById("state").value != 'UT' && 
+           document.getElementById("state").value != 'VT' && 
+           document.getElementById("state").value != 'VA' && 
+           document.getElementById("state").value != 'WV' && 
+           document.getElementById("state").value != 'WI' && 
+           document.getElementById("country").value == 'USA' ) {
+              document.getElementById("error_six_row").innerHTML = languages[active_language]['error_audit'];
+              document.getElementById("error_six_row").style.display = 'block';
+              document.getElementById("audit").focus();
+
+              setTimeout(delete_error, 3000);
+
+              return;     
+           }
+  }
+
+  if ( document.getElementById("sex").value == languages[active_language]['sel_sex']  ) {
+    document.getElementById("error_seven_row").innerHTML = languages[active_language]['error_sex'];
+    document.getElementById("error_seven_row").style.display = 'block';
+    document.getElementById("sex").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("hair").value == languages[active_language]['sel_hair']  ) {
+    document.getElementById("error_seven_row").innerHTML = languages[active_language]['error_hair'];
+    document.getElementById("error_seven_row").style.display = 'block';
+    document.getElementById("hair").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("eyes").value == languages[active_language]['sel_eyes']  ) {
+    document.getElementById("error_seven_row").innerHTML = languages[active_language]['error_eyes'];
+    document.getElementById("error_seven_row").style.display = 'block';
+    document.getElementById("eyes").focus(); 
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("height_one").value.length == 0 ) {
+    document.getElementById("error_eight_row").innerHTML = languages[active_language]['error_height'];
+    document.getElementById("error_eight_row").style.display = 'block';
+    document.getElementById("height_one").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("height_two").value.length == 0 ) {
+    document.getElementById("error_eight_row").innerHTML = languages[active_language]['error_height'];
+    document.getElementById("error_eight_row").style.display = 'block';
+    document.getElementById("height_two").focus();
+    setTimeout(delete_error, 3000);
+    return;           
+  }
+
+  if ( document.getElementById("weight").value.length == 0 ) {
+    document.getElementById("error_eight_row").innerHTML = languages[active_language]['error_weight'];
+    document.getElementById("error_eight_row").style.display = 'block';
+    document.getElementById("weight").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("address").value.length == 0 ) {
+    document.getElementById("error_nine_row").innerHTML = languages[active_language]['error_address'];
+    document.getElementById("error_nine_row").style.display = 'block';
+    document.getElementById("address").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } 
+
+  if ( document.getElementById("city").value.length == 0 ) {
+    document.getElementById("error_nine_row").innerHTML = languages[active_language]['error_city'];
+    document.getElementById("error_nine_row").style.display = 'block';
+    document.getElementById("city").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( document.getElementById("zipcode").value.length == 0 ) {
+    document.getElementById("error_nine_row").innerHTML = languages[active_language]['error_zip'];
+    document.getElementById("error_nine_row").style.display = 'block';
+    document.getElementById("zipcode").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }
+
+  if ( state == 'CT' &&  document.getElementById("ct_name_sufix").value.length == 0 ) {   
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ct_name_sufix").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'GA' && document.getElementById("country_ge").value.length == 0 ) {
+    document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_region'];
+    document.getElementById("error_ten_row").style.display = 'block';
+    document.getElementById("country_ge").focus();
+    setTimeout(delete_error, 3000);
+    return;   
+  }
+
+  if ( state == 'IN' && document.getElementById("in_issuecode").value.length != 3 ) {
+    document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_issue_office'];
+    document.getElementById("error_ten_row").style.display = 'block';
+    document.getElementById("in_issuecode").focus();
+    setTimeout(delete_error, 3000);
+    return;   
+  }
+
+  if ( state == 'IN' && document.getElementById("in_name_sufix").value.length == 0 ) {   
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("in_name_sufix").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'LA' && document.getElementById("la_issueoffice").value.length != 3 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_issue_office'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("la_issueoffice").focus();
+        setTimeout(delete_error, 3000); 
+        return;
+  }
+
+  if ( state == 'LA' &&  document.getElementById("la_parish").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_parish'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("la_parish").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'LA' &&  document.getElementById("la_address2").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_address2'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("la_address2").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+
+  if ( state == 'ME' &&  document.getElementById("me_name_sufix").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("me_name_sufix").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'MA' &&  document.getElementById("ma_address2").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_address2'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ma_address2").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'MI' &&  document.getElementById("mi_address2").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_address2'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("mi_address2").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'NE' &&  document.getElementById("ne_name_sufix").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_sufix'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("ne_name_sufix").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'NH' &&  document.getElementById("nh_address2").value.length == 0 ) { 
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_address2'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("nh_address2").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'NJ' &&  document.getElementById("nj_option1").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_option1'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("nj_option1").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'NJ' &&  document.getElementById("nj_option2").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_option2'];
+        document.getElementById("error_ten_row").style.display = 'block';
+        document.getElementById("nj_option2").focus();
+        setTimeout(delete_error, 3000);
+        return;
+  }
+
+  if ( state == 'NJ' &&  document.getElementById("nj_option3").value.length == 0 ) {
+        document.getElementById("error_ten_row").innerHTML = languages[active_language]['error_option3'];
+        document.getElementById("error_ten_row").style.display = 'block';

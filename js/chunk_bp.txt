@@ -1,0 +1,500 @@
+      document.getElementById(elem.id).value = '0' + document.getElementById(elem.id).value + '/';
+    } else if ( elem_length == 2 ) {
+      var elem_month = parseInt(elem.value.substring(0,2));
+      if ( elem_month >= 0 && elem_month <= 12) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '/';
+        }
+      } else {
+        document.getElementById(elem.id).value = '';
+      }
+    } else if ( elem_length == 5 ) {
+      var elem_day = parseInt(elem.value.substring(3,5));
+      var elem_month = parseInt(elem.value.substring(0,2));
+
+      if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '/';
+        }
+      } else {
+        document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,3);
+      }
+
+    } else if ( elem_length == 10 ) {
+      if ( elem.id == 'bdate' ) {
+        document.getElementById('edate').focus();
+      } else if ( elem.id == 'edate' && country == 'NLD') {
+        var year_expiration = parseInt(document.getElementById("edate").value.substring(6,10));
+        console.log(year_expiration);
+        var issue_date = year_expiration - 10;
+        if ( issue_date >= 2014 ) {
+          document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><input class="inputer_with_auto inputer" type="text" id="additional_data"><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+        } else {
+          document.getElementById("add_data_html").innerHTML = '';
+        }
+      }
+    } else if ( elem_length > 10 ) {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( elem_length == 5 && e.which == 191  ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,3) + '0' + document.getElementById(elem.id).value.substring(3,4) + '/';
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } 
+ 
+}
+
+function bd_onkeyup_eur(elem, e) {
+  var elem_length = elem.value.length;
+  var prev_value = elem.value.substring(0,elem_length - 1); 
+  var last_char = parseInt(elem.value.substring(elem_length - 1, elem_length)); 
+  if (last_char >= 0 && last_char <= 9) {
+    if ( elem_length == 2 ) {
+      var elem_day = parseInt(elem.value.substring(0,2));
+      if ( elem_day > 31 ) {
+        document.getElementById(elem.id).value = prev_value;
+      }
+    } else if ( elem_length == 3 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 5 ) {
+
+      var elem_day = parseInt(elem.value.substring(0,2));
+      var elem_month = parseInt(elem.value.substring(3,5));
+
+      if ( elem_month > 12 || elem_month < 1 ) {
+        document.getElementById(elem.id).value = prev_value;
+      } else if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '.';
+        }
+      } else {
+        document.getElementById(elem.id).value = prev_value;
+      }
+
+    } else if ( elem_length == 6 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 10 ) {
+
+      if ( elem.id == 'bdate' ) {
+        document.getElementById('edate').focus();
+      } else if ( elem.id == 'edate' && country == 'NLD') {
+        var year_expiration = parseInt(document.getElementById("edate").value.substring(6,10));
+        var issue_date = year_expiration - 10;
+        if ( issue_date >= 2014 ) {
+          document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><input class="inputer_with_auto inputer" type="text" id="additional_data"><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+        } else {
+          document.getElementById("add_data_html").innerHTML = '';
+        }
+      }
+
+    } else if ( elem_length > 10 ) {
+      document.getElementById(elem.id).value = prev_value;
+    }
+
+  } else if ( elem_length == 2 && e.which == 190  ) {
+    document.getElementById(elem.id).value = '0' + document.getElementById(elem.id).value.substring(0,1) + '.';
+  } else if ( elem_length == 3 && e.which == 190 ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value;
+  } else if ( elem_length == 5 && e.which == 190  ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,2) + '.0' + document.getElementById(elem.id).value.substring(3,4) + '.';
+    
+    var month_cur_change =  document.getElementById(elem.id).value.substring(3,5);
+      var day_cur_change = parseInt(document.getElementById(elem.id).value.substring(0,2));
+    if( month_cur_change == '02' ) {
+      if ( day_cur_change > 29 ) {
+        document.getElementById(elem.id).value = '28.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '01' || month_cur_change == '03' || month_cur_change == '05' || month_cur_change == '07' || month_cur_change == '08' || month_cur_change == '10' || month_cur_change == '12' ) {
+      if ( day_cur_change > 31 ) {
+        document.getElementById(elem.id).value = '31.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '04' || month_cur_change == '06' || month_cur_change == '09' || month_cur_change == '11' ) {
+      if ( day_cur_change > 30 ) {
+        document.getElementById(elem.id).value = '30.0' + month_cur_change + '.';
+      }
+    } else {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( elem_length == 6 && e.which == 190 ) {
+    var month_cur_change =  document.getElementById(elem.id).value.substring(3,5);
+      var day_cur_change = parseInt(document.getElementById(elem.id).value.substring(0,2));
+    if( month_cur_change == '02' ) {
+      if ( day_cur_change > 29 ) {
+        document.getElementById(elem.id).value = '28.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '01' || month_cur_change == '03' || month_cur_change == '05' || month_cur_change == '07' || month_cur_change == '08' || month_cur_change == '10' || month_cur_change == '12' ) {
+      if ( day_cur_change > 31 ) {
+        document.getElementById(elem.id).value = '31.0' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '04' || month_cur_change == '06' || month_cur_change == '09' || month_cur_change == '11' ) {
+      if ( day_cur_change > 30 ) {
+        document.getElementById(elem.id).value = '30.0' + month_cur_change + '.';
+      }
+    } else {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } else if ( elem_length == 10 ) {
+    if ( elem.id == 'bdate' ) {
+      document.getElementById('edate').focus();
+    } else if ( elem.id == 'edate' && country == 'NLD') {
+      var year_expiration = parseInt(document.getElementById("edate").value.substring(6,10));
+      var issue_date = year_expiration - 10;
+      if ( issue_date >= 2014 ) {
+        document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><input class="inputer_with_auto inputer" type="text" id="additional_data"><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      } else {
+        document.getElementById("add_data_html").innerHTML = '';
+      }
+    }
+  } else if ( elem_length > 10 ) {
+    document.getElementById(elem.id).value = '';
+  }
+ 
+}
+
+function change_date_format() {
+
+  if ( format_type == 'USA' ) {
+    format_type = 'EUR';
+    document.getElementById('bdate').placeholder='DD.MM.YYYY';
+    document.getElementById('edate').placeholder='DD.MM.YYYY';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup_eur(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup_eur(this, event)');
+  } else {
+    format_type = 'USA'; 
+    document.getElementById('bdate').placeholder='MM/DD/YYYY';
+    document.getElementById('edate').placeholder='MM/DD/YYYY';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+  }
+
+  for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+    document.getElementsByClassName('gen_button_new')[i].innerHTML = languages[active_language]['format'] + ': ' +format_type;
+  }
+
+  if ( document.getElementById('bdate').value.length != 10 ) {
+    document.getElementById('bdate').value = '';
+  } else {
+
+    if (format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(3,5));
+    } else {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(0,2));
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {
+      var day_in_month = 31;             
+    }
+
+    if ( elem_day > 0 && elem_day <= day_in_month) {
+      if (format_type == 'USA') {
+        document.getElementById('bdate').value = document.getElementById('bdate').value.substring(3,5) + "/" + document.getElementById('bdate').value.substring(0,2)  + "/" + document.getElementById('bdate').value.substring(6,10);
+      } else {
+        document.getElementById('bdate').value = document.getElementById('bdate').value.substring(3,5) + "." + document.getElementById('bdate').value.substring(0,2)  + "." + document.getElementById('bdate').value.substring(6,10);
+      }
+    } else {
+      document.getElementById('bdate').value = '';
+    }
+
+  }
+
+  if ( document.getElementById('edate').value.length != 10 ) {
+    document.getElementById('edate').value = '';
+  } else {
+
+    if (format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(3,5));
+    } else {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(0,2));
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {
+      var day_in_month = 31;             
+    }
+
+    if ( elem_day > 0 && elem_day <= day_in_month) {
+      if (format_type == 'USA') {
+        document.getElementById('edate').value = document.getElementById('edate').value.substring(3,5) + "/" + document.getElementById('edate').value.substring(0,2)  + "/" + document.getElementById('edate').value.substring(6,10);
+      } else {
+        document.getElementById('edate').value = document.getElementById('edate').value.substring(3,5) + "." + document.getElementById('edate').value.substring(0,2)  + "." + document.getElementById('edate').value.substring(6,10);
+      }
+    } else {
+      document.getElementById('edate').value = '';
+    }
+
+  }
+
+}
+
+var format_type = document.getElementById("date_format_u").innerHTML;
+
+if ( format_type == 'USA' ) {
+  document.getElementById('bdate').onclick ='MM/DD/YYYY';
+  document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup(this, event);');
+  document.getElementById('edate').placeholder='MM/DD/YYYY';
+  document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup(this, event);');
+
+} else {
+  document.getElementById('bdate').placeholder='DD.MM.YYYY';
+  document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup_eur(this, event);');
+  document.getElementById('edate').placeholder='DD.MM.YYYY';
+  document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup_eur(this, event);');
+}
+
+for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+  document.getElementsByClassName('gen_button_new')[i].innerHTML = languages[active_language]['format'] + ': ' +format_type;
+}
+
+function randomDate(start, end) {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
+function addYears(date, years) {
+  date.setFullYear(date.getFullYear() + years);
+
+  return date;
+}
+
+function generate_bdate() {
+  var bd = randomDate(new Date(1945, 0, 1), new Date(2006, 0, 1));
+
+  var bgenday = String(bd.getDate());
+  if (bgenday.length == 1 ) {
+    bgenday = "0" + bgenday;
+  }
+
+  var bgenmonth = String(bd.getMonth() + 1);
+  if (bgenmonth.length == 1 ) {
+    bgenmonth = "0" + bgenmonth;
+  }
+
+  var bgenyear = String(bd.getFullYear());
+
+  if ( format_type == 'USA' ) {
+    document.getElementById('bdate').value= bgenmonth + '/' + bgenday + '/' + bgenyear;
+  } else {
+    document.getElementById('bdate').value= bgenday + '.' + bgenmonth + '.' + bgenyear;
+  }
+
+}
+
+function generate_edate() {
+  var enddate = addYears(new Date(), 4);
+  var ed = randomDate(new Date(), enddate);
+
+  var egenday = String(ed.getDate());
+  if (egenday.length == 1 ) {
+    egenday = "0" + egenday;
+  }
+
+  var egenmonth = String(ed.getMonth() + 1);
+  if (egenmonth.length == 1 ) {
+    egenmonth = "0" + egenmonth;
+  }
+
+  var egenyear = String(ed.getFullYear());
+
+  if ( format_type == 'USA' ) {
+    document.getElementById('edate').value= egenmonth + '/' + egenday + '/' + egenyear;
+  } else {
+    document.getElementById('edate').value= egenday + '.' + egenmonth + '.' + egenyear;
+  }
+
+}
+
+if (  generate_link.includes(" AND ") ) {
+  var country_selection = generate_link.split(' AND ')[0];
+  document.getElementById("country").value = country_selection;
+  select_country(country_selection);
+  document.getElementById("country").disabled = true;
+} 
+
+function select_country(selection) {
+  if ( selection == 'RUSINSIDE' ) {
+    document.getElementById("country_of_birthday").value = 'RUS';
+  } else {
+    document.getElementById("country_of_birthday").value = selection;
+  }
+    
+  country = selection;
+  switch(active_language) {      
+    case 'en':
+      document.getElementById("expiry_selector").innerHTML = 'Expired date';
+    break;
+    case 'cn':
+      document.getElementById("expiry_selector").innerHTML = '有效期';
+    break;
+    case 'hi':
+      document.getElementById("expiry_selector").innerHTML = 'समाप्ति तिथि';
+    break;
+    case 'ru':
+      document.getElementById("expiry_selector").innerHTML = 'Действителен до';
+    break;
+    case 'ua':
+      document.getElementById("expiry_selector").innerHTML = 'Дійсний до';
+    break;
+  }
+  switch (selection) {
+    case 'USA':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2006';
+    break;
+    case 'ARM':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'AUS':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2014';
+    break;
+    case 'ARG':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'AUT':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2014';
+    break;
+    case 'BGD':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'BLR':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'BEl':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'BRA':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2015';
+    break; 
+    case 'BGR':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2010';
+    break;
+    case 'CAN':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2013';
+    break;
+    case 'CMR':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'CHN':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break; 
+    case 'HRV':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'CZE':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'CZE':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'DNK':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'DOM':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'EGY':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'EST':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2014';
+    break;            
+    case 'FIN':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2017';
+    break;
+    case 'FRA':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2006';
+    break; 
+    case 'GEO':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'DEU':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2017';
+    break;
+    case 'GRC':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'IND':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'IRL':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break; 
+    case 'ISR':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'ITA':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2010';
+    break;
+    case 'HUN':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'KAZ':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'KEN':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'KGZ':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'LVA':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';

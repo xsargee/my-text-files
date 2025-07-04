@@ -1,0 +1,500 @@
+      document.getElementById("doc_number").value = 'A' + makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'AUS':
+      document.getElementById("doc_number").value = 'PA' + makestr(7, digits);
+    break;
+    case 'AUT':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'BGD':
+      document.getElementById("doc_number").value = 'BN' + makestr(7, digits);
+    break;
+    case 'BLR':
+      document.getElementById("doc_number").value = 'KB' + makestr(7, digits);
+    break;
+    case 'BEL':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'BRA':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'BGR':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'CAN':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'CMR':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'CHN':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(8, digits);
+    break;
+    case 'HRV':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'CZE':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'DNK':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'DOM':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'EGY':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(8, digits);
+    break; 
+    case 'EST':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;            
+    case 'FIN':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'FRA':
+      document.getElementById("doc_number").value = makestr(2, digits) + makestr(2, letters) + makestr(5, digits);
+    break;
+    case 'GEO':
+      document.getElementById("doc_number").value = makestr(2, digits) + makestr(2, letters) + makestr(5, digits);
+    break;
+    case 'DEU':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(1, digits) + makestr(3, letters) + makestr(2, digits) + makestr(2, letters);
+    break;
+    case 'GRC':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'IND':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'IRE':
+      document.getElementById("doc_number").value = makestr(2, letters) + makestr(7, digits);
+    break;
+    case 'ISR':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'ITA':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'HUN':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'KAZ':
+      document.getElementById("doc_number").value = makestr(1, letters) +  makestr(8, digits);
+    break;
+    case 'KEN':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'KGZ':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break; 
+    case 'LVA':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;               
+    case 'LTU':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'MLT':
+      document.getElementById("doc_number").value = makestr(7, digits);
+    break;
+    case 'MEX':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(8, digits);
+    break;
+    case 'MDA':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(7, digits);
+    break;
+    case 'NLD':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(3, digits) + makestr(2, letters) + makestr(2, digits);
+    break;
+    case 'NOR':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'POL':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'PRT':
+      document.getElementById("doc_number").value = makestr(7, digits);
+    break;
+    case 'ROU':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'RUS':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;       
+    case 'SRB':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'SGP':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits) + makestr(1, letters);
+    break;
+    case 'SVN':
+      document.getElementById("doc_number").value = "P" + makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'ZAF':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(8, digits);
+    break;
+    case 'ESP':
+      document.getElementById("doc_number").value = 'P' + makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'SWE':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'CHE':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'TKM':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'UKR':
+      document.getElementById("doc_number").value = makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'GBR':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;            
+    case 'UZB':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(7, digits);
+    break;
+    case 'VEN':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'VNM':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break; 
+    default:
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;     
+  } 
+}
+
+
+function document_number_copy(e) {
+  if( document.getElementById("doc_number").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = e.clientY  + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("doc_number").focus();
+    document.getElementById("doc_number").select();
+
+    navigator.clipboard.writeText(document.getElementById("doc_number").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+
+function generate_visa() {
+  if ( document.getElementById("country").value.length != 3 ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  }
+
+  switch (country) {    
+    case 'USA':
+      document.getElementById("visa_number_inp").value = makestr(1, letters) + makestr(1, digits) + makestr(3, letters) + makestr(1, digits) + '00' + makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'AUT':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'BGR':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'HRV':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'CYP':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'CZE':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'DNK':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'EST':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'FIN':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'FRA':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'DEU':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'GRC':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'HUN':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'IRL':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'ITA':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'LVA':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'LTU':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'LUX':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'MLT':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'NLD':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'POL':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'PRT':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'ROU':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'SVK':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'SVN':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'ESP':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'SWE':
+      document.getElementById("visa_number_inp").value = "M" + makestr(6, digits);
+    break;
+    case 'AUS':
+      document.getElementById("visa_number_inp").value = makestr(1, letters) + makestr(11, digits) + " AS " + makestr(3, digits);
+    break;
+    case 'IDN':
+      document.getElementById("visa_number_inp").value = "0" + makestr(1, digits);
+    break;
+    case 'CHN':     
+      if ( document.getElementById("country_of_birthday").value.length != 3 ) {       
+        document.getElementById("error_one").innerHTML = languages[active_language]['error_birth_country'];
+        document.getElementById("error_one").style.display = 'block';
+        document.getElementById("country_of_birthday").focus();
+        setTimeout(delete_error, 3000);   
+        return;
+      } 
+
+      document.getElementById("visa_number_inp").value = makestr(4, all_char) + document.getElementById("country_of_birthday").value + makestr(2, letters) + makestr(1, digits) + makestr(4, letters) + makestr(2, digits);
+    break;
+    break;
+    case 'CAN':
+      document.getElementById("visa_number_inp").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'GBR':
+      document.getElementById("visa_number_inp").value = "<<<<<<<<";
+    break;
+    case 'MEX':
+      document.getElementById("visa_number_inp").value = "<<<<<<<<";
+    break;
+    case 'RUS':
+      if ( document.getElementById("country_of_birthday").value.length != 3 ) {       
+        document.getElementById("error_one").innerHTML = languages[active_language]['error_birth_country'];
+        document.getElementById("error_one").style.display = 'block';
+        document.getElementById("country_of_birthday").focus();
+        setTimeout(delete_error, 3000);   
+        return;
+      } 
+
+      document.getElementById("visa_number_inp").value = document.getElementById("country_of_birthday").value + makestr(6, digits);;
+    break;
+    case 'TUR':
+      document.getElementById("visa_number_inp").value = makestr(1, digits);
+    break;
+    case 'THA':
+      document.getElementById("visa_number_inp").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'VNM':
+      document.getElementById("visa_number_inp").value = makestr(1, letters) + makestr(7, digits);
+    break;
+  }
+
+}
+
+
+function visa_number_copy(e) {
+  if( document.getElementById("visa_number_inp").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = e.clientY  + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("visa_number_inp").focus();
+    document.getElementById("visa_number_inp").select();
+
+    navigator.clipboard.writeText(document.getElementById("visa_number_inp").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+
+function generate_invitation() {
+  switch (country) {    
+    case 'RUS':
+      document.getElementById("invitation_data").value = makestr(1, digits) + makestr(1, letters) + makestr(7, digits);
+    break;
+  }
+}
+
+
+function invitation_number_copy(e) {
+  if( document.getElementById("invitation_data").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = e.clientY  + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("invitation_data").focus();
+    document.getElementById("invitation_data").select();
+
+    navigator.clipboard.writeText(document.getElementById("invitation_data").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+
+function reset_form() {
+  document.getElementById("true_good_form").reset();
+  document.getElementById("add_data_html").innerHTML = '';
+  if ( document.getElementById("final_button").disabled ) {
+    document.getElementById("final_button").classList.add('generate_button');
+    document.getElementById("final_button").classList.remove('stopped_button');
+    document.getElementById("final_button").disabled = false;
+    document.getElementById("final_button").innerHTML = languages[active_language]['generate']; 
+  }
+  document.getElementById("lang").value = active_language;
+}
+
+
+function generate(generation_type) {
+  if ( document.getElementById("country").value.length != 3 ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("vtype").value.length != 1 ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_vtype'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("vtype").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("country_of_birthday").value.length != 3 ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_birth_country'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("country_of_birthday").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("country_of_birthday").value == document.getElementById("country").value ) {
+    document.getElementById("error_one").innerHTML = languages[active_language]['error_country_visa'];
+    document.getElementById("error_one").style.display = 'block';
+    document.getElementById("country_of_birthday").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("lname").value.length <= 0 ) {
+    document.getElementById("error_two").innerHTML = languages[active_language]['error_last_name'];
+    document.getElementById("error_two").style.display = 'block';
+    document.getElementById("lname").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("fname").value.length <= 0 ) {
+    document.getElementById("error_two").innerHTML = languages[active_language]['error_first_name'];
+    document.getElementById("error_two").style.display = 'block';
+    document.getElementById("fname").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("sex").value.length != 1 ) {
+    document.getElementById("error_three").innerHTML = languages[active_language]['error_sex'];
+    document.getElementById("error_three").style.display = 'block';
+    document.getElementById("sex").focus();
+    setTimeout(delete_error, 3000);   
+    return;
+  } else if ( document.getElementById("bdate").value.length != 10  ) {
+    document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+    document.getElementById("error_three").style.display = 'block';
+    document.getElementById("bdate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("edate").value.length != 10  ) {
+    document.getElementById("error_three").innerHTML = languages[active_language]['error_second_date'];
+    document.getElementById("error_three").style.display = 'block';
+    document.getElementById("edate").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("doc_number").value.length <= 0  ) {
+    document.getElementById("error_four").innerHTML = languages[active_language]['error_document_number'];
+    document.getElementById("error_four").style.display = 'block';
+    document.getElementById("doc_number").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("visa_number_inp").value.length <= 0  ) {
+    document.getElementById("error_four").innerHTML = languages[active_language]['error_visa_number'];
+    document.getElementById("error_four").style.display = 'block';
+    document.getElementById("visa_number_inp").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  }  
+
+  if ( country == 'RUS'  ) {
+    if ( document.getElementById("invitation_data").value.length <= 0  ) {
+      document.getElementById("error_four").innerHTML = languages[active_language]['error_invitation_data'];
+      document.getElementById("error_four").style.display = 'block';
+      document.getElementById("invitation_data").focus();
+      setTimeout(delete_error, 3000);
+      return;      
+    }    
+  }
+
+  var country_ed = document.getElementById("country").value;
+  var visa_type_ed = document.getElementById("vtype").value;
+  var lname_ed = document.getElementById("lname").value.toUpperCase().replaceAll(' ', '');
+  var name = document.getElementById("fname").value.toUpperCase().replaceAll(' ', '');
+    if ( document.getElementById("mname").value.length > 0 ) {
+      name += ' '+document.getElementById("mname").value.toUpperCase().replaceAll(' ', '');
+    }
+  var doc_num_ed = document.getElementById("doc_number").value;
+  var birthday_country_ed = document.getElementById("country_of_birthday").value;
+  if ( format_type == 'USA' ) {
+    var bdate_ed = document.getElementById("bdate").value;
+  } else {
+    var bdate_ed = document.getElementById("bdate").value.substring(3,5) + '/' + document.getElementById("bdate").value.substring(0,2) + '/' + document.getElementById("bdate").value.substring(6,10);
+  }
+  var sex_ed = document.getElementById("sex").value;
+  if ( format_type == 'USA' ) {
+    var edate_ed = document.getElementById("edate").value;
+  } else {
+    var edate_ed = document.getElementById("edate").value.substring(3,5) + '/' + document.getElementById("edate").value.substring(0,2) + '/' + document.getElementById("edate").value.substring(6,10);

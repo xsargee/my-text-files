@@ -1,0 +1,500 @@
+  }  
+  var visa_num_ed = document.getElementById("visa_number_inp").value;
+
+  var final_line = country_ed + ';' + visa_type_ed + ';' + lname_ed + ';' + name + ';' + doc_num_ed + ';' + birthday_country_ed + ';' + bdate_ed + ';' + sex_ed + ';' + edate_ed + ';' + visa_num_ed;
+  
+  if ( country == 'RUS'  ) {
+    final_line += ';' + document.getElementById("invitation_data").value;
+  } 
+
+  final_line += ';' + format_type;
+
+  if ( generation_type == 1 ) { 
+
+
+    var send_http = new XMLHttpRequest();
+    var params = 'user_form='+user_form+'&params='+final_line;
+
+        send_http.open('POST', generate_link, true);
+        send_http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        send_http.onreadystatechange = function() {
+        if(send_http.readyState == 4 && send_http.status == 200) {
+        var result_data = JSON.parse(send_http.responseText);
+               
+        switch (result_data.type) {
+          case 1:
+            document.getElementById("final_button").innerHTML = languages[active_language]['generated_b'];
+          break;
+          default:
+            document.getElementById("final_button").innerHTML = result_data.type + ' - ' +languages[active_language]['error']; 
+          break;
+          }
+
+        }
+        };
+
+        send_http.send(params);  
+   
+    
+        document.getElementById("final_button").classList.add('stopped_button');
+        document.getElementById("final_button").classList.remove('generate_button');
+
+        document.getElementById("final_button").disabled = true;
+        document.getElementById("final_button").innerHTML = languages[active_language]['loading'];
+
+  } else {
+    window.location.href = "https://t.me/pdf417mrz_bot";
+  }
+  
+}function add_to_cart(handle) {
+
+    var cart_item_numbers = Number(document.getElementById("cart_itms").innerHTML) +1;
+
+    document.getElementById("cart_itms").innerHTML = cart_item_numbers.toString(); 
+
+    document.getElementById("added_button").style.display = "block";
+
+    document.getElementById("buy_button").style.innerHTML = "";
+    document.getElementById("buy_button").style.display = "none";
+
+    var actual_cart = getCookie('my_cart');
+    if ( actual_cart  == '' ){
+      document.cookie = "my_cart="+handle+";path=/";
+      var new_link = "/";
+      if ( document.documentElement.lang != 'en'  ) {
+        new_link += document.documentElement.lang+"/";
+      }
+      new_link += 'cart';
+      document.getElementById("cart_link").setAttribute("href", new_link);
+    } else {
+      if (!actual_cart.includes(handle)) {
+        var actual_cart_array = actual_cart.split('_');
+        actual_cart_array.push(handle);
+        document.cookie = "my_cart="+actual_cart_array.join('_')+";path=/";
+      }
+    }
+
+}
+
+function start_cart() {
+
+
+
+  var last_symbol = window.location.href.substring(window.location.href.length - 1, window.location.href.length);
+  if ( last_symbol == '/' ) {
+    var str_of_destination = window.location.href.substring(0, window.location.href.length - 1);
+  } else {
+    var str_of_destination = window.location.href.substring(0, window.location.href.length);
+  }
+
+  var psd_template = str_of_destination.split("/")[str_of_destination.split("/").length - 1];
+  var actual_cart = getCookie('my_cart');
+
+  var elem_cart = document.getElementById("cart_link")
+
+  if ( actual_cart  != '' ) {
+
+    var new_link = "/";
+    if ( document.documentElement.lang != 'en'  ) {
+      new_link += document.documentElement.lang+"/";
+    }
+    new_link += 'cart';
+    elem_cart.setAttribute("href", new_link);
+
+    var qty_cart = actual_cart.split('_').length;
+    document.getElementById("cart_itms").innerHTML = qty_cart.toString(); 
+
+    if (actual_cart.includes(psd_template) && psd_template != '' ) {
+
+      document.getElementById("added_button").style.display = "block";
+
+      document.getElementById("buy_button").style.innerHTML = "";
+      document.getElementById("buy_button").style.display = "none";
+
+    }
+
+  }
+
+}
+
+start_cart();      var monthName = [
+        "", "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      var monthArray1_WA = ["", "B", "C", "D", "J", "K", "L", "M", "N", "O", "P", "Q", "R"];
+      var monthArray2_WA = ["", "S", "T", "U", "1", "2", "3", "4", "5", "6", "7", "8", "9"]; 
+      var dayArray_WA = ["", "A", "B", "C", "D", "E", "F", "G", "H", "Z", "S", "J",
+                         "K", "L", "M", "N", "W", "P", "Q", "R", "0", "1", "2", "3",
+                         "4", "5", "6", "7", "8", "9", "T", "U"];
+
+      var firstName_NJ = [
+        ['AARON', '000'],
+        ['ABIR', '004'],
+        ['ABRAHAM', '005'],
+        ['ADRIAN', '011'],
+        ['ALAN', '015'],
+        ['ALBERTO', '017'],
+        ['ALEXANDER', '019'],
+        ['ALLEN', '027'],
+        ['ANDREW', '042'],
+        ['ANDY', '043'],
+        ['ANGELA', '043'],
+        ['ANNA', '047'],
+        ['ANNETTE', '050'],
+        ['ANTHONY', '053'],
+        ['ARIEL', '058'],
+        ['BARBARA', '073'],
+        ['BERNICE', '085'],
+        ['BESMIR', '088'],
+        ['BHARAT', '093'],
+        ['BONNIE', '094'],
+        ['BRIAN', '096'],
+        ['BYRON', '104'],
+        ['CAMDEN', '109'],
+        ['CAROL', '113'],
+        ['CATHERINE', '115'],
+        ['CHAD', '120'],
+        ['CHARLES', '120'],
+        ['CHAYA', '122'],
+        ['CHOO', '124'],
+        ['CHRISTINA', '124'],
+        ['CHRISTOPHER', '124'],
+        ['CLAIRE', '126'],
+        ['CLYDE', '133'],
+        ['COLLEEN', '134'],
+        ['CYNTHIA', '144'],
+        ['DANIEL', '153'],
+        ['DARREN', '156'],
+        ['DAVID', '156'],
+        ['DAWN', '157'],
+        ['DEBORAH', '158'],
+        ['DENISE', '162'],
+        ['DENNIS', '163'],
+        ['DIANE', '167'],
+        ['DINAH', '169'],
+        ['DOMINIC', '172'],
+        ['DONALD', '173'],
+        ['DONNA', '174'],
+        ['DOROTHY', '178'],
+        ['DUSTIN', '184'],
+        ['DYLAN', '185'],
+        ['EDMOND', '190'],
+        ['EDWARD', '192'],
+        ['EDWIN', '193'],
+        ['EILEEN', '197'],
+        ['ELIZABETH', '212'],
+        ['EMILY', '224'],
+        ['ERIC', '232'],
+        ['ESTHER', '239'],
+        ['EVA', '250'],
+        ['FRANKLIN', '267'],
+        ['GABRIEL', '270'],
+        ['GARY', '274'],
+        ['GENEVA', '276'],
+        ['GERARD', '279'],
+        ['GINA', '288'],
+        ['GLENN', '292'],
+        ['GORDON', '297'],
+        ['GUSTAVO', '308'],
+        ['HARRY', '316'],
+        ['HAZEL', '319'],
+        ['HEATHER', '320'],
+        ['HYOSOON', '353'],
+        ['IRA', '364'],
+        ['ISHA', '374'],
+        ['ISMAEL', '375'],
+        ['IVONNE', '378'],
+        ['JACK', '380'],
+        ['JACLYN', '381'],
+        ['JAMES', '383'],
+        ['JANET', '384'],
+        ['JASON', '388'],
+        ['JAY', '390'],
+        ['JAZMINE', '392'],
+        ['JEANNE', '392'],
+        ['JEFFREY', '393'],
+        ['JENNIFER', '395'],
+        ['JEROME', '396'],
+        ['JERYL', '400'],
+        ['JESSICA', '400'],
+        ['JOANNE', '402'],
+        ['JOHN', '407'],
+        ['JONATHAN', '409'],
+        ['JORDAN', '410'],
+        ['JOSEPH', '410'],
+        ['JOSHUA', '411'],
+        ['JOYCE', '414'],
+        ['JUAN', '415'],
+        ['JUDITH', '417'],
+        ['JULIAN', '420'],
+        ['JUNG', '422'],
+        ['KALPANA', '424'],
+        ['KAMINI', '424'],
+        ['KAREN', '424'],
+        ['KARL', '424'],
+        ['KATHERINE', '427'],
+        ['KATHLEEN', '427'],
+        ['KAYLEE', '429'],
+        ['KENNETH', '431'],
+        ['KEISHIA', '432'],
+        ['KEVIN', '433'],
+        ['KIERAN', '434'],
+        ['KIMBERLY', '435'],
+        ['KRISTIE', '437'],
+        ['KRISTINA', '437'],
+        ['KYLE', '438'],
+        ['LAUREN', '443'],
+        ['LANA', '456'],
+        ['LEVARN', '465'],
+        ['LI', '467'],
+        ['LIAM', '467'],
+        ['LILI', '469'],
+        ['LOIS', '481'],
+        ['LOREN', '484'],
+        ['LORRAINE', '487'],
+        ['LUCIE', '490'],
+        ['LYNN', '500'],
+        ['MACKENZ', '503'],
+        ['MAHESH', '509'],
+        ['MAIASIA', '510'],
+        ['MARCI', '517'],
+        ['MARGARET', '518'],
+        ['MARIA', '519'],
+        ['MARISA', '519'],
+        ['MARK', '521'],
+        ['MARY', '527'],
+        ['MASSIMO', '528'],
+        ['MATTHEW', '529'],
+        ['MAURICE', '531'],
+        ['MEDORA', '537'],
+        ['MEGHAN', '537'],
+        ['MICHAEL', '544'],
+        ['MILAGROS', '547'],
+        ['MILDRED', '547'],
+        ['MISHEL', '549'],
+        ['NANCY', '557'],
+        ['NEELA', '584'],
+        ['NICHOLAS', '590'],
+        ['NICOLE', '591'],
+        ['NIDHI', '591'],
+        ['NILABEN', '592'],
+        ['NIRMAL', '594'],
+        ['NOAH', '594'],
+        ['PATRICE', '617'],
+        ['PATRICK', '617'],
+        ['PETER', '625'],
+        ['PHYLLIS', '629'],
+        ['PIETRO', '630'],
+        ['POOJA', '632'],
+        ['RANDOLPH', '640'],
+        ['RASHMI', '642'],
+        ['RAYMOND', '643'],
+        ['REBECCA', '645'],
+        ['RENA', '647'],
+        ['RICHARD', '655'],
+        ['RITESH', '658'],
+        ['ROBERT', '658'],
+        ['ROBIN', '659'],
+        ['ROGER', '664'],
+        ['ROLANDA', '665'],
+        ['RONALD', '668'],
+        ['ROSINA', '672'],
+        ['RUTH', '681'],
+        ['RYAN', '682'],
+        ['SANKET', '691'],
+        ['SAPAN', '691'],
+        ['SARA', '691'],
+        ['SCHUYLER', '693'],
+        ['SEAN', '695'],
+        ['SHARON', '703'],
+        ['SHAYNE', '704'],
+        ['SHELLEY', '705'],
+        ['SMITA', '717'],
+        ['SONAK', '718'],
+        ['STEPHEN', '722'],
+        ['SUSAN', '727'],
+        ['TAMMY', '732'],
+        ['TERRENCE', '733'],
+        ['TERRY', '733'],
+        ['THEODORE', '738'],
+        ['THOMAS', '740'],
+        ['TIMOTHY', '742'],
+        ['VALERIE', '761'],
+        ['VELON', '763'],
+        ['VICTORIA', '767'],
+        ['VITO', '772'],
+        ['WARREN', '778'],
+        ['WILLIAM', '785'],
+        ['WILSON', '785'],
+        ['WOONGHI', '788'],
+        ['XAVIER', '788'],
+        ['YASSER', '789'],
+        ['YESENIA', '789'],
+        ['YOOJUNG', '790'],
+        ['YVETTE', '790'],
+        ['YVONNE', '790'],
+      ];
+
+      var firstName_FL_IL_WI = [
+        ['Albert', '20'],
+        ['Alice', '20'],
+        ['Ann', '40'],
+        ['Anna', '40'],
+        ['Anne', '40'],
+        ['Annie', '40'],
+        ['Arthur', '40'],
+        ['Bernard', '80'],
+        ['Bette', '80'],
+        ['Bettie', '80'],
+        ['Betty', '80'],
+        ['Carl', '120'],
+        ['Catherine', '120'],
+        ['Charles', '140'],
+        ['Dorthy', '180'],
+        ['Edward', '220'],
+        ['Elizabeth', '220'],
+        ['Florence', '260'],
+        ['Donald', '180'],
+        ['Clara', '140'],
+        ['Frank', '260'],
+        ['George', '300'],
+        ['Grace', '300'],
+        ['Harold', '340'],
+        ['Harriet', '340'],
+        ['Harry', '360'],
+        ['Hazel', '360'],
+        ['Helen', '380'],
+        ['Henry', '380'],
+        ['James', '440'],
+        ['Jane', '440'],
+        ['Jayne', '440'],
+        ['Jean', '460'],
+        ['Joan', '480'],
+        ['John', '460'],
+        ['Joseph', '480'],
+        ['Margaret', '560'],
+        ['Martin', '560'],
+        ['Marvin', '580'],
+        ['Mary', '580'],
+        ['Melvin', '600'],
+        ['Mildred', '600'],
+        ['Patricia', '680'],
+        ['Paul', '680'],
+        ['Richard', '740'],
+        ['Robert', '760'],
+        ['Ruby', '740'],
+        ['Ruth', '760'],
+        ['Thelma', '820'],
+        ['Thomas', '820'],
+        ['Walter', '900'],
+        ['Wanda', '900'],
+        ['William', '920'],
+        ['Wilma', '920'],
+      ];
+
+      var firstInitial_FL_IL_WI = [
+        ['A', '0'],
+        ['B', '60'],
+        ['C', '100'],
+        ['D', '160'],
+        ['E', '200'],
+        ['F', '240'],
+        ['G', '280'],
+        ['H', '320'],
+        ['I', '400'],
+        ['J', '420'],
+        ['K', '500'],
+        ['L', '520'],
+        ['M', '540'],
+        ['N', '620'],
+        ['O', '640'],
+        ['P', '660'],
+        ['Q', '700'],
+        ['R', '720'],
+        ['S', '780'],
+        ['T', '800'],
+        ['U', '840'],
+        ['V', '860'],
+        ['W', '880'],
+        ['X', '940'],
+        ['Y', '960'],
+        ['Z', '980']
+      ];
+      
+      var middleInitial_FL_IL_WI = [
+        ['A', '1'],
+        ['B', '2'],
+        ['C', '3'],
+        ['D', '4'],
+        ['E', '5'],
+        ['F', '6'],
+        ['G', '7'],
+        ['H', '8'],
+        ['I', '9'],
+        ['J', '10'],
+        ['K', '11'],
+        ['L', '12'],
+        ['M', '13'],
+        ['N', '14'],
+        ['O', '14'],
+        ['P', '15'],
+        ['Q', '15'],
+        ['R', '16'],
+        ['S', '17'],
+        ['T', '18'],
+        ['U', '18'],
+        ['V', '18'],
+        ['W', '19'],
+        ['X', '19'],
+        ['Y', '19'],
+        ['Z', '19']
+      ];
+
+      var firstMiddleName_MD_MI_MN = [
+        ['a', '027'],
+        ['aa', '028'],
+        ['ab', '029'],
+        ['ac', '030'],
+        ['ad', '031'],
+        ['ae', '032'],
+        ['af', '033'],
+        ['ag', '034'],
+        ['ah', '035'],
+        ['ai', '036'],
+        ['aj', '037'],
+        ['ak', '038'],
+        ['al', '039'],
+        ['ala', '040'],
+        ['alb', '041'],
+        ['alc', '042'],
+        ['ald', '043'],
+        ['ale', '044'],
+        ['alf', '045'],
+        ['alg', '046'],
+        ['alh', '047'],
+        ['ali', '048'],
+        ['alj', '049'],
+        ['alk', '050'],
+        ['all', '051'],
+        ['alm', '052'],
+        ['aln', '053'],
+        ['alo', '054'],
+        ['alp', '055'],
+        ['alq', '056'],
+        ['alr', '057'],
+        ['als', '058'],
+        ['alt', '059'],
+        ['alu', '060'],
+        ['alv', '061'],
+        ['alw', '062'],
+        ['alx', '063'],
+        ['aly', '064'],
+        ['alz', '065'],
+        ['am', '066'],
+        ['an', '067'],
+        ['ao', '068'],
+        ['ap', '069'],
+        ['aq', '070'],
+        ['ar', '071'],
+        ['as', '072'],

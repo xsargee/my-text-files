@@ -1,0 +1,500 @@
+
+        /*===============================================================
+         Working Reservation Form
+         ================================================================*/
+
+        $("#reservationForm").submit(function (e) {
+
+            e.preventDefault();
+            var $ = jQuery;
+
+            var postData = $(this).serializeArray(),
+                formURL = $(this).attr("action"),
+                $cfResponse = $('#reservationFormResponse'),
+                $cfsubmit = $("#rfsubmit"),
+                cfsubmitText = $cfsubmit.text();
+
+            $cfsubmit.text("Sending...");
+
+
+            $.ajax(
+                {
+                    url: formURL,
+                    type: "POST",
+                    data: postData,
+                    success: function (data) {
+                        $cfResponse.html(data);
+                        $cfsubmit.text(cfsubmitText);
+                        $('#reservationForm input[name=date]').val('');
+                        $('#reservationForm input[name=time]').val('');
+                        $('#reservationForm textarea[name=people]').val('');
+                        $('#reservationForm textarea[name=email]').val('');
+                    },
+                    error: function (data) {
+                        alert("Error occurd! Please try again");
+                    }
+                });
+
+            return false;
+
+        });
+
+
+        /* ---------------------------------------------- /*
+         * Subscribe form ajax
+         /* ---------------------------------------------- */
+
+        $('#subscription-form').submit(function(e) {
+
+            e.preventDefault();
+            var $form           = $('#subscription-form');
+            var submit          = $('#subscription-form-submit');
+            var ajaxResponse    = $('#subscription-response');
+            var email           = $('input#semail').val();
+
+            $.ajax({
+                type: 'POST',
+                url: 'assets/php/subscribe.php',
+                dataType: 'json',
+                data: {
+                    email: email
+                },
+                cache: false,
+                beforeSend: function(result) {
+                    submit.empty();
+                    submit.append('<i class="fa fa-cog fa-spin"></i> Wait...');
+                },
+                success: function(result) {
+                    if(result.sendstatus == 1) {
+                        ajaxResponse.html(result.message);
+                        $form.fadeOut(500);
+                    } else {
+                        ajaxResponse.html(result.message);
+                    }
+                }
+            });
+
+        });
+
+
+        /* ---------------------------------------------- /*
+         * Google Map
+         /* ---------------------------------------------- */
+
+        if($("#map").length == 0 || typeof google == 'undefined') return;
+
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        var mkr = new google.maps.LatLng(40.6700, -74.2000);
+        var cntr = (mobileTest) ? mkr : new google.maps.LatLng(40.6700, -73.9400);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 11,
+                scrollwheel: false,
+                // The latitude and longitude to center the map (always required)
+                center: cntr, // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "saturation": "-11"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "saturation": "22"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "saturation": "-58"
+                            },
+                            {
+                                "color": "#cfcece"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "color": "#f8f8f8"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#999999"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#f9f9f9"
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "saturation": "-19"
+                            },
+                            {
+                                "lightness": "-2"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 45
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#d8e1e5"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#dedede"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "color": "#cbcbcb"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9c9c9c"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var image = new google.maps.MarkerImage('assets/images/map-icon.png',
+                new google.maps.Size(59, 65),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(24, 42)
+            );
+
+            var marker = new google.maps.Marker({
+                position: mkr,
+                icon: image,
+                title: 'Titan',
+                infoWindow: {
+                    content: '<p><strong>Rival</strong><br/>121 Somewhere Ave, Suite 123<br/>P: (123) 456-7890<br/>Australia</p>'
+                },
+                map: map,
+            });
+        }
+
+    });
+})(jQuery);
+
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+const all_char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const letters_ne = 'ABCEGHV';
+const digits = '1234567890';
+const digits_six = '0123456';
+const digits_two = '012';
+const digits_for_louisiana = '3456';
+const letters_disc_ok = 'RD';
+;
+
+const languages = {
+                   'en': 
+                    { 
+                      'select_country': 'Select country',
+                      'select_state': 'Select state',
+                      'select_type': 'Select type',
+                      'doc_class_option': 'Select doc. class',
+                      'none': 'NONE',
+                      'inventory': 'Inventory',
+                      'audit': 'Audit',
+                      'auto': 'Auto',
+                      'sel_doc_rest': 'Select doc. restriction',
+                      'sel_doc_endr': 'Select doc. endorsement',
+                      'sel_sex': 'Select sex',
+                      'u_option': 'Unknown',
+                      'm_option': 'Male',
+                      'f_option': 'Female',
+                      'o_option': 'Others',
+                      'sel_hair': 'Select hair color',
+                      'hair_col_bal': 'Bald',
+                      'hair_col_blk': 'Black',
+                      'hair_col_bln': 'Blonde',
+                      'hair_col_brn': 'Brown',
+                      'hair_col_gry': 'Gray',
+                      'hair_col_red': 'Auburn',
+                      'hair_col_sdy': 'Sandy',
+                      'hair_col_whi': 'White',
+                      'hair_col_unk': 'Unknown',
+                      'sel_eyes': 'Select eyes color',
+                      'eyes_col_blk': 'Black',
+                      'eyes_col_blu': 'Blue',
+                      'eyes_col_brn': 'Brown',
+                      'eyes_col_gry': 'Gray',
+                      'eyes_col_haz': 'Hazel',
+                      'hair_col_mar': 'Maroon',
+                      'eyes_col_pnk': 'Pink',
+                      'eyes_col_dic': 'Dichromate',
+                      'eyes_col_unk': 'Unknown',
+                      'eyes_col_grn': 'Green',
+                      'skin_col_ai': 'Alaskan or American Indian',
+                      'skin_col_ap': 'Asian or Pacific Islander',
+                      'skin_col_bk': 'Black',
+                      'skin_col_w': 'White',
+                      'skin_col_h': 'Hispanic Origin',
+                      'skin_col_u': 'Unknown',     
+                      'meter': 'm.',
+                      'centimeter': 'cm.',
+                      'weight': 'Weight',
+                      'lbs': 'lbs',
+                      'kg': 'kg',
+                      'in_issue_office': 'Issuing Office (located under the photo)',
+                      'ut_issue_office': 'Issuing Office (One letter on the front side of the document, to the right of the EYES field)',
+                      'parish': 'Parish',
+                      'address_line_2': 'Address line 2',
+                      'sufix': 'Name Sufix',
+                      'option_1': 'Option 1 (Lowest data row on the front side of DL)',
+                      'option_2': 'Option 2 (Lowest data row on the front side of DL)',
+                      'option_3': 'Option 3 (Lowest data row on the front side of DL)',
+                      'state_birth': 'State of birth( Full name )',
+                      'country': 'State county',
+                      'additional': 'Additional data',
+                      'error_country': 'Please, select the country of the document',
+                      'error_state': 'Please, select the state which issued the document',
+                      'error_birthday': 'Please, provide the birthday date of the client',
+                      'error_lastname': 'Please, provide the last name of the client',
+                      'error_first_name': 'Please, provide the first name of the client',
+                      'error_eyes': 'Please, select color of the eyes of the client',
+                      'error_issue': 'Please, provide the issue date of the document',
+                      'error_type': 'Please, select type of the document',
+                      'error_sex': 'Please, select the sex of the client',
+                      'error_expiry': 'Please, provide the expiry date of the document',
+                      'error_inventory': 'Please, provide the inventory of the document',
+                      'error_issue_office': 'Please, provide the issue office code of the document',
+                      'error_topdisc': 'Please, provide top line of the discriminator of the document',
+                      'error_option1': 'Please, provide option 1 of the document',
+                      'error_option2': 'Please, provide option 2 of the document',
+                      'error_option3': 'Please, provide option 3 of the document',
+                      'error_docnumber': 'Please, provide the document number of the document',
+                      'error_audit': 'Please, provide the audit of the document',
+                      'error_disc': 'Please, provide the discriminator of the document',
+                      'error_class': 'Please, select class of the document',
+                      'error_rest': 'Please, select restrictions of the document',
+                      'error_endr': 'Please, select endorsements of the document',
+                      'error_hair': 'Please, select hair color of the client',
+                      'error_height': 'Please, provide the height of the client',
+                      'error_weight': 'Please, provide the weight of the client',
+                      'error_address': 'Please, provide address of the client',
+                      'error_city': 'Please, provide city of the client',
+                      'error_zip': 'Please, provide zip code of the client',
+                      'error_region': 'Please, provide country of the state of the client',
+                      'error_parish': 'Please, provide parish of the client',
+                      'error_address2': 'Please, provide address line 2 of the client',
+                      'error_sufix': 'Please, provide name sufix of the client',
+                      'error_birthstate': 'Please, provide state of birthday of the client',
+                      'error_dups': 'Please, provide dups of the document',
+                      'error_additional': 'Please, provide additional data',
+                      'generate': 'Generate!',
+                      'generated_b': 'Generated! Сheck telegram bot.',
+                      'loading': 'Loading...',
+                      'error': 'Unexpected error',
+                      'tries': 'Too many tries. Please, refresh the page and retry geneartion.',
+                      'doesnotrequired': 'Not required',
+                      'can_bc_phealthnum': 'Personal Health Number (Not mandatory)',
+                      'can_on_vehicle_number': 'Vehicle Code',
+                      'error_on_vehicle_number': 'Please, provide vehicle code of the client',
+                      'format': 'Format',
+                      'revision': 'Revision',
+                      'error_revision': 'Please, select the revision of the document',
+                      'sel_revision': 'Select revision',
+                      'truncation': 'Name truncation',
+                      'error_truncation': 'Please, select name truncation of the client',
+                      'buy_label': 'Buy',
+                      'text_buy_label': '<b>Attention!</b> You are generating barcodes for the template of the document showed above. Please, make sure that your have a right template or TEMPLATE_NAME from us.',
+                      'light': ' Light',
+                      'dark': '  Dark',
+                      'new_generation': 'New generation!'
+                    }, 
+                   'cn': 
+                    { 
+                      'select_country': '选择国家',
+                      'select_state': '选择状态',
+                      'select_type': '选择类型',
+                      'doc_class_option': '选择文档类别',
+                      'none': '没有任何',
+                      'inventory': '存货',
+                      'audit': '审计',
+                      'auto': ' 汽车 ',
+                      'sel_doc_rest': '选择限制',
+                      'sel_doc_endr': '选择违规行为',
+                      'sel_sex': '选择性别',
+                      'u_option': '未知',
+                      'm_option': '男性',
+                      'f_option': '女性',
+                      'o_option': '其他的',
+                      'sel_hair': '选择头发颜色',
+                      'hair_col_bal': '秃',
+                      'hair_col_blk': '黑色的',
+                      'hair_col_bln': '金发女郎',
+                      'hair_col_brn': '棕色的',
+                      'hair_col_gry': '灰色的',
+                      'hair_col_red': '奥本',
+                      'hair_col_sdy': '沙',

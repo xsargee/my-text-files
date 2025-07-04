@@ -1,0 +1,500 @@
+}
+
+function change_lan(language) {
+  active_language = language;
+  switch(language) {  
+    case 'en': 
+      document.getElementById("div_with_copy").innerHTML = 'Copied!';
+      if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = 'Light';
+      }
+      if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = 'Dark';
+      }
+      if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'Please, pay attention that this is test form. For getting barcodes you required to have active subscription. You can <a href="https://t.me/pdf417mrz_bot">buy subscription</a> directly in bot.';
+      }
+      if( document.getElementById("lang_option") != null ) {
+        document.getElementById("lang_option").innerHTML = 'Select Language';
+      }
+      if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'Language';
+      }
+      document.getElementById("country_selector").innerHTML = 'Country';
+      document.getElementById("country_option").innerHTML = 'Select country';
+      document.getElementById("vtype_label").innerHTML = 'ID type';
+      document.getElementById("nationality_selector").innerHTML = 'Nationality';
+      document.getElementById("lname_label").innerHTML = 'Last name';
+      document.getElementById("fname_label").innerHTML = 'First name';
+      document.getElementById("mname_label").innerHTML = 'Middle name';
+      document.getElementById("sex_selector").innerHTML = 'Sex';
+      document.getElementById("sex_option").innerHTML = 'Select sex';
+      document.getElementById("u_option").innerHTML = 'Unknown';
+      document.getElementById("m_option").innerHTML = 'Male';
+      document.getElementById("f_option").innerHTML = 'Female';
+      for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'Format: '+format_type;
+      }
+      document.getElementById("birthday_selector").innerHTML = 'Birthday date';
+      document.getElementById("expiry_selector").innerHTML = 'Expiry date';
+      document.getElementById("number_selector").innerHTML = 'Document number';
+      for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'Auto';
+      }
+      if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'Clear form!';
+      }
+      document.getElementById("final_button").innerHTML = 'Generate!';
+      if( document.getElementById("additional_selector") != null ) {
+        document.getElementById("additional_selector").innerHTML = 'Additional data';
+      }
+      if( document.getElementById("additional_selector_more") != null ) {
+        document.getElementById("additional_selector_more").innerHTML = 'Additional data 2';
+      }
+    break;
+    case 'cn':
+      document.getElementById("div_with_copy").innerHTML = '复制了!';
+      if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = '光';
+      }
+      if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = '黑暗的';
+      }
+      if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = '请注意，这是测试表格。 要获取条形码，您需要有效订阅。 您可以直接在机器人中<a href="https://t.me/pdf417mrz_bot">购买订阅</a>。';
+      }
+      if( document.getElementById("lang_option") != null ) {
+        document.getElementById("lang_option").innerHTML = '选择语言';
+      }
+      if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = '语言';
+      }
+      document.getElementById("country_selector").innerHTML = '国家';
+      document.getElementById("country_option").innerHTML = '选择国家';
+      document.getElementById("vtype_label").innerHTML = '身份证类型';
+      document.getElementById("nationality_selector").innerHTML = '国籍';
+      document.getElementById("lname_label").innerHTML = '姓';
+      document.getElementById("fname_label").innerHTML = '名';
+      document.getElementById("mname_label").innerHTML = '中间名字';
+      document.getElementById("sex_selector").innerHTML = '性别';
+      document.getElementById("sex_option").innerHTML = '选择性别';
+      document.getElementById("u_option").innerHTML = '未知';
+      document.getElementById("m_option").innerHTML = '男性';
+      document.getElementById("f_option").innerHTML = '女性';
+      for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = '格式: '+format_type;
+      }
+      document.getElementById("birthday_selector").innerHTML = '生日日期';
+      document.getElementById("expiry_selector").innerHTML = '到期日';
+      document.getElementById("number_selector").innerHTML = '文件号码';
+      for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = ' 汽车 ';
+      }
+      if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = '表格清晰!';
+      }
+      document.getElementById("final_button").innerHTML = '产生';
+      if( document.getElementById("additional_selector") != null ) {
+        document.getElementById("additional_selector").innerHTML = '附加数据';
+      }
+      if( document.getElementById("additional_selector_more") != null ) {
+        document.getElementById("additional_selector_more").innerHTML = '附加数据2';
+      }
+    break;
+    case 'hi':
+      document.getElementById("div_with_copy").innerHTML = 'नकल की गई!';
+      if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = 'रोशनी';
+      }
+      if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = 'अँधेरा';
+      }
+      if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'कृपया ध्यान दें कि यह परीक्षण प्रपत्र है। बारकोड प्राप्त करने के लिए आपके पास सक्रिय सदस्यता होना आवश्यक है। आप सीधे बॉट में <a href="https://t.me/pdf417mrz_bot">सदस्यता खरीद सकते हैं</a>।';
+      }
+      if( document.getElementById("lang_option") != null ) {
+        document.getElementById("lang_option").innerHTML = 'भाषा चुने';
+      }
+      if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'भाषा';
+      }
+      document.getElementById("country_selector").innerHTML = 'देश'; 
+      document.getElementById("country_option").innerHTML = 'देश चुनें';
+      document.getElementById("vtype_label").innerHTML = 'आईडी का प्रकार';
+      document.getElementById("nationality_selector").innerHTML = 'राष्ट्रीयता';
+      document.getElementById("lname_label").innerHTML = 'उपनाम';
+      document.getElementById("fname_label").innerHTML = 'पहला नाम';
+      document.getElementById("mname_label").innerHTML = 'मध्य नाम';
+      document.getElementById("sex_selector").innerHTML = 'लिंग';
+      document.getElementById("sex_option").innerHTML = 'लिंग का चयन करें';
+      document.getElementById("u_option").innerHTML = 'अज्ञात';
+      document.getElementById("m_option").innerHTML = 'नर';
+      document.getElementById("f_option").innerHTML = 'महिला';
+      for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'प्रारूप: '+format_type;
+      }
+      document.getElementById("birthday_selector").innerHTML = 'जन्मदिन की तारीख';
+      document.getElementById("expiry_selector").innerHTML = 'समाप्ति तिथि';
+      document.getElementById("number_selector").innerHTML = 'दस्तावेज़ संख्या';
+      for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'ऑटो';
+      }
+      if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'स्पष्ट प्रपत्र!';
+      } 
+      document.getElementById("final_button").innerHTML = 'बनाना!';
+      if( document.getElementById("additional_selector") != null ) {
+        document.getElementById("additional_selector").innerHTML = 'अतिरिक्त डेटा';
+      }
+      if( document.getElementById("additional_selector_more") != null ) {
+        document.getElementById("additional_selector_more").innerHTML = 'अतिरिक्त डेटा 2';
+      }
+    break;     
+    case 'ru':
+      document.getElementById("div_with_copy").innerHTML = 'Скопировано!';
+      if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = 'Светлая';
+      }
+      if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = 'Тёмная';
+      }
+      if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'Обратите внимание, что это тестовая форма. Для получения штрих-кодов необходима активная подписка. Вы можете <a href="https://t.me/pdf417mrz_bot">купить подписку</a> прямо в боте.';
+      }
+      if( document.getElementById("lang_option") != null ) {
+        document.getElementById("lang_option").innerHTML = 'Выбрать язык';
+      }
+      if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'Язык';
+      }
+      document.getElementById("country_selector").innerHTML = 'Страна';
+      document.getElementById("country_option").innerHTML = 'Выбрать страну';
+      document.getElementById("vtype_label").innerHTML = 'Тип ID';
+      document.getElementById("nationality_selector").innerHTML = 'Национальность';
+      document.getElementById("lname_label").innerHTML = 'Фамилия';
+      document.getElementById("fname_label").innerHTML = 'Имя';
+      document.getElementById("mname_label").innerHTML = 'Отчество'; 
+      document.getElementById("sex_selector").innerHTML = 'Пол';
+      document.getElementById("sex_option").innerHTML = 'Выбрать пол';
+      document.getElementById("u_option").innerHTML = 'Неизвестно';
+      document.getElementById("m_option").innerHTML = 'Мужчина';
+      document.getElementById("f_option").innerHTML = 'Женщина';
+      for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'Формат: '+format_type;
+      }
+      document.getElementById("birthday_selector").innerHTML = 'Дата рождения';
+      document.getElementById("expiry_selector").innerHTML = 'Дата истечения срока действия';
+      document.getElementById("number_selector").innerHTML = 'Номер документа';
+      for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'Авто';
+      }
+      if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'Очистить форму!';
+      }  
+      document.getElementById("final_button").innerHTML = 'Сгенерировать!';
+      if( document.getElementById("additional_selector") != null ) {
+        document.getElementById("additional_selector").innerHTML = 'Дополнительные данные';
+      }
+      if( document.getElementById("additional_selector_more") != null ) {
+        document.getElementById("additional_selector_more").innerHTML = 'Дополнительные данные 2';
+      }
+    break;
+    case 'ua':
+      document.getElementById("div_with_copy").innerHTML = 'Скопійовано!';
+      if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = 'Світла';
+      }
+      if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = 'Темна';
+      }
+      if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'Зверніть увагу, що це тестова форма. Для отримання штрих-кодів вам потрібна активна підписка. Ви можете <a href="https://t.me/pdf417mrz_bot">купити підписку</a> безпосередньо в боті.';
+      }
+      if( document.getElementById("lang_option") != null ) {
+        document.getElementById("lang_option").innerHTML = 'Обрати мову';
+      }
+      if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'Мова';
+      }
+      document.getElementById("country_selector").innerHTML = 'Країна';
+      document.getElementById("country_option").innerHTML = 'Обрати країну';
+      document.getElementById("vtype_label").innerHTML = 'Тип ID';
+      document.getElementById("nationality_selector").innerHTML = 'Національність';
+      document.getElementById("lname_label").innerHTML = 'Призвище';
+      document.getElementById("fname_label").innerHTML = 'Ім\'я';
+      document.getElementById("mname_label").innerHTML = 'По-батькові';
+      document.getElementById("sex_selector").innerHTML = 'Стать';
+      document.getElementById("sex_option").innerHTML = 'Обрати стать';
+      document.getElementById("u_option").innerHTML = 'Невідомо';
+      document.getElementById("m_option").innerHTML = 'Чоловік';
+      document.getElementById("f_option").innerHTML = 'Жінка';
+      for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'Формат: '+format_type;
+      }
+      document.getElementById("birthday_selector").innerHTML = 'Дата народження';
+      document.getElementById("expiry_selector").innerHTML = 'Термін придатності';
+      document.getElementById("number_selector").innerHTML = 'Номер документу';
+      for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'Авто';
+      }
+      if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'Очистити форму!';
+      }  
+      document.getElementById("final_button").innerHTML = 'Згенерувати!';
+      if( document.getElementById("additional_selector") != null ) {
+        document.getElementById("additional_selector").innerHTML = 'Додаткові дані';
+      }
+      if( document.getElementById("additional_selector_more") != null ) {
+        document.getElementById("additional_selector_more").innerHTML = 'Додаткові дані 2';
+      }
+    break;   
+  }
+
+  var all_objects = document.getElementsByClassName('current_link');
+  for (let z = 0; z < all_objects.length; z++) {
+    all_objects[z].classList.remove("current_link");
+  }
+
+  if ( !generate_link.includes(" AND ") ) {
+    document.getElementById("lang_"+language).classList.add("current_link");
+  }
+
+}
+
+var generate_link = document.getElementById("act_generate").innerHTML;
+var user_form = document.getElementById("user_form").innerHTML;
+
+var active_language = document.getElementById("act_lang").innerHTML;
+    change_lan(active_language);
+    if( document.getElementById("lang") != null ) {
+      document.getElementById("lang").value = active_language;
+    }
+
+
+function nationality_keyup( nationality_country ) {
+  var length = nationality_country.length;
+  if( length > 3 ) {
+    document.getElementById("nationality").value = nationality_country.substring(0,3).toUpperCase(); 
+  } else {
+    var last_letter = nationality_country.substring(length - 1, length);
+     if ( last_letter.match(/[a-z]/i) ) {    
+       document.getElementById("nationality").value = nationality_country.substring(0,length - 1) + last_letter.toUpperCase();
+     }  
+  }
+}
+
+function bd_onkeyup(elem, e) {
+  var elem_length = elem.value.length;
+  var prev_value = elem.value.substring(0,elem_length - 1); 
+  var last_char = parseInt(elem.value.substring(elem_length - 1, elem_length)); 
+  if (last_char >= 0 && last_char <= 9) {
+    if ( elem_length == 1 && last_char != 1  && last_char != 0) {
+      document.getElementById(elem.id).value = '0' + document.getElementById(elem.id).value + '/';
+    } else if ( elem_length == 2 ) {
+      var elem_month = parseInt(elem.value.substring(0,2));
+      if ( elem_month >= 0 && elem_month <= 12) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '/';
+        }
+      } else {
+        document.getElementById(elem.id).value = '';
+      }
+    } else if ( elem_length == 5 ) {
+      var elem_day = parseInt(elem.value.substring(3,5));
+      var elem_month = parseInt(elem.value.substring(0,2));
+
+      if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '/';
+        }
+      } else {
+        document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,3);
+      }
+
+    } else if ( elem_length == 10 ) {
+      document.getElementById('edate').focus();
+    } else if ( elem_length > 10 ) {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( elem_length == 5 && e.which == 191  ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,3) + '0' + document.getElementById(elem.id).value.substring(3,4) + '/';
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } 
+ 
+}
+
+function bd_onkeyup_eur(elem, e) {
+  var elem_length = elem.value.length;
+  var prev_value = elem.value.substring(0,elem_length - 1); 
+  var last_char = parseInt(elem.value.substring(elem_length - 1, elem_length)); 
+  if (last_char >= 0 && last_char <= 9) {
+    if ( elem_length == 2 ) {
+      var elem_day = parseInt(elem.value.substring(0,2));
+      if ( elem_day > 31 ) {
+        document.getElementById(elem.id).value = prev_value;
+      }
+    } else if ( elem_length == 3 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 5 ) {
+
+      var elem_day = parseInt(elem.value.substring(0,2));
+      var elem_month = parseInt(elem.value.substring(3,5));
+
+      if ( elem_month > 12 || elem_month < 1 ) {
+        document.getElementById(elem.id).value = prev_value;
+      } else if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+        var day_in_month = 30;
+      } else if ( elem_month == 2 ) {
+        var day_in_month = 29;       
+      } else {
+        var day_in_month = 31;             
+      }
+
+      if ( elem_day >= 0 && elem_day <= day_in_month) {
+        if ( e.which != 8  ) {
+          document.getElementById(elem.id).value = document.getElementById(elem.id).value + '.';
+        }
+      } else {
+        document.getElementById(elem.id).value = prev_value;
+      }
+
+    } else if ( elem_length == 6 ) {
+      document.getElementById(elem.id).value = prev_value;
+    } else if ( elem_length == 10 ) {
+
+      document.getElementById('edate').focus();
+
+    } else if ( elem_length > 10 ) {
+      document.getElementById(elem.id).value = prev_value;
+    }
+
+  } else if ( elem_length == 2 && e.which == 190  ) {
+    document.getElementById(elem.id).value = '0' + document.getElementById(elem.id).value.substring(0,1) + '.';
+  } else if ( elem_length == 3 && e.which == 190 ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value;
+  } else if ( elem_length == 5 && e.which == 190  ) {
+    document.getElementById(elem.id).value = document.getElementById(elem.id).value.substring(0,2) + '.0' + document.getElementById(elem.id).value.substring(3,4) + '.';
+    
+    var month_cur_change =  document.getElementById(elem.id).value.substring(3,5);
+      var day_cur_change = parseInt(document.getElementById(elem.id).value.substring(0,2));
+    if( month_cur_change == '02' ) {
+      if ( day_cur_change > 29 ) {
+        document.getElementById(elem.id).value = '28.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '01' || month_cur_change == '03' || month_cur_change == '05' || month_cur_change == '07' || month_cur_change == '08' || month_cur_change == '10' || month_cur_change == '12' ) {
+      if ( day_cur_change > 31 ) {
+        document.getElementById(elem.id).value = '31.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '04' || month_cur_change == '06' || month_cur_change == '09' || month_cur_change == '11' ) {
+      if ( day_cur_change > 30 ) {
+        document.getElementById(elem.id).value = '30.0' + month_cur_change + '.';
+      }
+    } else {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( elem_length == 6 && e.which == 190 ) {
+    var month_cur_change =  document.getElementById(elem.id).value.substring(3,5);
+      var day_cur_change = parseInt(document.getElementById(elem.id).value.substring(0,2));
+    if( month_cur_change == '02' ) {
+      if ( day_cur_change > 29 ) {
+        document.getElementById(elem.id).value = '28.' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '01' || month_cur_change == '03' || month_cur_change == '05' || month_cur_change == '07' || month_cur_change == '08' || month_cur_change == '10' || month_cur_change == '12' ) {
+      if ( day_cur_change > 31 ) {
+        document.getElementById(elem.id).value = '31.0' + month_cur_change + '.';
+      }
+    } else if ( month_cur_change == '04' || month_cur_change == '06' || month_cur_change == '09' || month_cur_change == '11' ) {
+      if ( day_cur_change > 30 ) {
+        document.getElementById(elem.id).value = '30.0' + month_cur_change + '.';
+      }
+    } else {
+      document.getElementById(elem.id).value = prev_value;
+    }
+  } else if ( e.which != 8 ) {
+    document.getElementById(elem.id).value = prev_value;
+  } else if ( elem_length == 10 ) {
+    document.getElementById('edate').focus();
+  } else if ( elem_length > 10 ) {
+    document.getElementById(elem.id).value = '';
+  }
+ 
+}
+
+function change_date_format() {
+
+  if ( format_type == 'USA' ) {
+    format_type = 'EUR';
+    document.getElementById('bdate').placeholder='DD.MM.YYYY';
+    document.getElementById('edate').placeholder='DD.MM.YYYY';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup_eur(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup_eur(this, event)');
+  } else {
+    format_type = 'USA'; 
+    document.getElementById('bdate').placeholder='MM/DD/YYYY';
+    document.getElementById('edate').placeholder='MM/DD/YYYY';
+    document.getElementById('bdate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+    document.getElementById('edate').setAttribute('onkeyup','bd_onkeyup(this, event)');
+  }
+
+  for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+    document.getElementsByClassName('gen_button_new')[i].innerHTML = languages[active_language]['format'] + ': ' +format_type;
+  }
+
+  if ( document.getElementById('bdate').value.length != 10 ) {
+    document.getElementById('bdate').value = '';
+  } else {
+
+    if (format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(3,5));
+    } else {
+      var elem_day = parseInt(document.getElementById('bdate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('bdate').value.substring(0,2));
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {
+      var day_in_month = 31;             
+    }
+
+    if ( elem_day > 0 && elem_day <= day_in_month) {
+      if (format_type == 'USA') {
+        document.getElementById('bdate').value = document.getElementById('bdate').value.substring(3,5) + "/" + document.getElementById('bdate').value.substring(0,2)  + "/" + document.getElementById('bdate').value.substring(6,10);
+      } else {
+        document.getElementById('bdate').value = document.getElementById('bdate').value.substring(3,5) + "." + document.getElementById('bdate').value.substring(0,2)  + "." + document.getElementById('bdate').value.substring(6,10);
+      }
+    } else {
+      document.getElementById('bdate').value = '';
+    }
+
+  }
+
+  if ( document.getElementById('edate').value.length != 10 ) {
+    document.getElementById('edate').value = '';
+  } else {
+
+    if (format_type == 'USA') {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(0,2));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(3,5));
+    } else {
+      var elem_day = parseInt(document.getElementById('edate').value.substring(3,5));
+      var elem_month = parseInt(document.getElementById('edate').value.substring(0,2));
+    }
+
+    if ( elem_month == 4 || elem_month == 6 || elem_month == 9 || elem_month == 11  ) {
+      var day_in_month = 30;
+    } else if ( elem_month == 2 ) {
+      var day_in_month = 29;       
+    } else {

@@ -1,0 +1,500 @@
+        document.getElementById("fname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("bdate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("bdate").setAttribute('onchange', 'birthday_date_doc_n()');
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var bth_year = document.getElementById("bdate").value.substring(8,10);
+        var bth_mouth = document.getElementById("bdate").value.substring(3,5);
+        var bth_day = document.getElementById("bdate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var bth_year = document.getElementById("bdate").value.substring(2,4);
+        var bth_mouth = document.getElementById("bdate").value.substring(5,7);
+        var bth_day = document.getElementById("bdate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var bth_year = document.getElementById("bdate").value.substring(8,10);
+        var bth_mouth = document.getElementById("bdate").value.substring(0,2);
+        var bth_day = document.getElementById("bdate").value.substring(3,5);
+      }
+
+             if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'A' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'B' ) {
+        var fname_in = '1';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'C' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'D' ) {
+        var fname_in = '2';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'E' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'F' ) {
+        var fname_in = '3';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'G' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'H' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'I' ) {
+        var fname_in = '4';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'J' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'K' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'L' ) {
+        var fname_in = '5';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'M' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'N' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'O' ) {
+        var fname_in = '6';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'P' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'Q' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'R' ) {
+        var fname_in = '7';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'S' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'T' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'U' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'V' ) {
+        var fname_in = '8';
+      } else if ( document.getElementById("fname").value.substring(0,1).toUpperCase() == 'W' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'X' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'Y' ||
+                  document.getElementById("fname").value.substring(0,1).toUpperCase() == 'Z' ) {
+        var fname_in = '9';
+      } 
+
+      if ( document.getElementById("mname").value.length == 0  ) {
+        var mname_in = '0';   
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'A' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'B' ) {
+        var mname_in = '1';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'C' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'D' ) {
+        var mname_in = '2';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'E' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'F' ) {
+        var mname_in = '3';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'G' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'H' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'I' ) {
+        var mname_in = '4';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'J' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'K' ) {
+        var mname_in = '5';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'L' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'M' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'N' ) {
+        var mname_in = '6';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'O' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'P' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'Q' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'R' ) {
+        var mname_in = '7';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'S' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'T' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'U' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'V' ) {
+        var mname_in = '8';
+      } else if ( document.getElementById("lname").value.substring(0,1).toUpperCase() == 'W' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'X' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'Y' ||
+                  document.getElementById("lname").value.substring(0,1).toUpperCase() == 'Z' ) {
+        var mname_in = '9';
+      } 
+
+
+      var doc_num = amerSoundex(document.getElementById("lname").value.toUpperCase(), true) + fname_in + '-' + bth_day + bth_mouth + bth_year + '-' + mname_in + makestr(1, digits);
+    break;     
+  }
+  } else if ( document.getElementById("country").value == 'ARG' ) {
+    var doc_num = makestr(2, digits) + "." + makestr(3, digits) + "." + makestr(3, digits);
+  }
+
+  document.getElementById("doc_number").value = doc_num;
+  document.getElementById("doc_number").focus();   
+}
+
+
+function document_number_copy(e) {
+  if( document.getElementById("doc_number").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = e.clientY + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("doc_number").focus();
+    document.getElementById("doc_number").select();
+
+    navigator.clipboard.writeText(document.getElementById("doc_number").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+function select_doc_class( doc_class ) {
+  document.getElementById("doc_class_txt").value = doc_class;
+}
+
+function clear_doc_class_text() {
+  if ( document.getElementById("doc_class_txt").value == languages[active_language]['doc_class_option']  ) {
+    document.getElementById("doc_class_txt").value = '';
+  }
+}
+
+function veteran_click() {
+  switch(veteran) {
+    case 'VETERAN':
+      document.getElementById("veteran_b").classList.remove('active_badge');
+      veteran = '';        
+    break;
+    default:
+      document.getElementById("veteran_b").classList.add('active_badge');
+      veteran = 'VETERAN';     
+    break; 
+  }
+}
+
+function donor_click() {
+  switch(donor) {
+    case 'DONOR':
+      document.getElementById("donor_b").classList.remove('active_badge');
+      donor = '';        
+    break;
+    default:
+      document.getElementById("donor_b").classList.add('active_badge');
+      donor = 'DONOR';     
+    break; 
+  }
+}
+
+function safe_click() {
+  switch(safe) {
+    case 'SAFE':
+      document.getElementById("safe_b").classList.remove('active_badge');
+      safe = '';        
+    break;
+    default:
+      document.getElementById("safe_b").classList.add('active_badge');
+      safe = 'SAFE';     
+    break; 
+  }
+}
+
+function select_rest( rest ) {
+  document.getElementById("restriction_txt").value = rest;
+}
+
+function clear_rest_text() {
+  if ( document.getElementById("restriction_txt").value == languages[active_language]['sel_doc_rest']  ) {
+    document.getElementById("restriction_txt").value = '';
+  }
+}
+
+function select_endr( endr ) {
+  document.getElementById("endosernent_txt").value = endr;
+}
+
+function clear_endr_text() {
+  if ( document.getElementById("endosernent_txt").value == languages[active_language]['sel_doc_endr'] ) {
+    document.getElementById("endosernent_txt").value = '';
+  }
+}
+
+function generate_discriminator() {
+  if ( document.getElementById("country").value == languages[active_language]['select_country']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_country'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("country").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if ( document.getElementById("state").value == languages[active_language]['select_state']  ) {
+    document.getElementById("error_first_row").innerHTML = languages[active_language]['error_state'];
+    document.getElementById("error_first_row").style.display = 'block';
+    document.getElementById("state").focus();
+    setTimeout(delete_error, 3000);
+    return;      
+  } else if( document.getElementById("country").value == 'USA' ) {   
+  switch(state) {
+    case 'AL':
+      var discriminator = 'NONE';
+    break;
+    case 'AK':
+      if ( document.getElementById("revision").value == '11012018' ) {
+        if ( document.getElementById("idate").value.length != 10  ) {
+          document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+          document.getElementById("error_third_row").style.display = 'block';
+          document.getElementById("idate").focus();
+          setTimeout(delete_error, 3000);
+        return;       
+        }
+
+        if ( format_type == 'ARG') {
+          var isu_year = document.getElementById("idate").value.substring(8,10);
+          var isu_mouth = document.getElementById("idate").value.substring(3,5);
+          var isu_day = document.getElementById("idate").value.substring(0,2);
+        } else if ( format_type == 'CAN') {
+          var isu_year = document.getElementById("idate").value.substring(2,4);
+          var isu_mouth = document.getElementById("idate").value.substring(5,7);
+          var isu_day = document.getElementById("idate").value.substring(8,10);
+        } else if ( format_type == 'USA') {
+          var isu_year = document.getElementById("idate").value.substring(8,10);
+          var isu_mouth = document.getElementById("idate").value.substring(0,2);
+          var isu_day = document.getElementById("idate").value.substring(3,5);
+        }  
+
+        var discriminator = makestr(7, digits)+" "+ makestr(3, digits)+isu_year+isu_mouth+isu_day+"A"+makestr(2, letters)+"-0"
+      } else {
+        var discriminator = makestr(7, digits);
+      }
+    break; 
+    case 'AZ':
+      if ( document.getElementById("bdate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_birthday'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("bdate").setAttribute('onchange', 'birthday_date_discriminator()');
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( document.getElementById("lname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("lname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("fname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_first_name'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("fname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( format_type == 'ARG') {
+        var bth_year = document.getElementById("bdate").value.substring(9,10);
+      } else if ( format_type == 'CAN') {
+        var bth_year = document.getElementById("bdate").value.substring(3,4);
+      } else if ( format_type == 'USA') {
+        var bth_year = document.getElementById("bdate").value.substring(9,10);
+      }
+      var discriminator = makestr(4, digits) + makestr(2, letters) + makestr(3, digits) + document.getElementById("lname").value.substring(0,1).toUpperCase() + makestr(4, digits) + document.getElementById("fname").value.substring(0,1).toUpperCase() + bth_year;
+    break;
+    case 'AR':
+      var discriminator = makestr(9, digits) + ' ' + makestr(4, digits);
+    break;
+    case 'CO':
+      if ( document.getElementById("revision").value == languages[active_language]['sel_revision'] ) {
+        document.getElementById("error_first_row").innerHTML = languages[active_language]['error_revision'];
+        document.getElementById("error_first_row").style.display = 'block';
+        document.getElementById("revision").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } 
+      if ( document.getElementById("revision").value == '02282022' || document.getElementById("revision").value == '10302015' ) {
+        var discriminator = makestr(7, digits);
+      } else {
+        var discriminator = makestr(6, digits);       
+      }
+    break;
+    case 'CA':
+      if ( document.getElementById("idate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if ( document.getElementById("edate").value.length != 10  ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_expiry'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("edate").focus();
+        setTimeout(delete_error, 3000);
+        return;       
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var exp_year = document.getElementById("edate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var exp_year = document.getElementById("edate").value.substring(2,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var exp_year = document.getElementById("edate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }     
+      var rand_letter = makestr(1, letters);
+      var discriminator = isu_mouth + '/' + isu_day + '/' + isu_year + makestr(3, digits) + makestr(2, letters) + '/' + rand_letter + rand_letter + makestr(2, letters) + '/' + exp_year;
+    break;
+    case 'CT':
+      if ( document.getElementById("idate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }
+      var discriminator = isu_year + isu_mouth + isu_day + makestr(6, digits) + '01MV' + makestr(2, all_char);
+    break; 
+    case 'DC':
+      var discriminator = makestr(8, digits);
+    break;
+    case 'DE':
+      if ( document.getElementById("idate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }     
+      var discriminator = 'L' + isu_year + isu_mouth + isu_day + makestr(6, digits) + 'C';
+    break;
+    case 'FL':
+      if ( document.getElementById("idate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(2,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(8,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }     
+      var discriminator = makestr(1, letters) + makestr(2, digits) + isu_year + isu_mouth + isu_day + makestr(4, digits);
+    break;
+    case 'GA':
+      if ( document.getElementById("revision").value == languages[active_language]['sel_revision'] ) {
+        document.getElementById("error_first_row").innerHTML = languages[active_language]['error_revision'];
+        document.getElementById("error_first_row").style.display = 'block';
+        document.getElementById("revision").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( document.getElementById("idate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }
+      if ( document.getElementById("revision").value == '01022019' ) {
+        var discriminator = makestr(11, digits) + '00' + makestr(5, digits);
+      } else {  
+        if ( document.getElementById("inventory").value.length != 16 ) {
+          document.getElementById("error_six_row").innerHTML = languages[active_language]['error_inventory'];
+          document.getElementById("error_six_row").style.display = 'block';
+          document.getElementById("inventory").focus();
+          setTimeout(delete_error, 3000);
+          return;
+        }
+        var discriminator = document.getElementById("inventory").value.substring(0,14) + makestr(4, digits);
+      }
+    break;
+    case 'HI':
+      if ( document.getElementById("idate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);
+      } else if ( format_type == 'USA') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(0,2);
+        var isu_day = document.getElementById("idate").value.substring(3,5);
+      }
+      var discriminator = isu_year + isu_mouth + isu_day + makestr(12, digits) + '-2CO';
+    break;
+    case 'ID':
+      if ( document.getElementById("revision").value == '01312023' ) {
+        var discriminator = makestr(15, digits);
+      } else {
+        if ( document.getElementById("idate").value.length != 10 ) {
+          document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+          document.getElementById("error_third_row").style.display = 'block';
+          document.getElementById("idate").focus();
+          setTimeout(delete_error, 3000);
+          return;
+        } else if ( format_type == 'ARG') {
+          var isu_year = document.getElementById("idate").value.substring(8,10);
+        } else if ( format_type == 'CAN') {
+          var isu_year = document.getElementById("idate").value.substring(2,4);
+        } else if ( format_type == 'USA') {
+          var isu_year = document.getElementById("idate").value.substring(8,10);
+        }
+        var discriminator = '010' + isu_year + makestr(3, digits) + '01' + makestr(2, digits);         
+      }    
+    break; 
+    case 'IL':
+      if ( document.getElementById("idate").value.length != 10 ) {
+        document.getElementById("error_third_row").innerHTML = languages[active_language]['error_issue'];
+        document.getElementById("error_third_row").style.display = 'block';
+        document.getElementById("idate").focus();
+        setTimeout(delete_error, 3000);
+        return;
+      } else if ( document.getElementById("lname").value.length == 0  ) {
+        document.getElementById("error_second_row").innerHTML = languages[active_language]['error_lastname'];
+        document.getElementById("error_second_row").style.display = 'block';
+        document.getElementById("lname").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if ( format_type == 'ARG') {
+        var isu_year = document.getElementById("idate").value.substring(6,10);
+        var isu_mouth = document.getElementById("idate").value.substring(3,5);
+        var isu_day = document.getElementById("idate").value.substring(0,2);
+      } else if ( format_type == 'CAN') {
+        var isu_year = document.getElementById("idate").value.substring(0,4);
+        var isu_mouth = document.getElementById("idate").value.substring(5,7);
+        var isu_day = document.getElementById("idate").value.substring(8,10);

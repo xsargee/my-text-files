@@ -1,0 +1,500 @@
+      var revision = '2015';
+    break;      
+    case 'LTU':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2011';
+    break;
+    case 'MLT':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'MEX':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'MDA':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'NLD':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2014';
+    break;
+    case 'NZL':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break; 
+    case 'NOR':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2011';
+    break; 
+    case 'POL':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2018';
+    break;
+    case 'PRT':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'ROU':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2008';
+    break;
+    case 'RUS':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2010';
+    break;
+    case 'RUSINSIDE':
+      switch(active_language) {      
+        case 'en':
+          document.getElementById("expiry_selector").innerHTML = 'Issued date';
+        break;
+        case 'cn':
+          document.getElementById("expiry_selector").innerHTML = '发行日期';
+        break;
+        case 'hi':
+          document.getElementById("expiry_selector").innerHTML = 'जारी करने की तारिख';
+        break;
+        case 'ru':
+          document.getElementById("expiry_selector").innerHTML = 'Дата выдачи';
+        break;
+        case 'ua':
+          document.getElementById("expiry_selector").innerHTML = 'Дата видачі';
+        break;
+      }
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2010';
+    break;                
+    case 'SRB':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'SGP':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'SVN':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2016';
+    break;
+    case 'ZAF':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'ESP':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2015';
+    break; 
+    case 'SWE':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2012';
+    break;
+    case 'CHE':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '';
+    break;
+    case 'TKM':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'UKR':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '2015';
+    break;
+    case 'GBR':
+      document.getElementById("add_data_html").innerHTML = '';
+      var revision = '2020';
+    break;                     
+    case 'UZB':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'VEN':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;
+    case 'VNM':
+      document.getElementById("add_data_html").innerHTML = '<div class="label_pdf" id="additional_selector">'+languages[active_language]['additional_data']+'</div><div class="inp_height"><label class="new_label"><input class="inputer_with_auto inputer" type="text" id="additional_data" onclick="additional_number_copy(event)"></label><button type="button" id="add_data_gen_b" class="gen_button" onclick="generate_additional();">'+languages[active_language]['auto']+'</button></div>';
+      var revision = '';
+    break;         
+  }
+
+  selected_revision( country, revision );
+
+}
+
+function selected_revision( sel_country, sel_revision ) {
+
+  var revision_in_public_format = sel_revision;
+
+  if ( revision_in_public_format == '' ) {
+    revision_in_public_format = '2000'
+  }
+
+     
+  var send_http_for_template = new XMLHttpRequest();
+  var params_for_template = 'country='+sel_country+'&state=XX&revision='+revision_in_public_format+'&type=Passport';
+
+         send_http_for_template.open('POST', 'https://pdf417mrz.xyz/api/find-template', true);
+         send_http_for_template.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+         send_http_for_template.onreadystatechange = function() {
+         if(send_http_for_template.readyState == 4 && send_http_for_template.status == 200) {
+
+          var result_data_for_template = JSON.parse(send_http_for_template.responseText);
+               
+          switch (result_data_for_template.type) {
+          case 1:
+            var link_for_template = "https://pdf417mrz.xyz/";
+
+            switch(active_language) {
+             case 'cn':
+              link_for_template += active_language+'/';
+              var seo_link_name = '购买 '+result_data_for_template.title;
+              break;
+             case 'hi':
+              link_for_template += active_language+'/';
+              var seo_link_name = result_data_for_template.title+' खरीदें';
+              break;
+             case 'ru':
+              link_for_template += active_language+'/';
+              var seo_link_name = 'Купить '+result_data_for_template.title;
+              break;
+             case 'ua':
+              link_for_template += active_language+'/';
+              var seo_link_name = 'Купити '+result_data_for_template.title;
+              break;
+             default:
+              var seo_link_name = 'Buy '+result_data_for_template.title;
+              break;
+            }
+
+            link_for_template += 'psd-templates/'+result_data_for_template.handle;
+
+            document.getElementById('left_column_result').innerHTML = '<div class="col-sm-6 col-md-3 col-lg-3"><div class="shop-item"><div class="shop-item-image"><img class="two_img_inside_item" src="/static/img/templates/'+result_data_for_template.front+'" alt="'+result_data_for_template.title+'"/><img class="two_img_inside_item" src="/static/img/templates/'+result_data_for_template.back+'" alt="'+result_data_for_template.title+' - Seond image"/><div class="shop-item-detail"><a href="'+link_for_template+'" target="_blank" class="btn btn-round btn-b"><span class="icon-basket">'+languages[active_language]['buy_label']+'</span></a></div></div><h4 class="shop-item-title font-alt"><a href="'+link_for_template+'">'+result_data_for_template.title+' - '+result_data_for_template.price+'$</a></h4>'+languages[active_language]['text_buy_label'].replace('TEMPLATE_NAME','<a target="_blank" href="'+link_for_template+'">'+seo_link_name+'</a>' )+'</div></div>';
+            if (  generate_link.includes(" AND ") ) {
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">'+languages[active_language]['generate']+'</button>';
+            } else {
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">'+languages[active_language]['generate']+'</button><button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">'+languages[active_language]['new_generation']+'</button>';
+            }
+          break;
+          default:
+            if (  generate_link.includes(" AND ") ) {
+              document.getElementById('left_column_result').innerHTML = '';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">'+languages[active_language]['generate']+'</button>';
+            } else {
+              document.getElementById('left_column_result').innerHTML = '<button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">'+languages[active_language]['new_generation']+'</button>';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">'+languages[active_language]['generate']+'</button>';
+            }
+          break;
+          }
+
+         } else if (send_http_for_template.readyState == 4 && send_http_for_template.status == 404) {
+            if (  generate_link.includes(" AND ") ) {
+              document.getElementById('left_column_result').innerHTML = '';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(2);">Generate!</button>';
+            } else {
+              document.getElementById('left_column_result').innerHTML = '<button id="reset_button" type="button" class="generate_button_clear" onclick="reset_form();">Clear form!</button>';
+              document.getElementById('right_column_result').innerHTML = '<button id="final_button" type="button" class="generate_button" onclick="generate(1);">Generate!</button>';
+            }
+         }
+        };
+
+        send_http_for_template.send(params_for_template);      
+}
+
+function generate_document() {
+  switch (country) {
+    case 'USA':
+      if ( document.getElementById("edate").value.length != 10  ) {      
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_second_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("edate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+      var year_expiration_checked_gen = parseInt(document.getElementById("edate").value.substring(6,10));
+      var issue_date_add_gen = year_expiration_checked_gen - 10;
+      if ( issue_date_add_gen >= 2021 ) {
+        document.getElementById("doc_number").value = 'A00' + makestr(6, digits);
+      } else if ( issue_date_add_gen >= 2016 && issue_date_add_gen < 2021 ) {
+        document.getElementById("doc_number").value = '5' + makestr(8, digits);
+      } else {
+        document.getElementById("doc_number").value = makestr(9, digits);
+      }      
+    break;
+    case 'ARM':
+      document.getElementById("doc_number").value = 'A' + makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'AUS':
+      document.getElementById("doc_number").value = 'PA' + makestr(7, digits);
+    break;
+    case 'ARG':
+      document.getElementById("doc_number").value = makestr(3, letters) + makestr(6, digits);
+    break;
+    case 'AUT':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'BGD':
+      document.getElementById("doc_number").value = 'BN' + makestr(7, digits);
+    break;
+    case 'BLR':
+      document.getElementById("doc_number").value = 'KB' + makestr(7, digits);
+    break;
+    case 'BEL':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'BRA':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'BGR':
+      document.getElementById("doc_number").value =  makestr(9, digits);
+    break;
+    case 'CAN':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'CMR':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'CHN':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(8, digits);
+    break;
+    case 'HRV':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'CZE':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'DNK':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'DOM':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'EGY':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(8, digits);
+    break; 
+    case 'EST':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;            
+    case 'FIN':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'FRA':
+      if ( document.getElementById("edate").value.length != 10  ) {      
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_second_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("edate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      }
+      var year_expiration_checked_gen = parseInt(document.getElementById("edate").value.substring(6,10));
+      var issue_date_add_gen = year_expiration_checked_gen - 10;
+      var issue_date_add_gen_string = String(issue_date_add_gen);
+
+      var fra_series = ['CA','CK','DE','CH','BE','AD','CP','CT','CL','FD'];
+      document.getElementById("doc_number").value = issue_date_add_gen_string.substring(2,4) + fra_series[Math.floor(Math.random()*fra_series.length)] + makestr(5, digits);
+    break;
+    case 'GEO':
+      document.getElementById("doc_number").value = makestr(2, digits) + makestr(2, letters) + makestr(5, digits);
+    break;
+    case 'DEU':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(1, digits) + makestr(3, letters) + makestr(2, digits) + makestr(2, letters);
+    break;
+    case 'GRC':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'IND':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'IRL':
+      document.getElementById("doc_number").value = makestr(2, letters) + makestr(7, digits);
+    break;
+    case 'ISR':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'ITA':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'HUN':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'KAZ':
+      document.getElementById("doc_number").value = makestr(1, letters) +  makestr(8, digits);
+    break;
+    case 'KEN':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'KGZ':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break; 
+    case 'LVA':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;               
+    case 'LTU':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'MLT':
+      document.getElementById("doc_number").value = makestr(7, digits);
+    break;
+    case 'MEX':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(8, digits);
+    break;
+    case 'MDA':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(7, digits);
+    break;
+    case 'NLD':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(3, digits) + makestr(2, letters) + makestr(2, digits);
+    break;
+    case 'NZL':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'NOR':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'POL':
+      document.getElementById("doc_number").value = makestr(2, letters) +  makestr(7, digits);
+    break;
+    case 'PRT':
+      document.getElementById("doc_number").value = makestr(7, digits);
+    break;
+    case 'ROU':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'RUS':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'RUSINSIDE':
+      document.getElementById("doc_number").value = makestr(10, digits);
+    break;       
+    case 'SRB':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'SGP':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits) + makestr(1, letters);
+    break;
+    case 'SVN':
+      document.getElementById("doc_number").value = "P" + makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'ZAF':
+      document.getElementById("doc_number").value =  makestr(1, letters) + makestr(8, digits);
+    break;
+    case 'ESP':
+      document.getElementById("doc_number").value = 'P' + makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'SWE':
+      document.getElementById("doc_number").value = makestr(8, digits);
+    break;
+    case 'CHE':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'TKM':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;
+    case 'UKR':
+      document.getElementById("doc_number").value = makestr(2, letters) + makestr(6, digits);
+    break;
+    case 'GBR':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;            
+    case 'UZB':
+      document.getElementById("doc_number").value =  makestr(2, letters) + makestr(7, digits);
+    break;
+    case 'VEN':
+      document.getElementById("doc_number").value = makestr(9, digits);
+    break;
+    case 'VNM':
+      document.getElementById("doc_number").value = makestr(1, letters) + makestr(7, digits);
+    break;      
+  } 
+}
+
+
+function document_number_copy(e) {
+  if( document.getElementById("doc_number").value.length > 0 ) {
+
+    var left  = e.clientX  + "px";
+    var top  = e.clientY  + "px";
+
+    document.getElementById("div_with_copy").style.left = left;
+    document.getElementById("div_with_copy").style.top = top;
+
+    document.getElementById("doc_number").focus();
+    document.getElementById("doc_number").select();
+
+    navigator.clipboard.writeText(document.getElementById("doc_number").value);
+
+    document.getElementById("div_with_copy").style.display = 'block';
+    setTimeout(() => { 
+      document.getElementById("div_with_copy").style.display = 'none';
+    }, "1000");
+
+  }
+}
+
+
+function generate_additional() {
+  switch (country) {
+    case 'USA':
+      document.getElementById("additional_data").value = makestr(9, digits) + '<' + makestr(4, digits);
+    break;
+    case 'AUS':
+      document.getElementById("additional_data").value = makestr(8, digits) + makestr(1, letters);
+    break;
+    case 'ARG':
+      document.getElementById("additional_data").value = makestr(8, digits);
+    break;
+    case 'BLR':
+      document.getElementById("additional_data").value = makestr(14, all_char);
+    break;
+    case 'BGR':
+      document.getElementById("additional_data").value = makestr(10, digits);
+    break;
+    case 'CMR':
+      if ( document.getElementById("sex").value.length != 1 ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_sex'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("sex").focus();
+        setTimeout(delete_error, 3000);   
+        return;
+      }
+
+      document.getElementById("additional_data").value =  document.getElementById("sex").value + makestr(7, digits);
+    break;
+    case 'CHN':
+      document.getElementById("additional_data").value = makestr(14, letters);
+    break;
+    case 'CZE':
+      if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'USA') {
+        var elem_day = document.getElementById('bdate').value.substring(3,5);
+        var elem_month = document.getElementById('bdate').value.substring(0,2);
+      } else {
+        var elem_day = document.getElementById('bdate').value.substring(0,2);
+        var elem_month = document.getElementById('bdate').value.substring(3,5);
+      }    
+
+      document.getElementById("additional_data").value = document.getElementById("bdate").value.substring(8,10) + elem_month + elem_day + '/' + makestr(4, digits);
+    break;
+    case 'DNK':
+      if ( document.getElementById("bdate").value.length != 10  ) {
+        document.getElementById("error_three").innerHTML = languages[active_language]['error_first_date'];
+        document.getElementById("error_three").style.display = 'block';
+        document.getElementById("bdate").focus();
+        setTimeout(delete_error, 3000);
+        return;      
+      } else if (format_type == 'USA') {
+        var elem_day = document.getElementById('bdate').value.substring(3,5);
+        var elem_month = document.getElementById('bdate').value.substring(0,2);
+      } else {
+        var elem_day = document.getElementById('bdate').value.substring(0,2);
+        var elem_month = document.getElementById('bdate').value.substring(3,5);
+      } 
+
+      document.getElementById("additional_data").value = elem_day + elem_month + document.getElementById("bdate").value.substring(8,10) + '-' + makestr(4, digits);
+    break;
+    case 'DOM':

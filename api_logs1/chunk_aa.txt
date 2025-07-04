@@ -1,0 +1,500 @@
+User-agent: Googlebot
+Disallow: /user
+Disallow: /user/
+Disallow: /users
+Disallow: /users/
+Disallow: /user_list
+Disallow: /user_list/
+Disallow: /passport/
+Disallow: /visa/
+Disallow: /id/
+Disallow: /dl/
+Disallow: /generate/
+Disallow: /regenerate/
+Disallow: /generate-pdf
+Disallow: /generate-pdf/
+Disallow: /discounts
+Disallow: /discounts/
+Disallow: /languages
+Disallow: /languages/
+Disallow: /subscriptions
+Disallow: /subscriptions/
+Disallow: /reports
+Disallow: /reports/
+Disallow: /settingsmrz
+Disallow: /settingsmrz/
+Disallow: /checkout/
+Disallow: /payment_done
+Disallow: /payment_done/
+Disallow: /filter_users
+Disallow: /filter_users/
+Disallow: /login
+Disallow: /login/
+Disallow: /logout/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /error
+Disallow: /error/
+Sitemap: https://pdf417mrz.xyz/sitemap.xml
+
+User-agent: *
+Disallow: /user
+Disallow: /user/
+Disallow: /users
+Disallow: /users/
+Disallow: /user_list
+Disallow: /user_list/
+Disallow: /passport/
+Disallow: /visa/
+Disallow: /id/
+Disallow: /dl/
+Disallow: /generate/
+Disallow: /regenerate/
+Disallow: /generate-pdf
+Disallow: /generate-pdf/
+Disallow: /discounts
+Disallow: /discounts/
+Disallow: /languages
+Disallow: /languages/
+Disallow: /subscriptions
+Disallow: /subscriptions/
+Disallow: /reports
+Disallow: /reports/
+Disallow: /settingsmrz
+Disallow: /settingsmrz/
+Disallow: /checkout/
+Disallow: /payment_done
+Disallow: /payment_done/
+Disallow: /filter_users
+Disallow: /filter_users/
+Disallow: /login
+Disallow: /login/
+Disallow: /logout/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /error
+Disallow: /error/
+Sitemap: https://pdf417mrz.xyz/sitemap.xml./mrz/visa-indonesia
+./mrz/passport-south-africa
+./mrz/id-malta
+./mrz/visa-greece
+./mrz/passport-belgium
+./mrz/visa-finland
+./mrz/passport-romania
+./mrz/id-cyprus
+./mrz/passport-croatia
+./mrz/passport-venezuela
+./mrz/id-armenia
+./mrz/passport-argentina
+./mrz/visa-hungary
+./mrz/id-united-kingdom
+./mrz/id-switzerland
+./mrz/passport-finland
+./mrz/passport-india
+./mrz/id-united-arab-emirates
+./mrz/id-kazakhstan
+./mrz/passport-portugal
+./mrz/id-senegal
+./mrz/passport-usa
+./mrz/id-france
+./mrz/visa-united-kingdom
+./mrz/id-belgium
+./mrz/id-germany
+./mrz/id-hungary
+./mrz/passport-cameroon
+./mrz/passport-austria
+./mrz/passport-switzerland
+./mrz/passport-norway
+./mrz/passport-france
+./mrz/id-moldova
+./mrz/passport-ireland
+./mrz/passport-moldova
+./mrz/id-kyrgyzstan
+./mrz/visa-denmark
+./mrz/visa-lithuania
+./mrz/visa-vietnam
+./mrz/passport-lithuania
+./mrz/visa-netherlands
+./mrz/visa-luxembourg
+./mrz/visa-spain
+./mrz/passport-egypt
+./mrz/passport-israel
+./mrz/passport-kyrgyzstan
+./mrz/passport-slovenia
+./mrz/visa-china
+./mrz/passport-czech-republic
+./mrz/id-spain
+./mrz/visa-slovakia
+./mrz/id-lithuania
+./mrz/visa-canada
+./mrz/passport-malta
+./mrz/passport-germany
+./mrz/passport-canada
+./mrz/id-sweden
+./mrz/visa-france
+./mrz/visa-italy
+./mrz/passport-georgia
+./mrz/passport-ukraine
+./mrz/visa-cyprus
+./mrz/passport-united-kingdom
+./mrz/id-norway
+./mrz/passport-netherlands
+./mrz/passport-inside-russian
+./mrz/passport-uzbekistan
+./mrz/passport-belarus
+./mrz/id-argentina
+./mrz/passport-hungary
+./mrz/id-bulgaria
+./mrz/id-luxembourg
+./mrz/passport-kenya
+./mrz/passport-kazakhstan
+./mrz/visa-czech-republic
+./mrz/id-slovenia
+./mrz/visa-latvia
+./mrz/id-slovakia
+./mrz/passport-australia
+./mrz/passport-spain
+./mrz/visa-thailand
+./mrz/passport-dominican-republic
+./mrz/passport-bulgaria
+./mrz/passport-brazil
+./mrz/visa-romania
+./mrz/visa-austria
+./mrz/passport-poland
+./mrz/passport-singapore
+./mrz/passport-turkmenistan
+./mrz/passport-sweden
+./mrz/visa-poland
+./mrz/passport-china
+./mrz/id-estonia
+./mrz/id-austria
+./mrz/id-czech-republic
+./mrz/visa-malta
+./mrz/visa-russia
+./mrz/passport-latvia
+./mrz/visa-estonia
+./mrz/id-finland
+./mrz/id-romania
+./mrz/id-ukraine
+./mrz/visa-portugal
+./mrz/visa-mexico
+./mrz/visa-bulgaria
+./mrz/id-denmark
+./mrz/visa-germany
+./mrz/visa-turkey
+./mrz/passport-armenia
+./mrz/passport-estonia
+./mrz/id-netherlands
+./mrz/passport-new-zealand
+./mrz/passport-greece
+./mrz/passport-denmark
+./mrz/passport-russia
+./mrz/id-croatia
+./mrz/passport-serbia
+./mrz/visa-slovenia
+./mrz/id-greece
+./mrz/visa-sweden
+./mrz/id-poland
+./mrz/id-italy
+./mrz/passport-mexico
+./mrz/id-portugal
+./mrz/visa-australia
+./mrz/visa-ireland
+./mrz/id-latvia
+./mrz/passport-italy
+./mrz/passport-bangladesh
+./mrz/id-canada
+./mrz/id-ireland
+./mrz/visa-croatia
+./mrz/visa-usa
+./mrz/id-usa
+./mrz/passport-vietnam
+./prices
+./blog/editable-usa-passport-template-psd-file
+./blog/how-to-use-id-psd-template
+./blog/how-to-make-a-social-security-card
+./blog/download-the-ultimate-michigan-dl-template-psd
+./referral
+./scandit
+./how-to-generate-pdf417
+./robots.txt
+./pdf417_generator/north-dakota
+./pdf417_generator/saskatchewan
+./pdf417_generator/idaho
+./pdf417_generator/montana
+./pdf417_generator/kansas
+./pdf417_generator/wisconsin
+./pdf417_generator/texas
+./pdf417_generator/arkansas
+./pdf417_generator/new-mexico
+./pdf417_generator/missouri
+./pdf417_generator/connecticut
+./pdf417_generator/vermont
+./pdf417_generator/kentucky
+./pdf417_generator/florida
+./pdf417_generator/michigan
+./pdf417_generator/utah
+./pdf417_generator/maine
+./pdf417_generator/california
+./pdf417_generator/british-columbia
+./pdf417_generator/arizona
+./pdf417_generator/ontario
+./pdf417_generator/new-hampshire
+./pdf417_generator/nebraska
+./pdf417_generator/alberta
+./pdf417_generator/new-york
+./pdf417_generator/washington
+./pdf417_generator/nevada
+./pdf417_generator/nova-scotia
+./pdf417_generator/quebec
+./pdf417_generator/georgia
+./pdf417_generator/newfoundland-and-labrador
+./pdf417_generator/alabama
+./pdf417_generator/oklahoma
+./pdf417_generator/maryland
+./pdf417_generator/rhode-island
+./pdf417_generator/west-virginia
+./pdf417_generator/new-jersey
+./pdf417_generator/lousiana
+./pdf417_generator/mississippi
+./pdf417_generator/north-carolina
+./pdf417_generator/south-carolina
+./pdf417_generator/tennessee
+./pdf417_generator/new-brunswick
+./pdf417_generator/massachusetts
+./pdf417_generator/argentina
+./pdf417_generator/illinois
+./pdf417_generator/manitoba
+./pdf417_generator/indiana
+./pdf417_generator/alaska
+./pdf417_generator/pennsylvania
+./pdf417_generator/south-dacota
+./pdf417_generator/minnesota
+./pdf417_generator/virginia
+./pdf417_generator/index.html
+./pdf417_generator/district-of-columbia
+./pdf417_generator/prince-edward-island
+./pdf417_generator/wyoming
+./pdf417_generator/iowa
+./pdf417_generator/delaware
+./pdf417_generator/ohio
+./pdf417_generator/oregon
+./examples
+./check-barcodes
+./file_list.txt
+./ru/mrz/visa-indonesia
+./ru/mrz/passport-south-africa
+./ru/mrz/id-malta
+./ru/mrz/visa-greece
+./ru/mrz/passport-belgium
+./ru/mrz/visa-finland
+./ru/mrz/passport-romania
+./ru/mrz/id-cyprus
+./ru/mrz/passport-croatia
+./ru/mrz/passport-venezuela
+./ru/mrz/id-armenia
+./ru/mrz/passport-argentina
+./ru/mrz/visa-hungary
+./ru/mrz/id-united-kingdom
+./ru/mrz/id-switzerland
+./ru/mrz/passport-finland
+./ru/mrz/passport-india
+./ru/mrz/id-united-arab-emirates
+./ru/mrz/id-kazakhstan
+./ru/mrz/passport-portugal
+./ru/mrz/id-senegal
+./ru/mrz/passport-usa
+./ru/mrz/id-france
+./ru/mrz/visa-united-kingdom
+./ru/mrz/id-belgium
+./ru/mrz/id-germany
+./ru/mrz/id-hungary
+./ru/mrz/passport-cameroon
+./ru/mrz/passport-austria
+./ru/mrz/passport-switzerland
+./ru/mrz/passport-norway
+./ru/mrz/passport-france
+./ru/mrz/id-moldova
+./ru/mrz/passport-ireland
+./ru/mrz/passport-moldova
+./ru/mrz/id-kyrgyzstan
+./ru/mrz/visa-denmark
+./ru/mrz/visa-lithuania
+./ru/mrz/visa-vietnam
+./ru/mrz/passport-lithuania
+./ru/mrz/visa-netherlands
+./ru/mrz/visa-luxembourg
+./ru/mrz/visa-spain
+./ru/mrz/passport-egypt
+./ru/mrz/passport-israel
+./ru/mrz/passport-kyrgyzstan
+./ru/mrz/passport-slovenia
+./ru/mrz/visa-china
+./ru/mrz/passport-czech-republic
+./ru/mrz/id-spain
+./ru/mrz/visa-slovakia
+./ru/mrz/id-lithuania
+./ru/mrz/visa-canada
+./ru/mrz/passport-malta
+./ru/mrz/passport-germany
+./ru/mrz/passport-canada
+./ru/mrz/id-sweden
+./ru/mrz/visa-france
+./ru/mrz/visa-italy
+./ru/mrz/passport-georgia
+./ru/mrz/passport-ukraine
+./ru/mrz/visa-cyprus
+./ru/mrz/passport-united-kingdom
+./ru/mrz/id-norway
+./ru/mrz/passport-netherlands
+./ru/mrz/passport-inside-russian
+./ru/mrz/passport-uzbekistan
+./ru/mrz/passport-belarus
+./ru/mrz/id-argentina
+./ru/mrz/passport-hungary
+./ru/mrz/id-bulgaria
+./ru/mrz/id-luxembourg
+./ru/mrz/passport-kenya
+./ru/mrz/passport-kazakhstan
+./ru/mrz/visa-czech-republic
+./ru/mrz/id-slovenia
+./ru/mrz/visa-latvia
+./ru/mrz/id-slovakia
+./ru/mrz/passport-australia
+./ru/mrz/passport-spain
+./ru/mrz/visa-thailand
+./ru/mrz/passport-dominican-republic
+./ru/mrz/passport-bulgaria
+./ru/mrz/passport-brazil
+./ru/mrz/visa-romania
+./ru/mrz/visa-austria
+./ru/mrz/passport-poland
+./ru/mrz/passport-singapore
+./ru/mrz/passport-turkmenistan
+./ru/mrz/passport-sweden
+./ru/mrz/visa-poland
+./ru/mrz/passport-china
+./ru/mrz/id-estonia
+./ru/mrz/id-austria
+./ru/mrz/id-czech-republic
+./ru/mrz/visa-malta
+./ru/mrz/visa-russia
+./ru/mrz/passport-latvia
+./ru/mrz/visa-estonia
+./ru/mrz/id-finland
+./ru/mrz/id-romania
+./ru/mrz/id-ukraine
+./ru/mrz/visa-portugal
+./ru/mrz/visa-mexico
+./ru/mrz/visa-bulgaria
+./ru/mrz/id-denmark
+./ru/mrz/visa-germany
+./ru/mrz/visa-turkey
+./ru/mrz/passport-armenia
+./ru/mrz/passport-estonia
+./ru/mrz/id-netherlands
+./ru/mrz/passport-new-zealand
+./ru/mrz/passport-greece
+./ru/mrz/passport-denmark
+./ru/mrz/passport-russia
+./ru/mrz/id-croatia
+./ru/mrz/passport-serbia
+./ru/mrz/visa-slovenia
+./ru/mrz/id-greece
+./ru/mrz/visa-sweden
+./ru/mrz/id-poland
+./ru/mrz/id-italy
+./ru/mrz/passport-mexico
+./ru/mrz/id-portugal
+./ru/mrz/visa-australia
+./ru/mrz/visa-ireland
+./ru/mrz/id-latvia
+./ru/mrz/passport-italy
+./ru/mrz/passport-bangladesh
+./ru/mrz/id-canada
+./ru/mrz/id-ireland
+./ru/mrz/visa-croatia
+./ru/mrz/visa-usa
+./ru/mrz/id-usa
+./ru/mrz/passport-vietnam
+./ru/prices
+./ru/blog/editable-usa-passport-template-psd-file
+./ru/blog/how-to-use-id-psd-template
+./ru/blog/how-to-make-a-social-security-card
+./ru/blog/download-the-ultimate-michigan-dl-template-psd
+./ru/referral
+./ru/scandit
+./ru/how-to-generate-pdf417
+./ru/pdf417_generator/north-dakota
+./ru/pdf417_generator/saskatchewan
+./ru/pdf417_generator/idaho
+./ru/pdf417_generator/montana
+./ru/pdf417_generator/kansas
+./ru/pdf417_generator/wisconsin
+./ru/pdf417_generator/texas
+./ru/pdf417_generator/arkansas
+./ru/pdf417_generator/new-mexico
+./ru/pdf417_generator/missouri
+./ru/pdf417_generator/connecticut
+./ru/pdf417_generator/vermont
+./ru/pdf417_generator/kentucky
+./ru/pdf417_generator/florida
+./ru/pdf417_generator/michigan
+./ru/pdf417_generator/utah
+./ru/pdf417_generator/maine
+./ru/pdf417_generator/california
+./ru/pdf417_generator/british-columbia
+./ru/pdf417_generator/arizona
+./ru/pdf417_generator/ontario
+./ru/pdf417_generator/new-hampshire
+./ru/pdf417_generator/nebraska
+./ru/pdf417_generator/alberta
+./ru/pdf417_generator/new-york
+./ru/pdf417_generator/washington
+./ru/pdf417_generator/nevada
+./ru/pdf417_generator/nova-scotia
+./ru/pdf417_generator/quebec
+./ru/pdf417_generator/georgia
+./ru/pdf417_generator/newfoundland-and-labrador
+./ru/pdf417_generator/alabama
+./ru/pdf417_generator/oklahoma
+./ru/pdf417_generator/maryland
+./ru/pdf417_generator/rhode-island
+./ru/pdf417_generator/west-virginia
+./ru/pdf417_generator/new-jersey
+./ru/pdf417_generator/lousiana
+./ru/pdf417_generator/mississippi
+./ru/pdf417_generator/north-carolina
+./ru/pdf417_generator/south-carolina
+./ru/pdf417_generator/tennessee
+./ru/pdf417_generator/new-brunswick
+./ru/pdf417_generator/massachusetts
+./ru/pdf417_generator/argentina
+./ru/pdf417_generator/illinois
+./ru/pdf417_generator/manitoba
+./ru/pdf417_generator/indiana
+./ru/pdf417_generator/alaska
+./ru/pdf417_generator/pennsylvania
+./ru/pdf417_generator/south-dacota
+./ru/pdf417_generator/minnesota
+./ru/pdf417_generator/virginia
+./ru/pdf417_generator/district-of-columbia
+./ru/pdf417_generator/prince-edward-island
+./ru/pdf417_generator/wyoming
+./ru/pdf417_generator/iowa
+./ru/pdf417_generator/delaware
+./ru/pdf417_generator/ohio
+./ru/pdf417_generator/oregon
+./ru/examples
+./ru/check-barcodes
+./ru/demo
+./ru/how-to-generate-mrz-strings
+./ru/psd-templates/spain-passport-2015
+./ru/psd-templates/norway-passport-2011
+./ru/psd-templates/poland-id-2015
+./ru/psd-templates/south-dakota
+./ru/psd-templates/nevada-2021
+./ru/psd-templates/poland-dl-2013
+./ru/psd-templates/connecticut-2017
+./ru/psd-templates/germany-passport
+./ru/psd-templates/nebraska-2021

@@ -1,0 +1,500 @@
+    document.getElementById("donor_b").innerHTML = 'Donor';
+    document.getElementById("safe_b").innerHTML = 'Safe Driver';
+    document.getElementById("restriction_selector").innerHTML = 'Restrictions';
+    document.getElementById("restriction_txt").value = 'Select doc. restriction';
+    document.getElementById("endosernent_selector").innerHTML = 'Endorsement';
+    document.getElementById("endosernent_txt").value = 'Select doc. endorsement';
+    document.getElementById("discriminator_selector").innerHTML = 'Discriminator'; 
+    document.getElementById("inventory_selector").innerHTML = 'Inventory';
+    document.getElementById("audit_selector").innerHTML = 'Audit';
+    for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'Auto';
+    }
+    document.getElementById("sex_selector").innerHTML = 'Sex';
+    document.getElementById("sex_option").innerHTML = 'Select sex';
+    document.getElementById("u_option").innerHTML = 'Unknown';
+    document.getElementById("m_option").innerHTML = 'Male';
+    document.getElementById("f_option").innerHTML = 'Female';
+    document.getElementById("o_option").innerHTML = 'Others';
+    document.getElementById("hair_selector").innerHTML = 'Hair color';
+    document.getElementById("hair_option").innerHTML = 'Select hair color';
+    document.getElementById("hair_col_bal").innerHTML = 'Bald';
+    document.getElementById("hair_col_blk").innerHTML = 'Black';
+    document.getElementById("hair_col_bln").innerHTML = 'Blonde';
+    document.getElementById("hair_col_brn").innerHTML = 'Brown';
+    document.getElementById("hair_col_gry").innerHTML = 'Gray';
+    document.getElementById("hair_col_red").innerHTML = 'Auburn';
+    document.getElementById("hair_col_sdy").innerHTML = 'Sandy';
+    document.getElementById("hair_col_whi").innerHTML = 'White';
+    document.getElementById("hair_col_unk").innerHTML = 'Unknown';
+    document.getElementById("eyes_selector").innerHTML = 'Eyes color'; 
+    document.getElementById("eyes_option").innerHTML = 'Select eyes color';
+    document.getElementById("eyes_col_blk").innerHTML = 'Black';
+    document.getElementById("eyes_col_blu").innerHTML = 'Blue';
+    document.getElementById("eyes_col_brn").innerHTML = 'Brown';
+    document.getElementById("eyes_col_gry").innerHTML = 'Gray';
+    document.getElementById("eyes_col_haz").innerHTML = 'Hazel';
+    document.getElementById("hair_col_mar").innerHTML = 'Maroon';
+    document.getElementById("eyes_col_pnk").innerHTML = 'Pink';
+    document.getElementById("eyes_col_dic").innerHTML = 'Dichromate';
+    document.getElementById("eyes_col_unk").innerHTML = 'Unknown';
+    document.getElementById("eyes_col_grn").innerHTML = 'Green'; 
+    document.getElementById("height_selector").innerHTML = 'Height';
+    document.getElementById("weight_label").innerHTML = 'Weight (lbs)';
+    document.getElementById("skin_selector").innerHTML = 'Skin color';
+    document.getElementById("skin_col_ai").innerHTML = 'Alaskan or American Indian';
+    document.getElementById("skin_col_ap").innerHTML = 'Asian or Pacific Islander';
+    document.getElementById("skin_col_bk").innerHTML = 'Black';
+    document.getElementById("skin_col_w").innerHTML = 'White';
+    document.getElementById("skin_col_h").innerHTML = 'Hispanic Origin';
+    document.getElementById("skin_col_u").innerHTML = 'Unknown';
+    document.getElementById("address_selector").innerHTML = 'Street and house number';
+    document.getElementById("city_selector").innerHTML = 'City';
+    document.getElementById("zip_selector").innerHTML = 'ZIP code';
+    if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'New generation!';
+    }
+    document.getElementById("final_button").innerHTML = 'Generate!';
+    document.getElementById("revision_selector").innerHTML = 'Revision';
+    document.getElementById("rev_option").innerHTML = 'Select revision';
+    document.getElementById("truncation_label").innerHTML = 'Name truncation';                       
+  break;
+  case 'cn':
+    if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = '语言';
+    }
+    if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = '请注意，这是测试表格。 要获取条形码，您需要有效订阅。 您可以直接在机器人中<a href="https://t.me/pdf417mrz_bot">购买订阅</a>。';
+    }
+    document.getElementById("div_with_copy").innerHTML = '复制了!';
+    if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = '     光';
+    }
+    if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = '   黑暗的';
+    }
+    if( document.getElementById("lang_option") != null ) {
+        document.getElementById("lang_option").innerHTML = '选择语言';
+    }
+    document.getElementById("country_selector").innerHTML = '国家';
+    document.getElementById("country_option").innerHTML = '选择国家';
+    document.getElementById("state_selector").innerHTML = '状态';
+    document.getElementById("state_option").innerHTML = '选择状态';
+    document.getElementById("doc_selector").innerHTML = '文件类型';
+    document.getElementById("doc_option").innerHTML = '选择类型';
+    document.getElementById("lname_label").innerHTML = '姓氏';
+    document.getElementById("fname_label").innerHTML = '名字';
+    document.getElementById("mname_label").innerHTML = '中间名字';
+    for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = '格式: '+format_type;
+    }
+    document.getElementById("birthday_selector").innerHTML = '出生日期';
+    document.getElementById("issue_selector").innerHTML = '发行日期';
+    document.getElementById("expiry_selector").innerHTML = '有效期';
+    document.getElementById("number_selector").innerHTML = '证件号码';
+    document.getElementById("doc_class_selector").innerHTML = 'DL级别';
+    document.getElementById("doc_class_txt").value = '选择文档类别';
+    document.getElementById("compliance_selector").innerHTML = '符合身份证明';
+    document.getElementById("badges_selector").innerHTML = '徽章';
+    document.getElementById("veteran_b").innerHTML = '老将';
+    document.getElementById("donor_b").innerHTML = '捐赠者';
+    document.getElementById("safe_b").innerHTML = '安全驾驶';
+    document.getElementById("restriction_selector").innerHTML = '限制';
+    document.getElementById("restriction_txt").value = '选择限制';
+    document.getElementById("endosernent_selector").innerHTML = '内皮';
+    document.getElementById("endosernent_txt").value = '选择违规行为';
+    document.getElementById("discriminator_selector").innerHTML = '证件鉴别器';
+    document.getElementById("inventory_selector").innerHTML = '清单号';
+    document.getElementById("audit_selector").innerHTML = '审计';
+    for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = ' 汽车 ';
+    }
+    document.getElementById("sex_selector").innerHTML = '性别';
+    document.getElementById("sex_option").innerHTML = '选择性别';
+    document.getElementById("u_option").innerHTML = '未知';
+    document.getElementById("m_option").innerHTML = '男性';
+    document.getElementById("f_option").innerHTML = '女性';
+    document.getElementById("o_option").innerHTML = '其他的';
+    document.getElementById("hair_selector").innerHTML = '发色';
+    document.getElementById("hair_option").innerHTML = '选择头发颜色';
+    document.getElementById("hair_col_bal").innerHTML = '秃';
+    document.getElementById("hair_col_blk").innerHTML = '黑色的';
+    document.getElementById("hair_col_bln").innerHTML = '金发女郎';
+    document.getElementById("hair_col_brn").innerHTML = '棕色的';
+    document.getElementById("hair_col_gry").innerHTML = '灰色的';
+    document.getElementById("hair_col_red").innerHTML = '奥本';
+    document.getElementById("hair_col_sdy").innerHTML = '沙';
+    document.getElementById("hair_col_whi").innerHTML = '白色的';
+    document.getElementById("hair_col_unk").innerHTML = '未知';
+    document.getElementById("eyes_selector").innerHTML = '眼睛颜色';
+    document.getElementById("eyes_option").innerHTML = '选择眼睛颜色';
+    document.getElementById("eyes_col_blk").innerHTML = '深棕色';
+    document.getElementById("eyes_col_blu").innerHTML = '蓝色的';
+    document.getElementById("eyes_col_brn").innerHTML = '浅褐色';
+    document.getElementById("eyes_col_gry").innerHTML = '灰色的';
+    document.getElementById("eyes_col_haz").innerHTML = '博洛特尼';
+    document.getElementById("hair_col_mar").innerHTML = '勃艮第';
+    document.getElementById("eyes_col_pnk").innerHTML = '粉色的';
+    document.getElementById("eyes_col_dic").innerHTML = '重铬酸盐';
+    document.getElementById("eyes_col_unk").innerHTML = '未知';
+    document.getElementById("eyes_col_grn").innerHTML = '绿色的';
+    document.getElementById("height_selector").innerHTML = '身高';
+    document.getElementById("weight_label").innerHTML = '重量';
+    document.getElementById("skin_selector").innerHTML = '肤色';
+    document.getElementById("skin_col_ai").innerHTML = '爱斯基摩人';
+    document.getElementById("skin_col_ap").innerHTML = '亚洲人';
+    document.getElementById("skin_col_bk").innerHTML = '黑色的';
+    document.getElementById("skin_col_w").innerHTML = '白色的';
+    document.getElementById("skin_col_h").innerHTML = '西班牙裔';
+    document.getElementById("skin_col_u").innerHTML = '未知';
+    document.getElementById("address_selector").innerHTML = '街道';
+    document.getElementById("city_selector").innerHTML = '城市';
+    document.getElementById("zip_selector").innerHTML = '邮政编码';
+    if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = '新一代!';
+    }
+    document.getElementById("final_button").innerHTML = '产生!'; 
+    document.getElementById("revision_selector").innerHTML = '版本';
+    document.getElementById("rev_option").innerHTML = '选择版本';
+    document.getElementById("truncation_label").innerHTML = '名称截断';
+  break;
+  case 'hi':
+    if( document.getElementById("language_selector") != null ) {
+        document.getElementById("language_selector").innerHTML = 'भाषा';
+    }
+    if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'कृपया ध्यान दें कि यह परीक्षण प्रपत्र है। बारकोड प्राप्त करने के लिए आपके पास सक्रिय सदस्यता होना आवश्यक है। आप सीधे बॉट में <a href="https://t.me/pdf417mrz_bot">सदस्यता खरीद सकते हैं</a>।';
+    }
+    document.getElementById("div_with_copy").innerHTML = 'नकल की गई!';
+    if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = '   रोशनी';
+    }
+    if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = '   अँधेरा';
+    }
+    if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'भाषा';
+    }
+    document.getElementById("country_selector").innerHTML = 'देश'; 
+    document.getElementById("country_option").innerHTML = 'देश चुनें';
+    document.getElementById("state_selector").innerHTML = 'राज्य';
+    document.getElementById("state_option").innerHTML = 'राज्य चुनें';
+    document.getElementById("doc_selector").innerHTML = 'दस्तावेज़ संख्या';
+    document.getElementById("doc_option").innerHTML = 'प्रकार चुनें';
+    document.getElementById("lname_label").innerHTML = 'उपनाम';
+    document.getElementById("fname_label").innerHTML = 'प्रथम नाम';
+    document.getElementById("mname_label").innerHTML = 'मध्य नाम';
+    for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'प्रारूप: '+format_type;
+    }
+    document.getElementById("birthday_selector").innerHTML = 'जन्म तिथि';
+    document.getElementById("issue_selector").innerHTML = 'जारी करने की तारिख';
+    document.getElementById("expiry_selector").innerHTML = 'समाप्ति तिथि';
+    document.getElementById("number_selector").innerHTML = 'दस्तावेज़ संख्या';
+    document.getElementById("doc_class_selector").innerHTML = 'DL श्रेणी';
+    document.getElementById("doc_class_txt").value = 'दस्तावेज़ वर्ग का चयन करें';
+    document.getElementById("compliance_selector").innerHTML = 'आईडी का अनुपालन';
+    document.getElementById("badges_selector").innerHTML = 'बैज';
+    document.getElementById("veteran_b").innerHTML = 'अनुभवी व्यक्ति';
+    document.getElementById("donor_b").innerHTML = 'दाता';
+    document.getElementById("safe_b").innerHTML = 'सुरक्षित ड्राइवर';
+    document.getElementById("restriction_selector").innerHTML = 'प्रतिबंध';
+    document.getElementById("restriction_txt").value = 'प्रतिबंध चुनें';
+    document.getElementById("endosernent_selector").innerHTML = 'एंडोसेर्नेंट';
+    document.getElementById("endosernent_txt").value = 'उल्लंघन चुनें';
+    document.getElementById("discriminator_selector").innerHTML = 'Discriminator';
+    document.getElementById("inventory_selector").innerHTML = 'भंडार';
+    document.getElementById("audit_selector").innerHTML = 'अंकेक्षण';
+    for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'ऑटो';
+    }
+    document.getElementById("sex_selector").innerHTML = 'लिंग';
+    document.getElementById("sex_option").innerHTML = 'लिंग का चयन करें';
+    document.getElementById("u_option").innerHTML = 'अज्ञात';
+    document.getElementById("m_option").innerHTML = 'नर';
+    document.getElementById("f_option").innerHTML = 'महिला';
+    document.getElementById("o_option").innerHTML = 'अन्य';
+    document.getElementById("hair_selector").innerHTML = 'लम्बाई';
+    document.getElementById("hair_option").innerHTML = 'बालों का रंग चुनें';
+    document.getElementById("hair_col_bal").innerHTML = 'गंजा';
+    document.getElementById("hair_col_blk").innerHTML = 'काला';
+    document.getElementById("hair_col_bln").innerHTML = 'गोरा';
+    document.getElementById("hair_col_brn").innerHTML = 'भूरा';
+    document.getElementById("hair_col_gry").innerHTML = 'स्लेटी';
+    document.getElementById("hair_col_red").innerHTML = 'सुनहरा भूरा रंग';
+    document.getElementById("hair_col_sdy").innerHTML = 'रेतीले';
+    document.getElementById("hair_col_whi").innerHTML = 'सफ़ेद';
+    document.getElementById("hair_col_unk").innerHTML = 'अज्ञात';
+    document.getElementById("eyes_selector").innerHTML = 'आँखों का रंग';
+    document.getElementById("eyes_option").innerHTML = 'आंखों का रंग चुनें';
+    document.getElementById("eyes_col_blk").innerHTML = 'गहरे भूरे रंग';
+    document.getElementById("eyes_col_blu").innerHTML = 'नीला';
+    document.getElementById("eyes_col_brn").innerHTML = 'हल्का भूरा';
+    document.getElementById("eyes_col_gry").innerHTML = 'स्लेटी';
+    document.getElementById("eyes_col_haz").innerHTML = 'बोलोटनी';
+    document.getElementById("hair_col_mar").innerHTML = 'बरगंडी';
+    document.getElementById("eyes_col_pnk").innerHTML = 'गुलाबी';
+    document.getElementById("eyes_col_dic").innerHTML = 'डाइक्रोमेट';
+    document.getElementById("eyes_col_unk").innerHTML = 'अज्ञात';
+    document.getElementById("eyes_col_grn").innerHTML = 'हरा';
+    document.getElementById("height_selector").innerHTML = 'ऊंचाई';
+    document.getElementById("weight_label").innerHTML = 'वजन (पाउंड)';
+    document.getElementById("skin_selector").innerHTML = 'त्वचा का रंग';
+    document.getElementById("skin_col_ai").innerHTML = 'एस्किमो';
+    document.getElementById("skin_col_ap").innerHTML = 'एशियाई';
+    document.getElementById("skin_col_bk").innerHTML = 'काला';
+    document.getElementById("skin_col_w").innerHTML = 'सफ़ेद';
+    document.getElementById("skin_col_h").innerHTML = 'हिस्पैनिक';
+    document.getElementById("skin_col_u").innerHTML = 'अज्ञात';
+    document.getElementById("address_selector").innerHTML = 'पता';
+    document.getElementById("city_selector").innerHTML = 'शहर';
+    document.getElementById("zip_selector").innerHTML = 'ज़िप कोड';
+    if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'नई पीढ़ी!';
+    }
+    document.getElementById("final_button").innerHTML = 'उत्पन्न!';
+    document.getElementById("revision_selector").innerHTML = 'संशोधन';
+    document.getElementById("rev_option").innerHTML = 'संशोधन चुनें';
+    document.getElementById("truncation_label").innerHTML = 'नाम काट-छाँट';
+  break;     
+  case 'ru':
+    if( document.getElementById("language_selector") != null ) {
+        document.getElementById("language_selector").innerHTML = 'Язык';
+    }
+    if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'Обратите внимание, что это тестовая форма. Для получения штрих-кодов необходима активная подписка. Вы можете <a href="https://t.me/pdf417mrz_bot">купить подписку</a> прямо в боте.';
+    }
+    document.getElementById("div_with_copy").innerHTML = 'Скопировано!';
+    if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = 'Светлая';
+    }
+    if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = 'Тёмная';
+    } 
+    if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'Язык';
+    }   
+    document.getElementById("country_selector").innerHTML = 'Страна';
+    document.getElementById("country_option").innerHTML = 'Выбрать страну';
+    document.getElementById("state_selector").innerHTML = 'Штат';
+    document.getElementById("state_option").innerHTML = 'Выбрать штат';
+    document.getElementById("doc_selector").innerHTML = 'Тип документа';
+    document.getElementById("doc_option").innerHTML = 'Выбрать тип';
+    document.getElementById("lname_label").innerHTML = 'Фамилия';
+    document.getElementById("fname_label").innerHTML = 'Имя';
+    document.getElementById("mname_label").innerHTML = 'Отчество';
+    for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'Формат: '+format_type;
+    }
+    document.getElementById("birthday_selector").innerHTML = 'Дата рождения';
+    document.getElementById("issue_selector").innerHTML = 'Дата выдачи';
+    document.getElementById("expiry_selector").innerHTML = 'Действителен до';
+    document.getElementById("number_selector").innerHTML = 'Номер документа';
+    document.getElementById("doc_class_selector").innerHTML = 'Категория ВУ';
+    document.getElementById("doc_class_txt").value = 'Выберите класс док-та';
+    document.getElementById("compliance_selector").innerHTML = 'Тип cоответствия';
+    document.getElementById("badges_selector").innerHTML = 'Ярлыки';
+    document.getElementById("veteran_b").innerHTML = 'Ветеран';
+    document.getElementById("donor_b").innerHTML = 'Донор';
+    document.getElementById("safe_b").innerHTML = 'Безопасный';
+    document.getElementById("restriction_selector").innerHTML = 'Ограничения';
+    document.getElementById("restriction_txt").value = 'Выберите ограничения';
+    document.getElementById("endosernent_selector").innerHTML = 'Нарушения';
+    document.getElementById("endosernent_txt").value = 'Выберите нарушения';
+    document.getElementById("discriminator_selector").innerHTML = 'Дискриминатор';
+    document.getElementById("inventory_selector").innerHTML = 'Инвентарный номер';
+    document.getElementById("audit_selector").innerHTML = 'Аудит';
+    for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'Авто';
+    }
+    document.getElementById("sex_selector").innerHTML = 'Пол';
+    document.getElementById("sex_option").innerHTML = 'Выбрать пол';
+    document.getElementById("u_option").innerHTML = 'Неизвестно';
+    document.getElementById("m_option").innerHTML = 'Мужчина';
+    document.getElementById("f_option").innerHTML = 'Женщина';
+    document.getElementById("o_option").innerHTML = 'Другие';
+    document.getElementById("hair_selector").innerHTML = 'Цвет волос';
+    document.getElementById("hair_option").innerHTML = 'Выберите цвет волос';
+    document.getElementById("hair_col_bal").innerHTML = 'Лысый';
+    document.getElementById("hair_col_blk").innerHTML = 'Чёрный';
+    document.getElementById("hair_col_bln").innerHTML = 'Блондин / ка';
+    document.getElementById("hair_col_brn").innerHTML = 'Русый';
+    document.getElementById("hair_col_gry").innerHTML = 'Седой';
+    document.getElementById("hair_col_red").innerHTML = 'Каштановый';
+    document.getElementById("hair_col_sdy").innerHTML = 'Рыжий';
+    document.getElementById("hair_col_whi").innerHTML = 'Белый';
+    document.getElementById("hair_col_unk").innerHTML = 'Неизвесный';
+    document.getElementById("eyes_selector").innerHTML = 'Цвет глаз';
+    document.getElementById("eyes_option").innerHTML = 'Выберите цвет глаз';
+    document.getElementById("eyes_col_blk").innerHTML = 'Тёмно-карий';
+    document.getElementById("eyes_col_blu").innerHTML = 'Голубой';
+    document.getElementById("eyes_col_brn").innerHTML = 'Светло-карий';
+    document.getElementById("eyes_col_gry").innerHTML = 'Серый';
+    document.getElementById("eyes_col_haz").innerHTML = 'Болотный';
+    document.getElementById("hair_col_mar").innerHTML = 'Бордовый';
+    document.getElementById("eyes_col_pnk").innerHTML = 'Розовый';
+    document.getElementById("eyes_col_dic").innerHTML = 'Дихромат';
+    document.getElementById("eyes_col_unk").innerHTML = 'Неизвесный';
+    document.getElementById("eyes_col_grn").innerHTML = 'Зелёный';
+    document.getElementById("height_selector").innerHTML = 'Рост';
+    document.getElementById("weight_label").innerHTML = 'Вес (фунтов)';
+    document.getElementById("skin_selector").innerHTML = 'Цвет кожи';
+    document.getElementById("skin_col_ai").innerHTML = 'Эскимосы или Индеец';
+    document.getElementById("skin_col_ap").innerHTML = 'Азиат';
+    document.getElementById("skin_col_bk").innerHTML = 'Чёрный';
+    document.getElementById("skin_col_w").innerHTML = 'Белый';
+    document.getElementById("skin_col_h").innerHTML = 'Латиноамериканец';
+    document.getElementById("skin_col_u").innerHTML = 'Неизвесно';
+    document.getElementById("address_selector").innerHTML = 'Улица и номер дома';
+    document.getElementById("city_selector").innerHTML = 'Город';
+    document.getElementById("zip_selector").innerHTML = 'Почтовый индекс';
+    if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'Новая генерация!';
+    }
+    document.getElementById("final_button").innerHTML = 'Сгенирировать!';
+    document.getElementById("revision_selector").innerHTML = 'Ревизия';
+    document.getElementById("rev_option").innerHTML = 'Выберите ревизию';
+    document.getElementById("truncation_label").innerHTML = 'Сокращение имени';   
+  break;
+  case 'ua':
+    if( document.getElementById("language_selector") != null ) {
+        document.getElementById("language_selector").innerHTML = 'Мова';
+    }
+    if( document.getElementById("test_mode") != null ) {
+        document.getElementById("test_mode").innerHTML = 'Зверніть увагу, що це тестова форма. Для отримання штрих-кодів вам потрібна активна підписка. Ви можете <a href="https://t.me/pdf417mrz_bot">купити підписку</a> безпосередньо в боті.';
+    }
+    document.getElementById("div_with_copy").innerHTML = 'Скопійовано!';
+    if( document.getElementById("light") != null ) {
+        document.getElementById("light").innerHTML = 'Світла ';
+    }
+    if( document.getElementById("dark") != null ) {
+        document.getElementById("dark").innerHTML = 'Темна ';
+    }
+    if( document.getElementById("lang_desc") != null ) {
+        document.getElementById("lang_desc").innerHTML = 'Мова';
+    }   
+    document.getElementById("country_selector").innerHTML = 'Країна';
+    document.getElementById("country_option").innerHTML = 'Обрати країну';
+    document.getElementById("state_selector").innerHTML = 'Штат';
+    document.getElementById("state_option").innerHTML = 'Обрати штат';
+    document.getElementById("doc_selector").innerHTML = 'Тип документу';
+    document.getElementById("doc_option").innerHTML = 'Обрати тип';
+    document.getElementById("lname_label").innerHTML = 'Прізвище';
+    document.getElementById("fname_label").innerHTML = 'Ім\'я';
+    document.getElementById("mname_label").innerHTML = 'По-батькові';
+    for (var i = 0; i < document.getElementsByClassName('gen_button_new').length; i++) {
+        document.getElementsByClassName('gen_button_new')[i].innerHTML = 'Формат: '+format_type;
+    }
+    document.getElementById("birthday_selector").innerHTML = 'Дата народження';
+    document.getElementById("issue_selector").innerHTML = 'Дата видачі';
+    document.getElementById("expiry_selector").innerHTML = 'Дата закінчення дії';
+    document.getElementById("number_selector").innerHTML = '№ документу';
+    document.getElementById("doc_class_selector").innerHTML = 'Клас документа';
+    document.getElementById("doc_class_txt").value = 'Виберіть клас док-та';
+    document.getElementById("compliance_selector").innerHTML = 'Тип відповідності';
+    document.getElementById("badges_selector").innerHTML = 'Значки';
+    document.getElementById("veteran_b").innerHTML = 'Ветеран';
+    document.getElementById("donor_b").innerHTML = 'Донор';
+    document.getElementById("safe_b").innerHTML = 'Безпечний';
+    document.getElementById("restriction_selector").innerHTML = 'Обмеження';
+    document.getElementById("restriction_txt").value = 'Оберіть обмеження';
+    document.getElementById("endosernent_selector").innerHTML = 'Порушення';
+    document.getElementById("endosernent_txt").value = 'Оберіть порушення';
+    document.getElementById("discriminator_selector").innerHTML = 'Дискримінатор';
+    document.getElementById("inventory_selector").innerHTML = 'Інвентарний номер';
+    document.getElementById("audit_selector").innerHTML = 'Аудит';
+    for (var i = 0; i < document.getElementsByClassName('gen_button').length; i++) {
+        document.getElementsByClassName('gen_button')[i].innerHTML = 'Авто';
+    }
+    document.getElementById("sex_selector").innerHTML = 'Стать';
+    document.getElementById("sex_option").innerHTML = 'Обрати стать';
+    document.getElementById("u_option").innerHTML = 'Невідомо';
+    document.getElementById("m_option").innerHTML = 'Чоловік';
+    document.getElementById("f_option").innerHTML = 'Жінка';
+    document.getElementById("o_option").innerHTML = 'Інші';
+    document.getElementById("hair_selector").innerHTML = 'Колір волосся';
+    document.getElementById("hair_option").innerHTML = 'Оберіть колір волосся';
+    document.getElementById("hair_col_bal").innerHTML = 'Лисий';
+    document.getElementById("hair_col_blk").innerHTML = 'Чорний';
+    document.getElementById("hair_col_bln").innerHTML = 'Блондин / ка';
+    document.getElementById("hair_col_brn").innerHTML = 'Русий';
+    document.getElementById("hair_col_gry").innerHTML = 'Сідий';
+    document.getElementById("hair_col_red").innerHTML = 'Каштановий';
+    document.getElementById("hair_col_sdy").innerHTML = 'Рудий';
+    document.getElementById("hair_col_whi").innerHTML = 'Білий';
+    document.getElementById("hair_col_unk").innerHTML = 'Невідомий';
+    document.getElementById("eyes_selector").innerHTML = 'Колір очей';
+    document.getElementById("eyes_option").innerHTML = 'Оберіть колір очей';
+    document.getElementById("eyes_col_blk").innerHTML = 'Темно-карий';
+    document.getElementById("eyes_col_blu").innerHTML = 'Блакитний';
+    document.getElementById("eyes_col_brn").innerHTML = 'Світло-карий';
+    document.getElementById("eyes_col_gry").innerHTML = 'Сірий';
+    document.getElementById("eyes_col_haz").innerHTML = 'Болотяний';
+    document.getElementById("hair_col_mar").innerHTML = 'Бордовий';
+    document.getElementById("eyes_col_pnk").innerHTML = 'Рожевий';
+    document.getElementById("eyes_col_dic").innerHTML = 'Біхромат';
+    document.getElementById("eyes_col_unk").innerHTML = 'Невідомий';
+    document.getElementById("eyes_col_grn").innerHTML = 'Зелений';
+    document.getElementById("height_selector").innerHTML = 'Зріст';
+    document.getElementById("weight_label").innerHTML = 'Вага (фунтів)';
+    document.getElementById("skin_selector").innerHTML = 'Колір шкіри';
+    document.getElementById("skin_col_ai").innerHTML = 'Ескімос чи індіанець';
+    document.getElementById("skin_col_ap").innerHTML = 'Азіат';
+    document.getElementById("skin_col_bk").innerHTML = 'Чорний';
+    document.getElementById("skin_col_w").innerHTML = 'Білий';
+    document.getElementById("skin_col_h").innerHTML = 'Латиноамериканець';
+    document.getElementById("skin_col_u").innerHTML = 'Невідомо';
+    document.getElementById("address_selector").innerHTML = 'Вулиця та номер будинку';
+    document.getElementById("city_selector").innerHTML = 'Місто';
+    document.getElementById("zip_selector").innerHTML = 'Поштовий індекс';
+    if( document.getElementById("reset_button") != null ) {
+        document.getElementById("reset_button").innerHTML = 'Нова генерація!';
+    }
+    document.getElementById("final_button").innerHTML = 'Згенерувати!';
+    document.getElementById("revision_selector").innerHTML = 'Ревізія';
+    document.getElementById("rev_option").innerHTML = 'Оберіть ревізію';
+    document.getElementById("truncation_label").innerHTML = 'Скорочення імені';  
+  break;
+
+}
+
+function change_lan(new_lang) {
+  window.location.href = user_form + '?lang='+new_lang;
+}
+
+function new_toggleThemeColor() {
+  var body = document.getElementById("body");
+  if ( body.className == 'dark-mode') {
+    body.className = "dark-mode"  == "light-mode" ? "dark-mode" : "light-mode";
+  } else {
+    body.className = "light-mode"  == "light-mode" ? "dark-mode" : "dark-mode";
+  }
+}
+
+function toggleLight() {
+  var body = document.getElementById("body");
+  var currentClass = body.className;
+  body.className = currentClass == "dark-mode" ? "light-mode" : "light-mode";
+}
+
+function toggleDark() {
+  var body = document.getElementById("body");
+  var currentClass = body.className;
+  body.className = "light-mode"  == "light-mode" ? "dark-mode" : "dark-mode";
+}
+
+$(".ld-mode > .btn").click(function(){
+  $(".ld-mode > .btn").removeClass("active");
+  $(this).addClass("active");
+});
+ 
+function delete_error() {
+  for (var i = 0; i < document.getElementsByClassName('form_error').length; i++) {
+    document.getElementsByClassName('form_error')[i].style.display = 'none';
+  }
+}
+
+function amerSoundex(input, strictRules) {
+  var result = "";
+  var lastcode = "";
+  var first = true;
